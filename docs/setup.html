@@ -95,16 +95,8 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-use-cases">    
         <li>
-    <a class="dropdown-item" href="./notebooks/01a-fundamentals.html">
+    <a class="dropdown-item" href="./notebooks/01_gsv.html">
  <span class="dropdown-text">Example 1</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./notebooks/01b_exampleRcontent.html">
- <span class="dropdown-text">Example 2</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./notebooks/01c_exampleMDcontent.html">
- <span class="dropdown-text">Example 3</span></a>
   </li>  
     </ul>
   </li>
@@ -128,7 +120,13 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#log-into-the-service" id="toc-log-into-the-service" class="nav-link active" data-scroll-target="#log-into-the-service">Log into the service</a></li>
   <li><a href="#the-interface" id="toc-the-interface" class="nav-link" data-scroll-target="#the-interface">The interface</a></li>
-  <li><a href="#set-up-your-workspace" id="toc-set-up-your-workspace" class="nav-link" data-scroll-target="#set-up-your-workspace">Set up your workspace</a></li>
+  <li><a href="#set-up-your-workspace" id="toc-set-up-your-workspace" class="nav-link" data-scroll-target="#set-up-your-workspace">Set up your workspace</a>
+  <ul class="collapse">
+  <li><a href="#create-your-personal-access-token-for-nci-gadi" id="toc-create-your-personal-access-token-for-nci-gadi" class="nav-link" data-scroll-target="#create-your-personal-access-token-for-nci-gadi">Create your personal access token for NCI Gadi</a></li>
+  <li><a href="#create-your-personal-tower-credential-for-nci-gadi" id="toc-create-your-personal-tower-credential-for-nci-gadi" class="nav-link" data-scroll-target="#create-your-personal-tower-credential-for-nci-gadi">Create your personal Tower credential for NCI Gadi</a></li>
+  <li><a href="#create-a-tower-credential-for-nci-gadi" id="toc-create-a-tower-credential-for-nci-gadi" class="nav-link" data-scroll-target="#create-a-tower-credential-for-nci-gadi">Create a Tower credential for NCI Gadi</a></li>
+  <li><a href="#configure-a-compute-environment" id="toc-configure-a-compute-environment" class="nav-link" data-scroll-target="#configure-a-compute-environment">Configure a compute environment&nbsp;</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -153,6 +151,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><img src="images/Screen Shot 2023-08-24 at 2.58.13 pm.png" class="img-fluid"></p>
+<p>#replace this image with a higher resolution one</p>
 <section id="log-into-the-service" class="level3">
 <h3 class="anchored" data-anchor-id="log-into-the-service">Log into the service</h3>
 <p>Nextflow Tower provides a centralised interface for managing users, workspaces, compute environments, and workflows within defined spaces called workspaces. These workspaces are provided by the Australian BioCommons and workspace management and curation is relegated to&nbsp; the workspace administrators. Regarding <a href="https://help.tower.nf/23.1/orgs-and-teams/workspace-management/">workspace management</a>, this means that:</p>
@@ -160,13 +159,15 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <ul>
 <li><p>Go to <a href="https://tower.services.biocommons.org.au" class="uri">https://tower.services.biocommons.org.au</a>.</p></li>
-<li><p>Provide a your University email address, then you will receive an email with the access link in your email inbox.</p></li>
+<li><p>Provide a your University email address, then you will receive an email with the access link in your email inbox.</p>
+<p><img src="images/Screen Shot 2023-08-24 at 3.07.50 pm.png" class="img-fluid"></p></li>
 <li><p>Click the workspace dropdown menu at the top left of the page with your name to navigate between your personal and organisation workspaces.</p></li>
-<li><p>Navigate from your personal workspace to your group's workspace by selecting the down arrow next to your name on the top left of the interface.</p></li>
+<li><p>Navigate from your personal workspace to your group's workspace by selecting the down arrow next to your name on the top left of the interface.</p>
+<p><img src="images/Screen Shot 2023-08-24 at 2.16.26 pm.png" class="img-fluid"></p></li>
 </ul>
 </blockquote>
 </div>
-<p><img src="images/Screen Shot 2023-08-24 at 2.16.26 pm.png" class="img-fluid"></p>
+<p>#replace this image with a higher resolution one</p>
 </section>
 <section id="the-interface" class="level2">
 <h2 class="anchored" data-anchor-id="the-interface">The interface</h2>
@@ -199,8 +200,99 @@ ul.task-list li input[type="checkbox"] {
 <section id="set-up-your-workspace" class="level2">
 <h2 class="anchored" data-anchor-id="set-up-your-workspace">Set up your workspace</h2>
 <p>Workspace configuration can only be performed by admins. You can create and configure compute environments, configure workflows to run on these environments, and add collaborators. The NeuroCommunity are currently only trialling the Tower service at NCI Gadi and Pawsey Setonix HPCs. As such, you will need to create Tower Agent credentials as this is the only way to access NCI and Pawsey HPC's with Tower.</p>
+<section id="create-your-personal-access-token-for-nci-gadi" class="level3">
+<h3 class="anchored" data-anchor-id="create-your-personal-access-token-for-nci-gadi">Create your personal access token for NCI Gadi</h3>
+<p>You will need to create a personal access token and store it on your compute environment in order to communicate with the Tower API. To create a personal access token you will need to navigate to the user settings logo in the top navbar and select 'Your tokens', then:</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Select 'Add Token.&nbsp;</p></li>
+<li><p>Name it something descriptive and select 'Add'.</p>
+<p><img src="images/Screen Shot 2023-08-24 at 4.18.46 pm.png" class="img-fluid"></p></li>
+<li><p>Copy the token to your clipboard.</p>
+<p><img src="images/Screen Shot 2023-08-24 at 4.18.58 pm.png" class="img-fluid"></p></li>
+<li><p>Log in to NCI Gadi HPC on the command-line and navigate to $HOME.</p></li>
+<li><p>Make a hidden directory called tower to store Tower token and credentials in.&nbsp;</p></li>
+<li><p>Copy your personal access token into a file named token within this directory.</p>
+<p><img src="images/Screen Shot 2023-08-24 at 4.19.09 pm.png" class="img-fluid"></p></li>
+</ul>
+</blockquote>
+</section>
+<section id="create-your-personal-tower-credential-for-nci-gadi" class="level3">
+<h3 class="anchored" data-anchor-id="create-your-personal-tower-credential-for-nci-gadi">Create your personal Tower credential for NCI Gadi</h3>
+<p>You can create different types of credentials through the Tower interface, for accessing code repositories, commercial cloud, SSH-keys, and the Tower Agent. To create a personal credential you will need to navigate to the user settings logo in the top navbar and select 'Your credentials'.&nbsp;</p>
+<p><img src="images/Screen Shot 2023-08-24 at 4.21.36 pm.png" class="img-fluid"></p>
+</section>
+<section id="create-a-tower-credential-for-nci-gadi" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-tower-credential-for-nci-gadi">Create a Tower credential for NCI Gadi</h3>
+<p>You can either choose to work with a shared or personal credential. Setting this up requires a similar process to creating a personal access token, using both the CLI and Tower interface. Starting on the Tower interface, navigate to 'Credentials' in the top navbar menu:</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Select 'Add Credential'.</p></li>
+<li><p>Name the credential something descriptive.</p></li>
+<li><p>Select Tower Agent from the Provider dropdown menu.</p></li>
+<li><p>Enable 'Shared agent' so that all workspace users can access the same instance (optional).</p></li>
+<li><p>Copy the Agent connection ID to your clipboard.</p>
+<p><img src="images/Screen Shot 2023-08-24 at 4.21.47 pm.png" class="img-fluid"></p></li>
+<li><p>Before saving the credential you will need to run the agent on your HPC command line.&nbsp;</p></li>
+<li><p>Log in to your HPC project space on the command-line and navigate to the shared space where you'll be running the tower agent from.&nbsp;</p></li>
+<li><p>Copy your personal access token into a file named connection_id within the hidden .tower directory.</p>
+<p><img src="images/Screen Shot 2023-08-24 at 4.25.20 pm.png" class="img-fluid"></p></li>
+</ul>
+<!-- -->
+<ul>
+<li><p>Run the run_tower_agent_pbs.sh script at /g/data/er01/tower-nf.</p>
+<p><img src="images/Screen Shot 2023-08-24 at 4.25.31 pm.png" class="img-fluid"></p></li>
+<li><p>Back in the tower interface, hit ‘Add’ to save your Tower agent credential.</p></li>
+<li><p>You can cancel the Tower agent running on the command line after the credential is saved.</p></li>
+</ul>
+</blockquote>
+</section>
+<section id="configure-a-compute-environment" class="level3">
+<h3 class="anchored" data-anchor-id="configure-a-compute-environment">Configure a compute environment&nbsp;</h3>
+<p>Compute environments have been configured for our group on NCI Gadi and Pawsey Setonix HPCs. Currently only NCI Gadi is a shared environment. The NCI Gadi environment has specifically been configured for our SIH project 'er01'. Only users with access to er01 added to our workspace will be able to run workflows using this configured compute environment. The process for setting up this workspace is as follows:&nbsp;</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Run the tower agent on the HPC command lineCLI again with the <a href="https://github.com/Sydney-Informatics-Hub/tower-nf">relevant run_tower_agent_&lt;pbs|slurm&gt;.sh script</a>.</p></li>
+<li><p>In the Tower interface, navigate to 'Compute Environments' in the top navbar menu.</p></li>
+<li><p>Name the environment something descriptive to distinguish it from other environments you may set up.</p></li>
+<li><p>Select the platform. For Setonix this is Slurm workload manager, for Gadi this is Altair PBS Pro.&nbsp;</p></li>
+<li><p>Provide your (shared or personal) credentials previously saved to the connection_id file.</p>
+<p><img src="images/Screen Shot 2023-08-24 at 4.29.29 pm.png" class="img-fluid"></p></li>
+</ul>
+</blockquote>
+<p>For those working on Gadi:</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>It's important that you leave the head and compute queue names empty, given jobs submitted to queues on Gadi are transferred to the exec version of each queue once running. The exec queue names are not visible to the Tower API so your jobs will fail to run.&nbsp;</p></li>
+<li><p>Under 'Staging options' Singularity and Nextflow modules have been preloaded to be executed before the pipeline launches&nbsp;</p></li>
+<li><p>Under 'Advanced options' we have set the Nextflow queue size as 1000 (as directed <a href="https://opus.nci.org.au/display/Help/Queue+Limits">here</a>)</p></li>
+<li><p>Under 'Advanced options' we have set the Head job submit #PBS options and applied head jobs to the compute jobs :</p>
+<ul>
+<li><p>Walltime 10 hours&nbsp;</p></li>
+<li><p>NCPUS 1&nbsp;</p></li>
+<li><p>Memory 8G&nbsp;</p></li>
+<li><p>Access to /scratch/iz89</p></li>
+<li><p>Project iz89&nbsp;</p></li>
+<li><p>Queue: copyq (as this provides external network access)</p>
+<p><img src="images/Screen Shot 2023-08-24 at 4.30.19 pm.png" class="img-fluid"></p></li>
+</ul></li>
+</ul>
+</blockquote>
+<p>For those working on Setonix:</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>TBA</p>
+<ul>
+<li>TBA</li>
+</ul></li>
+</ul>
+</blockquote>
+<p><br>
+<br>
+</p>
 
 
+</section>
 </section>
 
 <p>All materials copyright Sydney Informatics Hub, University of Sydney</p></main> <!-- /main -->

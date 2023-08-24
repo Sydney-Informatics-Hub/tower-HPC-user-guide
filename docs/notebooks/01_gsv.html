@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sydney Informatics Hub - Nextflow Tower Service User Guide</title>
+<title>Sydney Informatics Hub – gsv</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Sydney Informatics Hub</span>
     </a>
   </div>
@@ -82,11 +82,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link" href="../index.html">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./setup.html">
+    <a class="nav-link" href="../setup.html">
  <span class="menu-text">Setup</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-use-cases">    
         <li>
-    <a class="dropdown-item" href="./notebooks/01_gsv.html">
+    <a class="dropdown-item" href="../notebooks/01_gsv.html">
  <span class="dropdown-text">Example 1</span></a>
   </li>  
     </ul>
@@ -118,53 +118,36 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources">Resources</a></li>
-  <li><a href="#getting-started-with-the-australian-biocommons-service" id="toc-getting-started-with-the-australian-biocommons-service" class="nav-link" data-scroll-target="#getting-started-with-the-australian-biocommons-service">Getting started with the Australian BioCommons service</a></li>
+  <li><a href="#add-the-germline-structuralv-nf-pipeline" id="toc-add-the-germline-structuralv-nf-pipeline" class="nav-link active" data-scroll-target="#add-the-germline-structuralv-nf-pipeline">Add the Germline-StructuralV-nf Pipeline</a>
+  <ul class="collapse">
+  <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Nextflow Tower Service User Guide</h1>
-</div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<p><img src="images/Australian-Biocommons-Logo-Horizontal-RGB.png" class="img-fluid"></p>
-<p>Nextflow Tower is a full-stack solution for the management of Nextflow pipeline executions. It’s designed as an intuitive, user-friendly interface that allows you to control and monitor your data analysis pipelines. It simplifies running complex workflows, like those provided by nf-core, on different computation infrastructures such as HPC clusters, cloud services, or Kubernetes.</p>
-<p>The Tower service is offered in two ways; a free basic account that can be used by individuals and a licensed service that is suitable for large organisations with multiple collaborators that require more complex user management. The <a href="https://www.biocommons.org.au/nextflow-tower">Australian BioCommons Nextflow Tower service</a> is licensed and provides a centralised command-post for running Nextflow pipelines as a subsidised service for Australian researchers.</p>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<section id="add-the-germline-structuralv-nf-pipeline" class="level1">
+<h1>Add the Germline-StructuralV-nf Pipeline</h1>
+<p><a href="https://github.com/Sydney-Informatics-Hub/Germline-StructuralV-nf" class="uri">https://github.com/Sydney-Informatics-Hub/Germline-StructuralV-nf</a></p>
+<p><img src="images/211971740-772796bc-6fb7-43fb-885b-d9cb116bfdd0.png" class="img-fluid"></p>
+<section id="description" class="level3">
+<h3 class="anchored" data-anchor-id="description">Description</h3>
+<p>GermlineStructuralV-nf is a pipeline for identifying structural variant events in human Illumina short read whole genome sequence data. GermlineStructuralV-nf identifies structural variant and copy number events from BAM files using&nbsp;<a href="https://github.com/Illumina/manta/blob/master/docs/userGuide/README.md#de-novo-calling">Manta</a>,&nbsp;<a href="https://github.com/brentp/smoove">Smoove</a>, and&nbsp;<a href="https://github.com/SciLifeLab/TIDDIT">TIDDIT</a>. Variants are then merged using&nbsp;<a href="https://github.com/fritzsedlazeck/SURVIVOR">SURVIVOR</a>, and annotated by&nbsp;<a href="https://pubmed.ncbi.nlm.nih.gov/29669011/">AnnotSV</a>. The pipeline is written in Nextflow and uses Singularity/Docker to run containerised tools.</p>
+<p>Structural and copy number detection is challenging. Most structural variant detection tools infer these events from read mapping patterns, which can often resemble sequencing and read alignment artefacts. To address this, GermlineStructuralV-nf employs 3 general purpose structural variant calling tools, which each support a combination of detection methods. Manta, Smoove and TIDDIT use typical detection approaches that consider:</p>
 <ul>
-<li><a href="https://tower.services.biocommons.org.au">Biocommons tower service</a></li>
-<li><a href="https://github.com/Sydney-Informatics-Hub/tower-nf">Tower-nf configuration scripts</a></li>
+<li><p>Discordant read pair alignments</p></li>
+<li><p>Split reads that span a breakpoints</p></li>
+<li><p>Read depth profiling</p></li>
+<li><p>Local de novo assembly</p></li>
 </ul>
+<p>This approach is currently considered the best approach for maximising sensitivty of short read data (<a href="https://www.nature.com/articles/s41467-019-11146-4">Cameron et al.&nbsp;2019</a>,&nbsp;<a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1828-7">Malmoud et al.&nbsp;2019</a>). By using a combination of tools that employ different methods, we improve our ability to detect different types and sizes of variant events.</p>
+
+
 </section>
-<section id="getting-started-with-the-australian-biocommons-service" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started-with-the-australian-biocommons-service">Getting started with the Australian BioCommons service</h2>
-<p>Nextflow Tower provides a centralised interface for managing users, workspaces, compute environments, and workflows within defined spaces called workspaces. These workspaces are provided by the Australian BioCommons and workspace management and curation is relegated to&nbsp; the workspace administrators. Regarding <a href="https://help.tower.nf/23.1/orgs-and-teams/workspace-management/">workspace managemen</a>t, this means that:</p>
-<ul>
-<li><p>Only organisation owners are permitted to create a workspace within the organisation.</p></li>
-<li><p>Workspaces are currently provided to use cases for the pilot program of the Australian BioCommons Nextflow Tower service.&nbsp;</p></li>
-<li><p>The Australian BioCommons service team has insight into and administrative control over workspaces.</p></li>
-</ul>
-<p><img src="images/Screen Shot 2023-08-24 at 2.54.46 pm.png" class="img-fluid"></p>
-<p>As you use Tower, keep in mind there are a number of <a href="https://help.tower.nf/23.1/getting-started/definitions/">key terms and core concepts</a> that you will come across as you set up your workspace, configure your compute environments, and execute your workflows.&nbsp;</p>
-
-
 </section>
 
 <p>All materials copyright Sydney Informatics Hub, University of Sydney</p></main> <!-- /main -->

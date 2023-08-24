@@ -1,0 +1,21 @@
+# Add the Germline-StructuralV-nf Pipeline
+
+<https://github.com/Sydney-Informatics-Hub/Germline-StructuralV-nf>
+
+![](images/211971740-772796bc-6fb7-43fb-885b-d9cb116bfdd0.png)
+
+### Description
+
+GermlineStructuralV-nf is a pipeline for identifying structural variant events in human Illumina short read whole genome sequence data. GermlineStructuralV-nf identifies structural variant and copy number events from BAM files using [Manta](https://github.com/Illumina/manta/blob/master/docs/userGuide/README.md#de-novo-calling), [Smoove](https://github.com/brentp/smoove), and [TIDDIT](https://github.com/SciLifeLab/TIDDIT). Variants are then merged using [SURVIVOR](https://github.com/fritzsedlazeck/SURVIVOR), and annotated by [AnnotSV](https://pubmed.ncbi.nlm.nih.gov/29669011/). The pipeline is written in Nextflow and uses Singularity/Docker to run containerised tools.
+
+Structural and copy number detection is challenging. Most structural variant detection tools infer these events from read mapping patterns, which can often resemble sequencing and read alignment artefacts. To address this, GermlineStructuralV-nf employs 3 general purpose structural variant calling tools, which each support a combination of detection methods. Manta, Smoove and TIDDIT use typical detection approaches that consider:
+
+-   Discordant read pair alignments
+
+-   Split reads that span a breakpoints
+
+-   Read depth profiling
+
+-   Local de novo assembly
+
+This approach is currently considered the best approach for maximising sensitivty of short read data ([Cameron et al. 2019](https://www.nature.com/articles/s41467-019-11146-4), [Malmoud et al. 2019](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1828-7)). By using a combination of tools that employ different methods, we improve our ability to detect different types and sizes of variant events.

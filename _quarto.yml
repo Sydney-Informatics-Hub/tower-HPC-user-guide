@@ -14,11 +14,7 @@ website:
       - text: "Use-Cases"
         menu:
         - text: "Example 1"
-          href: notebooks/01a-fundamentals.html
-        - text: "Example 2"
-          href: notebooks/01b_exampleRcontent.html
-        - text: "Example 3"
-          href: notebooks/01c_exampleMDcontent.html
+          href: notebooks/01_gsv.html
 
   body-footer: "All materials copyright Sydney Informatics Hub, University of Sydney"
 
