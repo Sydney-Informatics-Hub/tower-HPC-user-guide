@@ -11,13 +11,13 @@ website:
         text: About
       - href: setup.html
         text: "Setup"
-      - text: "Other"
+      - text: "Use-Cases"
         menu:
-        - text: "Python from ipynb example"
+        - text: "Example 1"
           href: notebooks/01a-fundamentals.html
-        - text: "R from qmd example"
+        - text: "Example 2"
           href: notebooks/01b_exampleRcontent.html
-        - text: "Markdown from md example"
+        - text: "Example 3"
           href: notebooks/01c_exampleMDcontent.html
 
   body-footer: "All materials copyright Sydney Informatics Hub, University of Sydney"

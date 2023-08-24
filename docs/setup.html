@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sydney Informatics Hub Course name - Setup</title>
+<title>Sydney Informatics Hub - User Setup Instructions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Sydney Informatics Hub Course name</span>
+    <span class="navbar-title">Sydney Informatics Hub</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -83,28 +83,28 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html">
- <span class="menu-text">Home</span></a>
+ <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./setup.html" aria-current="page">
  <span class="menu-text">Setup</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-session-1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Session 1</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-use-cases" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Use-Cases</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-session-1">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-use-cases">    
         <li>
     <a class="dropdown-item" href="./notebooks/01a-fundamentals.html">
- <span class="dropdown-text">Python from ipynb example</span></a>
+ <span class="dropdown-text">Example 1</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./notebooks/01b_exampleRcontent.html">
- <span class="dropdown-text">R from qmd example</span></a>
+ <span class="dropdown-text">Example 2</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./notebooks/01c_exampleMDcontent.html">
- <span class="dropdown-text">Markdown from md example</span></a>
+ <span class="dropdown-text">Example 3</span></a>
   </li>  
     </ul>
   </li>
@@ -126,7 +126,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#get-a-client" id="toc-get-a-client" class="nav-link active" data-scroll-target="#get-a-client">1. Get a client</a></li>
+  <li><a href="#log-into-the-service" id="toc-log-into-the-service" class="nav-link active" data-scroll-target="#log-into-the-service">Log into the service</a></li>
+  <li><a href="#the-interface" id="toc-the-interface" class="nav-link" data-scroll-target="#the-interface">The interface</a></li>
+  <li><a href="#set-up-your-workspace" id="toc-set-up-your-workspace" class="nav-link" data-scroll-target="#set-up-your-workspace">Set up your workspace</a></li>
   </ul>
 </nav>
     </div>
@@ -135,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Setup</h1>
+<h1 class="title">User Setup Instructions</h1>
 </div>
 
 
@@ -150,9 +152,53 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="get-a-client" class="level1">
-<h1>1. Get a client</h1>
-<p>These are the setup instructions…</p>
+<p><img src="images/Screen Shot 2023-08-24 at 2.58.13 pm.png" class="img-fluid"></p>
+<section id="log-into-the-service" class="level3">
+<h3 class="anchored" data-anchor-id="log-into-the-service">Log into the service</h3>
+<p>Nextflow Tower provides a centralised interface for managing users, workspaces, compute environments, and workflows within defined spaces called workspaces. These workspaces are provided by the Australian BioCommons and workspace management and curation is relegated to&nbsp; the workspace administrators. Regarding <a href="https://help.tower.nf/23.1/orgs-and-teams/workspace-management/">workspace management</a>, this means that:</p>
+<div>
+<blockquote class="blockquote">
+<ul>
+<li><p>Go to <a href="https://tower.services.biocommons.org.au" class="uri">https://tower.services.biocommons.org.au</a>.</p></li>
+<li><p>Provide a your University email address, then you will receive an email with the access link in your email inbox.</p></li>
+<li><p>Click the workspace dropdown menu at the top left of the page with your name to navigate between your personal and organisation workspaces.</p></li>
+<li><p>Navigate from your personal workspace to your group's workspace by selecting the down arrow next to your name on the top left of the interface.</p></li>
+</ul>
+</blockquote>
+</div>
+<p><img src="images/Screen Shot 2023-08-24 at 2.16.26 pm.png" class="img-fluid"></p>
+</section>
+<section id="the-interface" class="level2">
+<h2 class="anchored" data-anchor-id="the-interface">The interface</h2>
+<p>Upon signing into Tower, you will be greeted with an interface for you as an individual user. To access the full functionality offered by the Australian BioCommons Tower service, you will need to move into (one of) your assigned BioCommons workspaces. To do this:</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Select the dropdown menu by your user name.</p></li>
+<li><p>Then select the BioCommons workspace of interest.</p></li>
+</ul>
+</blockquote>
+<p>This is the dashboard where you will manage your workspaces and workflows. It will open to the launchpad interface. Above the interface you'll see the following:</p>
+<p><img src="images/Screen Shot 2023-08-24 at 2.17.37 pm.png" class="img-fluid"></p>
+<p>#replace this image with a higher resolution one</p>
+<div>
+<blockquote class="blockquote">
+<ol type="1">
+<li><p><a href="https://help.tower.nf/23.1/launch/launchpad/?h=launchpad">Launchpad</a>: all your configured pipelines will be available here for running. Run them from here by selecting the 'Launch' button for the pipeline of interest.&nbsp;</p></li>
+<li><p><a href="https://help.tower.nf/23.1/monitoring/overview/?h=runs">Runs</a>: from here you can monitor and inspect the details of all previous workflow executions that you and other users in your workspace have run.</p></li>
+<li><p><a href="https://help.tower.nf/23.1/pipeline-actions/overview/?h=actions">Actions</a>: you can use Github and Tower webhooks to trigger an automated pipeline test run based on things like pipeline version release.&nbsp;</p></li>
+<li><p><a href="https://help.tower.nf/23.1/datasets/overview/">Datasets</a>: you can store pipeline input sample sheets here that specify metadata and file paths for each of your datapoints or samples to be processed by a workflow.&nbsp;</p></li>
+<li><p><a href="https://help.tower.nf/23.1/enterprise/configuration/compute_environments/">Compute environment</a>: Tower can be used to deploy workflows on various environments, here you will be able to manage and find your preconfigured environments.&nbsp;</p></li>
+<li><p>Credentials: here you can store all your authentication keys, credentials required to access private code repositories on <a href="https://help.tower.nf/23.1/enterprise/configuration/authentication/?#github-identity-provider">GitHub</a>, the <a href="https://help.tower.nf/23.1/credentials/agent_credentials/">Tower agent</a> on HPCs, and <a href="https://help.tower.nf/23.1/enterprise/configuration/authentication/">external services</a>. These are all encrypted, so they cannot be accessed by anyone else once you've stored them.&nbsp;</p></li>
+<li><p>Secrets: Ignore for now.&nbsp;</p></li>
+<li><p><a href="https://help.tower.nf/23.1/orgs-and-teams/workspace-management/?h=#participant-roles">Participants</a>: here you can see and manage (if you are an admin) the other users in your workspace and define user roles to control access.&nbsp;</p></li>
+<li><p>Settings: manage some basic workspace settings (if you are an admin).</p></li>
+</ol>
+</blockquote>
+</div>
+</section>
+<section id="set-up-your-workspace" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-your-workspace">Set up your workspace</h2>
+<p>Workspace configuration can only be performed by admins. You can create and configure compute environments, configure workflows to run on these environments, and add collaborators. The NeuroCommunity are currently only trialling the Tower service at NCI Gadi and Pawsey Setonix HPCs. As such, you will need to create Tower Agent credentials as this is the only way to access NCI and Pawsey HPC's with Tower.</p>
 
 
 </section>
