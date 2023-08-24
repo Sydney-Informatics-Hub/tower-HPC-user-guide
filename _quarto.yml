@@ -3,15 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "Sydney Informatics Hub Course name"
+  title: "Sydney Informatics Hub"
   navbar:
     background: primary
     left:
       - href: index.qmd
-        text: Home
+        text: About
       - href: setup.html
         text: "Setup"
-      - text: "Session 1"
+      - text: "Other"
         menu:
         - text: "Python from ipynb example"
           href: notebooks/01a-fundamentals.html

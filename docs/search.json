@@ -96,5 +96,26 @@
     "title": "Nextflow Tower Service User Guide",
     "section": "Getting started with the Australian BioCommons service",
     "text": "Getting started with the Australian BioCommons service\nNextflow Tower provides a centralised interface for managing users, workspaces, compute environments, and workflows within defined spaces called workspaces. These workspaces are provided by the Australian BioCommons and workspace management and curation is relegated to  the workspace administrators. Regarding workspace management, this means that:\n\nOnly organisation owners are permitted to create a workspace within the organisation.\nWorkspaces are currently provided to use cases for the pilot program of the Australian BioCommons Nextflow Tower service. \nThe Australian BioCommons service team has insight into and administrative control over workspaces.\n\n\nAs you use Tower, keep in mind there are a number of key terms and core concepts that you will come across as you set up your workspace, configure your compute environments, and execute your workflows."
+  },
+  {
+    "objectID": "index.html#log-into-the-service",
+    "href": "index.html#log-into-the-service",
+    "title": "Nextflow Tower Service User Guide",
+    "section": "Log into the service",
+    "text": "Log into the service\nNextflow Tower provides a centralised interface for managing users, workspaces, compute environments, and workflows within defined spaces called workspaces. These workspaces are provided by the Australian BioCommons and workspace management and curation is relegated to  the workspace administrators. Regarding workspace management, this means that:\n\n\n\nGo to https://tower.services.biocommons.org.au\nProvide a your University email address, then you will receive an email with the access link in your email inbox.\nClick the workspace dropdown menu at the top left of the page with your name to navigate between your personal and organisation workspaces.\nNavigate from your personal workspace to your group's workspace by selecting the down arrow next to your name on the top left of the interface."
+  },
+  {
+    "objectID": "index.html#the-interface",
+    "href": "index.html#the-interface",
+    "title": "Nextflow Tower Service User Guide",
+    "section": "The interface",
+    "text": "The interface\nUpon signing into Tower, you will be greeted with an interface for you as an individual user. To access the full functionality offered by the Australian BioCommons Tower service, you will need to move into (one of) your assigned BioCommons workspaces. To do this:\n\n\nSelect the dropdown menu by your user name.\nThen select the BioCommons workspace of interest.\n\n\nThis is the dashboard where you will manage your workspaces and workflows. It will open to the launchpad interface. Above the interface you'll see the following:\n\n\n\n\n\nLaunchpad: all your configured pipelines will be available here for running. Run them from here by selecting the 'Launch' button for the pipeline of interest. \nRuns: from here you can monitor and inspect the details of all previous workflow executions that you and other users in your workspace have run.\nActions: you can use Github and Tower webhooks to trigger an automated pipeline test run based on things like pipeline version release. \nDatasets: you can store pipeline input sample sheets here that specify metadata and file paths for each of your datapoints or samples to be processed by a workflow. \nCompute environment: Tower can be used to deploy workflows on various environments, here you will be able to manage and find your preconfigured environments. \nCredentials: here you can store all your authentication keys, credentials required to access private code repositories on GitHub, the Tower agent on HPCs, and external services. These are all encrypted, so they cannot be accessed by anyone else once you've stored them. \nSecrets: Ignore for now. \nParticipants: here you can see and manage (if you are an admin) the other users in your workspace and define user roles to control access. \nSettings: manage some basic workspace settings (if you are an admin)."
+  },
+  {
+    "objectID": "index.html#set-up-your-workspace",
+    "href": "index.html#set-up-your-workspace",
+    "title": "Nextflow Tower Service User Guide",
+    "section": "Set up your workspace",
+    "text": "Set up your workspace\nWorkspace configuration can only be performed by admins. You can create and configure compute environments, configure workflows to run on these environments, and add collaborators. The NeuroCommunity are currently only trialling the Tower service at NCI Gadi and Pawsey Setonix HPCs. As such, you will need to create Tower Agent credentials as this is the only way to access NCI and Pawsey HPC's with Tower."
   }
 ]
