@@ -9,9 +9,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Course title",
+    "title": "Nextflow Tower Service User Guide",
     "section": "",
-    "text": "This is a training course aimed at (your target audience) to learn (your course).\nAll materials copyright Sydney Informatics Hub, University of Sydney"
+    "text": "Nextflow Tower is a full-stack solution for the management of Nextflow pipeline executions. It’s designed as an intuitive, user-friendly interface that allows you to control and monitor your data analysis pipelines. It simplifies running complex workflows, like those provided by nf-core, on different computation infrastructures such as HPC clusters, cloud services, or Kubernetes.\nThe Tower service is offered in two ways; a free basic account that can be used by individuals and a licensed service that is suitable for large organisations with multiple collaborators that require more complex user management. The Australian BioCommons Nextflow Tower service is licensed and provides a centralised command-post for running Nextflow pipelines as a subsidised service for Australian researchers.\nAll materials copyright Sydney Informatics Hub, University of Sydney"
   },
   {
     "objectID": "index.html#trainers",
@@ -82,5 +82,19 @@
     "title": "Sydney Informatics Hub Course name",
     "section": "",
     "text": "Sample R lesson\n\n\n\n\n\n\nChallenge 1\n\n\n\nHow can we make our lessons a bit more interactive??\n\n\n\n\n\n\n\n\nSolution\n\n\n\n\n\nHere’s some markdown code showing how to use markdown to do cool things in our quarto markdowns.\n\n::: callout-tip\n## Challenge 1\nHow can we make our lessons a bit more interactive??\n:::\n\n::: {.callout-caution collapse=\"true\"}\n## Solution\n\nWe can take advantage of cool markdown!\n\n:::\n\n\n\nYou can define sections in your quarto using html.\n<div class=\"questions\">\n</div>\nQuestions\n\nWhat can R do?\nHow do I do it?\nObjectives\n\nLearn the basic R commands\n\n# if using VSCode may been\n#install.packages(\"languageserver\")\nhist(mtcars$mpg)\n\n\n\n\nChallenge\nWrite a function to convert map scale. For example, on a 1:25,000 map (good for hiking!) the distance between two points is 15 cm. How far apart are these in real life? (3750 m).\n[Reminder: 15 cm * 25000 = 375000 cm = 3750 m]\nYour function should take as input two numbers: the distance on the map (in cm) and the second number of the scale and, i.e. calculate_distance(15, 25000) should return 375000\n\nSolution\n#Declare the name of the function\n# this is not a R example - but you get the idea!\ndef calculate_distance(distance_cm,scale):\n    '''calculates distance based on map and scale\n    returns: z\n    inputs: distance_cm,scale\n    distance_cm and scale are two integers\n    returns the product of distance_cm and scale\n    '''  \n    \n    return(distance_cm * scale)\nKey points\n\nYou can store things in R in variables\nLists can be used to store objects of different types\nLoops with for can be used to iterate over each object in a list\nFunctions are used to write (and debug) repetitive code once\nIndexing\n\n\nAll materials copyright Sydney Informatics Hub, University of Sydney"
+  },
+  {
+    "objectID": "index.html#resources",
+    "href": "index.html#resources",
+    "title": "Nextflow Tower Service User Guide",
+    "section": "Resources",
+    "text": "Resources\n\nBiocommons tower service\nTower-nf configuration scripts"
+  },
+  {
+    "objectID": "index.html#getting-started-with-the-australian-biocommons-service",
+    "href": "index.html#getting-started-with-the-australian-biocommons-service",
+    "title": "Nextflow Tower Service User Guide",
+    "section": "Getting started with the Australian BioCommons service",
+    "text": "Getting started with the Australian BioCommons service\nNextflow Tower provides a centralised interface for managing users, workspaces, compute environments, and workflows within defined spaces called workspaces. These workspaces are provided by the Australian BioCommons and workspace management and curation is relegated to  the workspace administrators. Regarding workspace management, this means that:\n\nOnly organisation owners are permitted to create a workspace within the organisation.\nWorkspaces are currently provided to use cases for the pilot program of the Australian BioCommons Nextflow Tower service. \nThe Australian BioCommons service team has insight into and administrative control over workspaces.\n\n\nAs you use Tower, keep in mind there are a number of key terms and core concepts that you will come across as you set up your workspace, configure your compute environments, and execute your workflows."
   }
 ]
