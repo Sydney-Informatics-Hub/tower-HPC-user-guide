@@ -23,9 +23,9 @@ The [Australian BioCommons Nextflow Tower service](https://www.biocommons.org.au
 -   [Biocommons tower service](https://tower.services.biocommons.org.au)
 -   [Tower-nf configuration scripts](https://github.com/Sydney-Informatics-Hub/tower-nf)
 
-## Getting started with the Australian BioCommons service
+## Getting started
 
-Nextflow Tower provides a centralised interface for managing users, workspaces, compute environments, and workflows within defined spaces called workspaces.
+Nextflow Tower provides a centralised interface for managing users, compute environments, and workflows within defined spaces called workspaces.
 These workspaces are provided by the Australian BioCommons to use cases for the pilot program of the Australian BioCommons Nextflow Tower service.
 Therefore,  the Australian BioCommons service team has insight into and administrative control over workspaces.
 However, workspace management and curation is the responsibility of the workspace administrator(s) from the research group.
@@ -34,12 +34,10 @@ More information on workspace management can be found here: [workspace managemen
 
 ![A workspace provides the context in which a user operates, including what resources are available and who can access them. It is composed of pipelines, compute environments, credentials, runs, actions, and datasets. Access permissions are controlled through participants, collaborators, and teams.](images/Screen%20Shot%202023-08-24%20at%202.54.46%20pm.png)
 
-> -   **Organizations:** An organization is the top-level entity where businesses, institutions, and groups can collaborate.
+> -   **Organization:** Top-level entity where businesses, institutions, and groups can collaborate.
 >     It can contain multiple workspaces.
 >
-> -   **Organization Owner:** TBA
->
-> -   **Team:** A team is a group of members in the same organization.
+> -   **Team:** Group of members in the same organization.
 >     Teams can operate in one or more organization workspaces with a specific workspace role (one role per workspace).
 >
 > -   **Participant:** A user operating with an assigned role within a workspace.
@@ -48,7 +46,7 @@ More information on workspace management can be found here: [workspace managemen
 
 As you use Tower, keep in mind there are a number of [key terms and core concepts](https://help.tower.nf/23.1/getting-started/definitions/) that you will come across as you set up your workspace, configure your compute environments, and execute your workflows. 
 
-## Glossary of common terms
+## Glossary of terms
 
 |                          | Definition                                                                                                                                                                                                                                                                                                |
 |--------------------|----------------------------------------------------|
@@ -65,7 +63,7 @@ As you use Tower, keep in mind there are a number of [key terms and core concept
 | **Pipeline**             | A pipeline is a pre-configured workflow that can be used by all users in a workspace. It is composed of a workflow repository, launch parameters, and a compute environment.                                                                                                                              |
 | **Pipeline Secrets**     | Pipeline secrets are keys used by workflow tasks to interact with external systems, such as a password to connect to an external database or an API token. They are stored in Tower using AES-256 encryption.                                                                                             |
 | **Run**                  | A run is a workflow execution. The Runs view is used to monitor and inspect the details of workflow executions in a workspace.                                                                                                                                                                            |
-| **Shared Environment**   | TBA                                                                                                                                                                                                                                                                                                       |
+| **Shared Environment**   | Could refer to a cluster, cloud computing environment, or High-Performance Computing (HPC) system where different users or workflows share the available resources for task execution.                                                                                                                    |
 | **Task**                 | A single unit of work within a workflow. It typically represents a specific analysis step, such as aligning sequences, running statistical analyses, or generating plots.                                                                                                                                 |
 | **Workflow**             | A sequence of tasks or processes arranged in a specific order to achieve a specific goal, often in the context of scientific or data analysis tasks.                                                                                                                                                      |
 | **Workspace**            | A workspace provides the context in which a user operates, including what resources are available and who can access them. It is composed of pipelines, compute environments, credentials, runs, actions, and datasets. Access permissions are controlled through participants, collaborators, and teams. |
