@@ -10,27 +10,19 @@ output:
 
 #replace this image with a higher resolution one
 
-### Log into the service
+### Logging into the service
 
-Nextflow Tower provides a centralised interface for managing users, workspaces, compute environments, and workflows within defined spaces called workspaces. These workspaces are provided by the Australian BioCommons and workspace management and curation is relegated to  the workspace administrators. Regarding [workspace management](https://help.tower.nf/23.1/orgs-and-teams/workspace-management/), this means that:
+Rather than the more common username and password style login you might be used to, NextFlow Tower uses an authentication link. To login:
 
 <div>
 
 > -   Go to <https://tower.services.biocommons.org.au>.
 >
-> -   Provide a your University email address, then you will receive an email with the access link in your email inbox.
+> -   Provide your University email address. ou will then receive an email with the access link in your email inbox. Click on this link to be logged into Nextflow Tower. Note that it can take a few minutes for the link to hit your inbox.
 >
 >     ![](images/Screen%20Shot%202023-08-24%20at%203.07.50%20pm.png)
->
-> -   Click the workspace dropdown menu at the top left of the page with your name to navigate between your personal and organisation workspaces.
->
-> -   Navigate from your personal workspace to your group\'s workspace by selecting the down arrow next to your name on the top left of the interface.
->
->     ![](images/Screen%20Shot%202023-08-24%20at%202.16.26%20pm.png)
 
 </div>
-
-#replace this image with a higher resolution one
 
 ## The interface
 

@@ -120,6 +120,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources">Resources</a></li>
   <li><a href="#getting-started-with-the-australian-biocommons-service" id="toc-getting-started-with-the-australian-biocommons-service" class="nav-link" data-scroll-target="#getting-started-with-the-australian-biocommons-service">Getting started with the Australian BioCommons service</a></li>
+  <li><a href="#glossary-of-common-terms" id="toc-glossary-of-common-terms" class="nav-link" data-scroll-target="#glossary-of-common-terms">Glossary of common terms</a></li>
   </ul>
 </nav>
     </div>
@@ -155,14 +156,119 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="getting-started-with-the-australian-biocommons-service" class="level2">
 <h2 class="anchored" data-anchor-id="getting-started-with-the-australian-biocommons-service">Getting started with the Australian BioCommons service</h2>
-<p>Nextflow Tower provides a centralised interface for managing users, workspaces, compute environments, and workflows within defined spaces called workspaces. These workspaces are provided by the Australian BioCommons and workspace management and curation is relegated to&nbsp; the workspace administrators. Regarding <a href="https://help.tower.nf/23.1/orgs-and-teams/workspace-management/">workspace managemen</a>t, this means that:</p>
-<ul>
-<li><p>Only organisation owners are permitted to create a workspace within the organisation.</p></li>
-<li><p>Workspaces are currently provided to use cases for the pilot program of the Australian BioCommons Nextflow Tower service.&nbsp;</p></li>
-<li><p>The Australian BioCommons service team has insight into and administrative control over workspaces.</p></li>
-</ul>
-<p><img src="images/Screen Shot 2023-08-24 at 2.54.46 pm.png" class="img-fluid"></p>
+<p>Nextflow Tower provides a centralised interface for managing users, workspaces, compute environments, and workflows within defined spaces called workspaces. These workspaces are provided by the Australian BioCommons to use cases for the pilot program of the Australian BioCommons Nextflow Tower service. Therefore,&nbsp; the Australian BioCommons service team has insight into and administrative control over workspaces. However, workspace management and curation is the responsibility of the workspace administrator(s) from the research group. Only organisation owners are permitted to create a workspace within the organisation. More information on workspace management can be found here: <a href="https://help.tower.nf/23.1/orgs-and-teams/workspace-management/">workspace management</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Screen Shot 2023-08-24 at 2.54.46 pm.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">A workspace provides the context in which a user operates, including what resources are available and who can access them. It is composed of pipelines, compute environments, credentials, runs, actions, and datasets. Access permissions are controlled through participants, collaborators, and teams.</figcaption><p></p>
+</figure>
+</div>
 <p>As you use Tower, keep in mind there are a number of <a href="https://help.tower.nf/23.1/getting-started/definitions/">key terms and core concepts</a> that you will come across as you set up your workspace, configure your compute environments, and execute your workflows.&nbsp;</p>
+</section>
+<section id="glossary-of-common-terms" class="level2">
+<h2 class="anchored" data-anchor-id="glossary-of-common-terms">Glossary of common terms</h2>
+<table class="table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Actions</strong></td>
+<td>Actions are used to automate the execution of pre-configured workflows (pipelines), based on event triggers such as code commits and webhooks.</td>
+</tr>
+<tr class="even">
+<td><strong>Cache</strong></td>
+<td>A feature that allows Nextflow to store and reuse previously computed results to avoid redundant computations.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cluster</strong></td>
+<td>A network of computers or servers used for distributed computing and task execution.</td>
+</tr>
+<tr class="even">
+<td><strong>Compute environments</strong></td>
+<td>A compute environment is the platform where workflows are executed. It is composed of access credentials, configuration settings, and storage options for the environment.</td>
+</tr>
+<tr class="odd">
+<td><strong>Configuration File</strong></td>
+<td>A file containing settings and parameters that control how a Nextflow workflow is executed.</td>
+</tr>
+<tr class="even">
+<td><strong>Credentials</strong></td>
+<td>Credentials are access keys stored by Tower in an encrypted format, using AES-256 encryption. They allow the safe storage of authentication keys for compute environments, private code repositories, and external services.</td>
+</tr>
+<tr class="odd">
+<td><strong>Datasets</strong></td>
+<td>Datasets are collections of versioned, structured data, usually in TSV (tab-separated values) and CSV (comma-separated values) formats. They are used to manage sample sheets and metadata, to be validated and used as inputs for workflow executions.</td>
+</tr>
+<tr class="even">
+<td><strong>GitHub/GitLab</strong></td>
+<td>Version control platforms used to manage and collaborate on Nextflow workflow scripts and associated files.</td>
+</tr>
+<tr class="odd">
+<td><strong>Launchpad</strong></td>
+<td>The Launchpad contains the collection of available pipelines that can be run in a workspace. From here, you can view and select pre-configured pipelines for launch.</td>
+</tr>
+<tr class="even">
+<td><strong>Members</strong></td>
+<td>A member is a user who is internal to the organization. Members have an organization role and can operate in one or more organization workspaces. In each workspace, members can have a participant role that defines the permissions granted to them within that workspace.</td>
+</tr>
+<tr class="odd">
+<td><strong>Organizations</strong></td>
+<td>An organization is the top-level entity where businesses, institutions, and groups can collaborate. It can contain multiple workspaces.</td>
+</tr>
+<tr class="even">
+<td><strong>Organization Owner</strong></td>
+<td>TBA</td>
+</tr>
+<tr class="odd">
+<td><strong>Participant</strong></td>
+<td>A user operating with an assigned role within a workspace.</td>
+</tr>
+<tr class="even">
+<td><strong>Participant Role</strong></td>
+<td>The participant role defines the permissions granted to a user to perform actions or tasks within a workspace.</td>
+</tr>
+<tr class="odd">
+<td><strong>Pipeline</strong></td>
+<td>A pipeline is a pre-configured workflow that can be used by all users in a workspace. It is composed of a workflow repository, launch parameters, and a compute environment.</td>
+</tr>
+<tr class="even">
+<td><strong>Pipeline Secrets</strong></td>
+<td>Pipeline secrets are keys used by workflow tasks to interact with external systems, such as a password to connect to an external database or an API token. They are stored in Tower using AES-256 encryption.</td>
+</tr>
+<tr class="odd">
+<td><strong>Run</strong></td>
+<td>A run is a workflow execution. The Runs view is used to monitor and inspect the details of workflow executions in a workspace.</td>
+</tr>
+<tr class="even">
+<td><strong>Shared Environment</strong></td>
+<td>TBA</td>
+</tr>
+<tr class="odd">
+<td><strong>Task</strong></td>
+<td>A single unit of work within a workflow. It typically represents a specific analysis step, such as aligning sequences, running statistical analyses, or generating plots.</td>
+</tr>
+<tr class="even">
+<td><strong>Team</strong></td>
+<td>A team is a group of members in the same organization. Teams can operate in one or more organization workspaces with a specific workspace role (one role per workspace).</td>
+</tr>
+<tr class="odd">
+<td><strong>Workflow</strong></td>
+<td>A sequence of tasks or processes arranged in a specific order to achieve a specific goal, often in the context of scientific or data analysis tasks.</td>
+</tr>
+<tr class="even">
+<td><strong>Workspace</strong></td>
+<td>A workspace provides the context in which a user operates, including what resources are available and who can access them. It is composed of pipelines, compute environments, credentials, runs, actions, and datasets. Access permissions are controlled through participants, collaborators, and teams.</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
