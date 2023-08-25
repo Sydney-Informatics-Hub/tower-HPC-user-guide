@@ -9,7 +9,7 @@ output:
 
 ### ![General steps in a Nextflow tower pipeline.](images/Screen%20Shot%202023-08-25%20at%201.58.52%20pm-02.png){width="747"}
 
-### Logging into the service
+## Logging into the service
 
 Rather than the more common username and password style login you might be used to, NextFlow Tower uses an authentication link. To login:
 
@@ -147,7 +147,7 @@ Compute environments have been configured for our group on NCI Gadi and Pawsey S
 
 ![](images/Screen%20Shot%202023-08-25%20at%204.02.10%20pm.png)
 
-#### Gadi
+#### NCI Gadi HPC
 
 Currently only NCI Gadi is a shared environment. The NCI Gadi environment has specifically been configured for our SIH project 'er01'. Only users with access to er01 added to our workspace will be able to run workflows using this configured compute environment. It's important that you leave the head and compute queue names empty, given jobs submitted to queues on Gadi are transferred to the exec version of each queue once running. The exec queue names are not visible to the Tower API so your jobs will fail to run. 
 
@@ -167,7 +167,7 @@ Currently only NCI Gadi is a shared environment. The NCI Gadi environment has sp
 
 ![](images/Screen%20Shot%202023-08-25%20at%204.03.34%20pm.png)
 
-#### Setonix
+#### Pawsey Setonix HPC
 
 > -   **Work directory:** \$TW_AGENT_WORK.
 >
@@ -201,5 +201,40 @@ Currently only NCI Gadi is a shared environment. The NCI Gadi environment has sp
 
 ![GermlineStructuralV-nf is a pipeline for identifying structural variant events in human Illumina short read whole genome sequence data. GermlineStructuralV-nf identifies structural variant and copy number events from BAM files using Manta, Smoove, and TIDDIT. Variants are then merged using SURVIVOR, and annotated by AnnotSV. The pipeline is written in Nextflow and uses Singularity/Docker to run containerised tools.](images/211971740-772796bc-6fb7-43fb-885b-d9cb116bfdd0.png)
 
-\
-\
+> -   From the Launchpad, select "Add pipeline". 
+>
+> -   Give your pipeline a descriptive name. It needs to be unique to your community (can\'t create one that already exists in broader BioCommons group). 
+>
+> -   Select your previously configured compute environment.
+>
+> -   Provide pipeline codebase URL <https://github.com/Sydney-Informatics-Hub/Germline-StructuralV-nf>. 
+>
+> -   Select **main** for the Revision number.
+>
+> -   Specify \$TW_AGENT_WORK for the work directory.
+>
+> -   Select either gadi or setonix for the config profiles (these are provided in the code base of the workflow).
+>
+> -   Select "Add".
+>
+>     ![](images/Screen%20Shot%202023-08-25%20at%204.35.01%20pm.png)
+
+Your launchpad will now reload with a preconfigured workflow.
+
+![](images/Screen%20Shot%202023-08-25%20at%204.36.57%20pm.png)
+
+## Adding collaborators
+
+TBA
+
+## Running a workflow
+
+TBA
+
+### NCI Gadi HPC
+
+TBA
+
+### Pawsey Setonix HPC
+
+TBA
