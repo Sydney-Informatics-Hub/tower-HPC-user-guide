@@ -9,12 +9,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: setup.html
+      - href: setup.qmd
         text: "Setup"
-      - text: "Example"
-        menu:
-        - text: "Example 1"
-          href: notebooks/01_gsv.html
 
   body-footer: "All materials copyright Sydney Informatics Hub, University of Sydney"
 

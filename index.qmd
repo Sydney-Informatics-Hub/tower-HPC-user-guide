@@ -2,8 +2,9 @@
 title: "Nextflow Tower Service User Guide"
 output:
   html_document:
-    toc: false
+    toc: true
     toc_float: false
+    toc-expand: 2
 editor: 
   markdown: 
     wrap: sentence
