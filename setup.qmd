@@ -90,6 +90,12 @@ You will need to create a personal access token and store it on your compute env
 
 You can create different types of credentials for different purposes through the Tower interface. For example, you can add credentials to access code repositories, commercial cloud, SSH-keys, and the Tower Agent. To connect your Tower agent to your HPC, you will need to create a Tower agent personal credential.
 
+![](images/Screen%20Shot%202023-08-25%20at%203.46.46%20pm.png)
+
+To set up your Tower agent credential,  you will need to navigate to the user settings logo in the top navbar and select \'Your credentials\'.  
+
+You can either choose to work with a shared or personal credential. Setting this up requires a similar process to creating a personal access token, using both the command line and Tower interface. Starting on the Tower interface, navigate to \'Credentials\' in the top navbar menu:\
+
 > -   Select 'Add Credential'.
 >
 > -   Name the credential something descriptive.
@@ -100,16 +106,26 @@ You can create different types of credentials for different purposes through the
 >
 > -   Copy the Agent connection ID to your clipboard.
 >
+>     ![](images/Screen%20Shot%202023-08-25%20at%203.46.53%20pm.png)
+>
 > -   Before saving the credential you will need to run the agent on your HPC command line. 
 >
 > -   Log in to your HPC project space on the command-line and navigate to the shared space where you'll be running the tower agent from. 
 >
 > -   Copy your personal access token into a file named connection_id within the hidden .tower directory.
 >
+>     ![](images/Screen%20Shot%202023-08-25%20at%203.50.27%20pm.png)
+>
 > ```{=html}
 > <!-- -->
 > ```
-> -   Run the run_tower_agent_pbs.sh script at /g/data/er01/tower-nf.
+> -   Navigate to your working directory (not \$HOME).
+>
+>     -   On gadi, run the run_tower_agent_pbs.sh script at /g/data/er01/tower-nf.
+>
+>     -   On setonix...
+>
+>     ![](images/Screen%20Shot%202023-08-25%20at%203.54.33%20pm.png)
 >
 > -   Back in the tower interface, hit 'Add' to save your Tower agent credential.
 >
