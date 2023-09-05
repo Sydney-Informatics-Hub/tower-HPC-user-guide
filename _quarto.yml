@@ -11,6 +11,11 @@ website:
         text: Home
       - href: setup.qmd
         text: "Setup"
+        menu:
+        - text: "Owner"
+          href: setup_admin.html
+        - text: "Participant"
+          href: setup_participant.html
       - href: pipeline.qmd
         text: "Adding Pipelines"
       - href: workflow.qmd

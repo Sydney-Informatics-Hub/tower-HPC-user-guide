@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sydney Informatics Hub - User Setup Instructions</title>
+<title>Sydney Informatics Hub - Workspace Curation for Participants</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./setup.html" aria-current="page">
+    <a class="nav-link" href="./setup.html">
  <span class="menu-text">Setup</span></a>
   </li>  
   <li class="nav-item">
@@ -118,6 +118,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#general-steps-in-a-nextflow-tower-pipeline." id="toc-general-steps-in-a-nextflow-tower-pipeline." class="nav-link active" data-scroll-target="#general-steps-in-a-nextflow-tower-pipeline."><img src="images/Screen Shot 2023-08-25 at 1.58.52 pm-02.png" class="img-fluid" width="747" alt="General steps in a Nextflow tower pipeline."></a></li>
   <li><a href="#logging-into-the-service" id="toc-logging-into-the-service" class="nav-link" data-scroll-target="#logging-into-the-service">Logging into the service</a></li>
   <li><a href="#the-interface" id="toc-the-interface" class="nav-link" data-scroll-target="#the-interface">The interface</a></li>
+  <li><a href="#setting-up-your-workspace" id="toc-setting-up-your-workspace" class="nav-link" data-scroll-target="#setting-up-your-workspace">Setting up your workspace</a>
+  <ul class="collapse">
+  <li><a href="#create-your-personal-access-token" id="toc-create-your-personal-access-token" class="nav-link" data-scroll-target="#create-your-personal-access-token">Create your personal access token</a></li>
+  <li><a href="#create-a-tower-credential-for-your-hpc" id="toc-create-a-tower-credential-for-your-hpc" class="nav-link" data-scroll-target="#create-a-tower-credential-for-your-hpc">Create a Tower credential for your HPC</a></li>
+  <li><a href="#configure-a-compute-environment" id="toc-configure-a-compute-environment" class="nav-link" data-scroll-target="#configure-a-compute-environment">Configure a compute environment&nbsp;</a></li>
+  </ul></li>
+  <li><a href="#adding-collaborators" id="toc-adding-collaborators" class="nav-link" data-scroll-target="#adding-collaborators">Adding collaborators</a></li>
   </ul>
 </nav>
     </div>
@@ -126,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">User Setup Instructions</h1>
+<h1 class="title">Workspace Curation for Participants</h1>
 </div>
 
 
@@ -185,6 +192,133 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </blockquote>
 </div>
+</section>
+<section id="setting-up-your-workspace" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-your-workspace">Setting up your workspace</h2>
+<p>Workspace configuration can only be performed by admins. With workspace configuration, you can create and configure compute environments, configure workflows to run on these environments, and add collaborators. The NeuroCommunity are currently only trialling the Tower service at NCI Gadi and Pawsey Setonix HPCs. As such, you will need to create Tower Agent credentials because this is the only way to access NCI and Pawsey HPC’s with Tower.</p>
+<p>Add paragraph</p>
+<section id="create-your-personal-access-token" class="level3">
+<h3 class="anchored" data-anchor-id="create-your-personal-access-token">Create your personal access token</h3>
+<p>You will need to create a personal access token and store it on your compute environment (i.e.&nbsp;on the HPC environment, not locally) in order to communicate with the Tower API. To create a personal access token you will need to navigate to the user settings logo in the top navbar and select ‘Your tokens’, then:</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Select ‘Add Token’.&nbsp;</p></li>
+<li><p>Name your token something descriptive and select ‘Add’.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 2.58.54 pm.png" class="img-fluid"></p></li>
+<li><p>Copy the token to your clipboard.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 2.59.14 pm.png" class="img-fluid"></p></li>
+<li><p>Log in to your HPC (either NCI Gadi or Pawsey Setonix) on the command-line.</p>
+<ul>
+<li><p>If you are using Gadi, navigate to $HOME.</p></li>
+<li><p>If you are on Setonix, navigate to $MYSOFTWARE.</p></li>
+</ul></li>
+<li><p>From within the directory mentioned above, make a hidden directory called tower to store Tower token and credentials in.</p></li>
+<li><p>Copy your personal access token into a file named token within this directory.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 3.04.27 pm.png" class="img-fluid"></p></li>
+</ul>
+</blockquote>
+</section>
+<section id="create-a-tower-credential-for-your-hpc" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-tower-credential-for-your-hpc">Create a Tower credential for your HPC</h3>
+<p>You can create different types of credentials for different purposes through the Tower interface. For example, you can add credentials to access code repositories, commercial cloud, SSH-keys, and the Tower Agent. To connect your Tower agent to your HPC, you will need to create a Tower agent personal credential.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 3.46.46 pm.png" class="img-fluid"></p>
+<p>To set up your Tower agent credential, you will need to navigate to the user settings logo in the top navbar and select ‘Your credentials’.&nbsp;&nbsp;</p>
+<p>You can either choose to work with a shared or personal credential. Setting this up requires a similar process to creating a personal access token, using both the command line and Tower interface. Starting on the Tower interface, navigate to ‘Credentials’ in the top navbar menu:<br>
+</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Select ‘Add Credential’.</p></li>
+<li><p>Name the credential something descriptive.</p></li>
+<li><p>Select Tower Agent from the Provider dropdown menu.</p></li>
+<li><p>Enable ‘Shared agent’ so that all workspace users can access the same instance (optional).</p></li>
+<li><p>Copy the Agent connection ID to your clipboard.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 3.46.53 pm.png" class="img-fluid"></p></li>
+<li><p>Before saving the credential you will need to run the agent on your HPC command line.&nbsp;</p></li>
+<li><p>Log in to your HPC project space on the command-line and navigate to the shared space where you’ll be running the tower agent from.&nbsp;</p></li>
+<li><p>Copy your personal access token into a file named connection_id within the hidden .tower directory.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 3.50.27 pm.png" class="img-fluid"></p></li>
+</ul>
+<!-- -->
+<ul>
+<li><p>Navigate to your working directory (not $HOME).</p>
+<ul>
+<li><p>On gadi, run the run_tower_agent_pbs.sh script at /g/data/er01/tower-nf.</p></li>
+<li><p>On setonix…</p></li>
+</ul>
+<p><img src="images/Screen Shot 2023-08-25 at 3.54.33 pm.png" class="img-fluid"></p></li>
+<li><p>Back in the tower interface, hit ‘Add’ to save your Tower agent credential.</p></li>
+<li><p>You can cancel the Tower agent running on the command line after the credential is saved.</p></li>
+</ul>
+</blockquote>
+</section>
+<section id="configure-a-compute-environment" class="level3">
+<h3 class="anchored" data-anchor-id="configure-a-compute-environment">Configure a compute environment&nbsp;</h3>
+<p>Compute environments have been configured for our group on NCI Gadi and Pawsey Setonix HPCs. The process for setting up this workspace is as follows:</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Run the tower agent on the HPC command line again with the <a href="https://github.com/Sydney-Informatics-Hub/tower-nf">relevant run_tower_agent_&lt;pbs|slurm&gt;.sh script</a></p></li>
+<li><p>In the Tower interface, navigate to ‘Compute Environments’ in the top navbar menu.</p></li>
+<li><p>Name the environment something descriptive to distinguish it from other environments you may set up.</p></li>
+<li><p>Select the platform. For Setonix this is Slurm workload manager, for Gadi this is Altair PBS Pro.&nbsp;</p></li>
+<li><p>Provide your (shared or personal) credentials previously saved to the connection_id file.</p></li>
+</ul>
+</blockquote>
+<p><img src="images/Screen Shot 2023-08-25 at 4.02.10 pm.png" class="img-fluid"></p>
+<section id="nci-gadi-hpc" class="level4">
+<h4 class="anchored" data-anchor-id="nci-gadi-hpc">NCI Gadi HPC</h4>
+<p>Currently only NCI Gadi is a shared environment. The NCI Gadi environment has specifically been configured for our SIH project ‘er01’. Only users with access to er01 added to our workspace will be able to run workflows using this configured compute environment. It’s important that you leave the head and compute queue names empty, given jobs submitted to queues on Gadi are transferred to the exec version of each queue once running. The exec queue names are not visible to the Tower API so your jobs will fail to run.&nbsp;</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Under <strong>Staging options:</strong></p>
+<ul>
+<li><p>module load nextflow/23.04.1.</p></li>
+<li><p>module load singularity/3.8.6-nompi.</p></li>
+</ul></li>
+<li><p>Under <strong>Advanced options:</strong></p>
+<ul>
+<li><p><strong>Nextflow queue size</strong>: Set to 1000 (as directed <a href="https://opus.nci.org.au/display/Help/Queue+Limits">here</a>).</p></li>
+<li><p><strong>Head job options:</strong> PBS options and applied head jobs to the compute jobs. Add queue as “copyq” to provide external network access.</p>
+<ul>
+<li>--Iwalltime=10:00:00, ncpus=1, mem=8G, storage=scratch/&lt;project&gt;+gdata/&lt;project&gt;, wd -P &lt;project&gt; -q copyq</li>
+</ul></li>
+</ul></li>
+</ul>
+</blockquote>
+<p><img src="images/Screen Shot 2023-08-25 at 4.03.34 pm.png" class="img-fluid"></p>
+</section>
+<section id="pawsey-setonix-hpc" class="level4">
+<h4 class="anchored" data-anchor-id="pawsey-setonix-hpc">Pawsey Setonix HPC</h4>
+<blockquote class="blockquote">
+<ul>
+<li><p><strong>Work directory:</strong> $TW_AGENT_WORK.</p></li>
+<li><p><strong>Launch directory:</strong> should be in the /scratch partition, because this is where you should run workflows. For example, /scratch/project_id/user_id/sv_calling.</p></li>
+<li><p><strong>Head queue name</strong>: work.</p></li>
+<li><p><strong>Compute queue name</strong>: work, unless you have a specific reason to select the long, highmem, or copy queue due to your workflow requirements.</p></li>
+<li><p>Under <strong>Staging options:</strong></p>
+<ul>
+<li><p><strong>Pre-run script</strong>: Here we load the needed system modules for running a Nextflow tower job. This currently includes the following modules, but the specific versions may change over time. You can check on the Setonix command line which module versions are available</p>
+<ul>
+<li><p>module load nextflow/23.04.1&nbsp;</p></li>
+<li><p>module load singularity/3.8.6-nompi</p></li>
+</ul></li>
+</ul></li>
+<li><p>Under <strong>Advanced options:</strong></p>
+<ul>
+<li><p><strong>Nextflow queue size</strong>: Set to 1024.</p></li>
+<li><p><strong>Head job submit options:</strong> This setting provides resources specifications for running the Nextflow head job. The main parameter you might want to change is `time`. You may need less than 24 hours walltime, in which case you can reduce the requested time.</p>
+<ul>
+<li>--time=24:00:00 --ntasks=1 --tasks-per-node=1 --mem=12G --cpus-per-task=1</li>
+</ul></li>
+</ul></li>
+</ul>
+</blockquote>
+</section>
+</section>
+</section>
+<section id="adding-collaborators" class="level2">
+<h2 class="anchored" data-anchor-id="adding-collaborators">Adding collaborators</h2>
+<p>TBA<br>
+</p>
 
 
 </section>
