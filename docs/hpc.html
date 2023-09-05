@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sydney Informatics Hub - Running Workflows on HPC</title>
+<title>Sydney Informatics Hub - Getting Access to HPC</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./hpc.html">
+    <a class="nav-link active" href="./hpc.html" aria-current="page">
  <span class="menu-text">HPC Access</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Adding Pipelines</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./workflow.html" aria-current="page">
+    <a class="nav-link" href="./workflow.html">
  <span class="menu-text">Running a Workflow</span></a>
   </li>  
 </ul>
@@ -126,24 +126,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#running-a-workflow" id="toc-running-a-workflow" class="nav-link active" data-scroll-target="#running-a-workflow">Running a workflow</a>
-  <ul class="collapse">
-  <li><a href="#nci-gadi-hpc" id="toc-nci-gadi-hpc" class="nav-link" data-scroll-target="#nci-gadi-hpc">NCI Gadi HPC</a></li>
-  <li><a href="#pawsey-setonix-hpc" id="toc-pawsey-setonix-hpc" class="nav-link" data-scroll-target="#pawsey-setonix-hpc">Pawsey Setonix HPC</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Running Workflows on HPC</h1>
+<h1 class="title">Getting Access to HPC</h1>
 </div>
 
 
@@ -158,37 +148,9 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="running-a-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="running-a-workflow">Running a workflow</h2>
-<p>TBA</p>
-<section id="nci-gadi-hpc" class="level3">
-<h3 class="anchored" data-anchor-id="nci-gadi-hpc">NCI Gadi HPC</h3>
-<p>Before you can execute workflows on Tower on Gadi, you will first need to run the tower agent. Navigate to the previously set up tower-nf directory on the command line and run the agent:&nbsp;</p>
-<blockquote class="blockquote">
-<ul>
-<li><p>cd /scratch/iz89/tower-nf&nbsp;</p></li>
-<li><p>bash run_tower_agent_pbs.sh</p></li>
-</ul>
-</blockquote>
-<p>Back at the tower interface, navigate to your launchpad or run on the command line and monitor on Tower:</p>
-<p><img src="images/Screen Shot 2023-08-25 at 4.44.11 pm.png" class="img-fluid"></p>
-</section>
-<section id="pawsey-setonix-hpc" class="level3">
-<h3 class="anchored" data-anchor-id="pawsey-setonix-hpc">Pawsey Setonix HPC</h3>
-<p>Before you can execute workflows on Tower on Setonix, you will first need to run the tower agent.&nbsp; Navigate to the previously set up tower-nf directory on the command line and run the agent:&nbsp;</p>
-<blockquote class="blockquote">
-<ul>
-<li><p>cd $MYSOFTWARE</p></li>
-<li><p>bash run_tower_agent_slurm.sh</p></li>
-</ul>
-</blockquote>
-<p>Back at the tower interface, navigate to your launchpad.</p>
-<p><br>
-</p>
+<p>NCI Gadi HPC</p>
 
 
-</section>
-</section>
 
 <p>All materials copyright Sydney Informatics Hub, University of Sydney</p></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

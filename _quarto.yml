@@ -9,8 +9,9 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: setup.qmd
-        text: "Setup"
+      - href: hpc.qmd
+        text: "HPC Access"
+      - text: "Setup"
         menu:
         - text: "Owner"
           href: setup_admin.html
