@@ -11,6 +11,10 @@ website:
         text: Home
       - href: setup.qmd
         text: "Setup"
+      - href: pipeline.qmd
+        text: "Adding Pipelines"
+      - href: workflow.qmd
+        text: "Running a Workflow"
 
   body-footer: "All materials copyright Sydney Informatics Hub, University of Sydney"
 

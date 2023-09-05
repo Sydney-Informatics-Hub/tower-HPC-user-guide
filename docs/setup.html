@@ -89,6 +89,14 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./setup.html" aria-current="page">
  <span class="menu-text">Setup</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./pipeline.html">
+ <span class="menu-text">Adding Pipelines</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./workflow.html">
+ <span class="menu-text">Running a Workflow</span></a>
+  </li>  
 </ul>
               <div class="quarto-toggle-container">
                   <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -116,16 +124,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#create-a-tower-credential-for-your-hpc" id="toc-create-a-tower-credential-for-your-hpc" class="nav-link" data-scroll-target="#create-a-tower-credential-for-your-hpc">Create a Tower credential for your HPC</a></li>
   <li><a href="#configure-a-compute-environment" id="toc-configure-a-compute-environment" class="nav-link" data-scroll-target="#configure-a-compute-environment">Configure a compute environment&nbsp;</a></li>
   </ul></li>
-  <li><a href="#adding-a-nf-core-pipeline" id="toc-adding-a-nf-core-pipeline" class="nav-link" data-scroll-target="#adding-a-nf-core-pipeline">Adding a nf-core pipeline</a>
-  <ul class="collapse">
-  <li><a href="#germline-structuralv-nf-pipeline" id="toc-germline-structuralv-nf-pipeline" class="nav-link" data-scroll-target="#germline-structuralv-nf-pipeline">Germline-StructuralV-nf pipeline</a></li>
-  </ul></li>
   <li><a href="#adding-collaborators" id="toc-adding-collaborators" class="nav-link" data-scroll-target="#adding-collaborators">Adding collaborators</a></li>
-  <li><a href="#running-a-workflow" id="toc-running-a-workflow" class="nav-link" data-scroll-target="#running-a-workflow">Running a workflow</a>
-  <ul class="collapse">
-  <li><a href="#nci-gadi-hpc-1" id="toc-nci-gadi-hpc-1" class="nav-link" data-scroll-target="#nci-gadi-hpc-1">NCI Gadi HPC</a></li>
-  <li><a href="#pawsey-setonix-hpc-1" id="toc-pawsey-setonix-hpc-1" class="nav-link" data-scroll-target="#pawsey-setonix-hpc-1">Pawsey Setonix HPC</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -316,68 +315,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="adding-a-nf-core-pipeline" class="level2">
-<h2 class="anchored" data-anchor-id="adding-a-nf-core-pipeline">Adding a nf-core pipeline</h2>
-<p><a href="https://nf-co.re/pipelines">nf-core</a> is a community effort to collect a curated set of analysis pipelines built using Nextflow. There are 86 pipelines that are currently available.</p>
-<section id="germline-structuralv-nf-pipeline" class="level3">
-<h3 class="anchored" data-anchor-id="germline-structuralv-nf-pipeline">Germline-StructuralV-nf pipeline</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/211971740-772796bc-6fb7-43fb-885b-d9cb116bfdd0.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">GermlineStructuralV-nf is a pipeline for identifying structural variant events in human Illumina short read whole genome sequence data. GermlineStructuralV-nf identifies structural variant and copy number events from BAM files using Manta, Smoove, and TIDDIT. Variants are then merged using SURVIVOR, and annotated by AnnotSV. The pipeline is written in Nextflow and uses Singularity/Docker to run containerised tools.</figcaption><p></p>
-</figure>
-</div>
-<blockquote class="blockquote">
-<ul>
-<li><p>From the Launchpad, select “Add pipeline”.&nbsp;</p></li>
-<li><p>Give your pipeline a descriptive name. It needs to be unique to your community (can’t create one that already exists in broader BioCommons group).&nbsp;</p></li>
-<li><p>Select your previously configured compute environment.</p></li>
-<li><p>Provide pipeline codebase URL <a href="https://github.com/Sydney-Informatics-Hub/Germline-StructuralV-nf" class="uri">https://github.com/Sydney-Informatics-Hub/Germline-StructuralV-nf</a>.&nbsp;</p></li>
-<li><p>Select <strong>main</strong> for the Revision number.</p></li>
-<li><p>Specify $TW_AGENT_WORK for the work directory.</p></li>
-<li><p>Select either gadi or setonix for the config profiles (these are provided in the code base of the workflow).</p></li>
-<li><p>Select “Add”.</p>
-<p><img src="images/Screen Shot 2023-08-25 at 4.35.01 pm.png" class="img-fluid"></p></li>
-</ul>
-</blockquote>
-<p>Your launchpad will now reload with a preconfigured workflow.</p>
-<p><img src="images/Screen Shot 2023-08-25 at 4.36.57 pm.png" class="img-fluid"></p>
-</section>
-</section>
 <section id="adding-collaborators" class="level2">
 <h2 class="anchored" data-anchor-id="adding-collaborators">Adding collaborators</h2>
-<p>TBA</p>
-</section>
-<section id="running-a-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="running-a-workflow">Running a workflow</h2>
-<p>TBA</p>
-<section id="nci-gadi-hpc-1" class="level3">
-<h3 class="anchored" data-anchor-id="nci-gadi-hpc-1">NCI Gadi HPC</h3>
-<p>Before you can execute workflows on Tower on Gadi, you will first need to run the tower agent. Navigate to the previously set up tower-nf directory on the command line and run the agent:&nbsp;</p>
-<blockquote class="blockquote">
-<ul>
-<li><p>cd /scratch/iz89/tower-nf&nbsp;</p></li>
-<li><p>bash run_tower_agent_pbs.sh</p></li>
-</ul>
-</blockquote>
-<p>Back at the tower interface, navigate to your launchpad or run on the command line and monitor on Tower:</p>
-<p><img src="images/Screen Shot 2023-08-25 at 4.44.11 pm.png" class="img-fluid"></p>
-</section>
-<section id="pawsey-setonix-hpc-1" class="level3">
-<h3 class="anchored" data-anchor-id="pawsey-setonix-hpc-1">Pawsey Setonix HPC</h3>
-<p>Before you can execute workflows on Tower on Setonix, you will first need to run the tower agent.&nbsp; Navigate to the previously set up tower-nf directory on the command line and run the agent:&nbsp;</p>
-<blockquote class="blockquote">
-<ul>
-<li><p>cd $MYSOFTWARE</p></li>
-<li><p>bash run_tower_agent_slurm.sh</p></li>
-</ul>
-</blockquote>
-<p>Back at the tower interface, navigate to your launchpad.</p>
-<p><br>
+<p>TBA<br>
 </p>
 
 
-</section>
 </section>
 
 <p>All materials copyright Sydney Informatics Hub, University of Sydney</p></main> <!-- /main -->

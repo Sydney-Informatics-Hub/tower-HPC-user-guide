@@ -215,5 +215,19 @@
     "title": "User Setup Instructions",
     "section": "Running a workflow",
     "text": "Running a workflow\nTBA\n\nNCI Gadi HPC\nBefore you can execute workflows on Tower on Gadi, you will first need to run the tower agent. Navigate to the previously set up tower-nf directory on the command line and run the agent: \n\n\ncd /scratch/iz89/tower-nf \nbash run_tower_agent_pbs.sh\n\n\nBack at the tower interface, navigate to your launchpad or run on the command line and monitor on Tower:\n\n\n\nPawsey Setonix HPC\nBefore you can execute workflows on Tower on Setonix, you will first need to run the tower agent.  Navigate to the previously set up tower-nf directory on the command line and run the agent: \n\n\ncd $MYSOFTWARE\nbash run_tower_agent_slurm.sh\n\n\nBack at the tower interface, navigate to your launchpad."
+  },
+  {
+    "objectID": "pipeline.html",
+    "href": "pipeline.html",
+    "title": "Adding General and NF-CORE Pipelines",
+    "section": "",
+    "text": "nf-core is a community effort to collect a curated set of analysis pipelines built using Nextflow. There are 86 pipelines that are currently available.\n\n\n\n\n\nGermlineStructuralV-nf is a pipeline for identifying structural variant events in human Illumina short read whole genome sequence data. GermlineStructuralV-nf identifies structural variant and copy number events from BAM files using Manta, Smoove, and TIDDIT. Variants are then merged using SURVIVOR, and annotated by AnnotSV. The pipeline is written in Nextflow and uses Singularity/Docker to run containerised tools.\n\n\n\n\nFrom the Launchpad, select “Add pipeline”. \nGive your pipeline a descriptive name. It needs to be unique to your community (can’t create one that already exists in broader BioCommons group). \nSelect your previously configured compute environment.\nProvide pipeline codebase URL https://github.com/Sydney-Informatics-Hub/Germline-StructuralV-nf. \nSelect main for the Revision number.\nSpecify $TW_AGENT_WORK for the work directory.\nSelect either gadi or setonix for the config profiles (these are provided in the code base of the workflow).\nSelect “Add”.\n\n\n\nYour launchpad will now reload with a preconfigured workflow.\nAll materials copyright Sydney Informatics Hub, University of Sydney"
+  },
+  {
+    "objectID": "workflow.html",
+    "href": "workflow.html",
+    "title": "Running Workflows on HPC",
+    "section": "",
+    "text": "TBA\n\n\nBefore you can execute workflows on Tower on Gadi, you will first need to run the tower agent. Navigate to the previously set up tower-nf directory on the command line and run the agent: \n\n\ncd /scratch/iz89/tower-nf \nbash run_tower_agent_pbs.sh\n\n\nBack at the tower interface, navigate to your launchpad or run on the command line and monitor on Tower:\n\n\n\n\nBefore you can execute workflows on Tower on Setonix, you will first need to run the tower agent.  Navigate to the previously set up tower-nf directory on the command line and run the agent: \n\n\ncd $MYSOFTWARE\nbash run_tower_agent_slurm.sh\n\n\nBack at the tower interface, navigate to your launchpad.\nAll materials copyright Sydney Informatics Hub, University of Sydney"
   }
 ]
