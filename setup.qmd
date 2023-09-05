@@ -31,9 +31,13 @@ Upon signing into Tower, you will be greeted with an interface for you as an ind
 >
 > -   Then select the BioCommons workspace of interest.
 
+Add paragraph
+
 This is the dashboard where you will manage your workspaces and workflows. It will open to the launchpad interface. Above the interface you'll see the following:
 
 ![](images/Screen%20Shot%202023-08-24%20at%202.17.37%20pm.png)
+
+Add paragraph
 
 <div>
 
@@ -60,6 +64,8 @@ This is the dashboard where you will manage your workspaces and workflows. It wi
 ## Setting up your workspace
 
 Workspace configuration can only be performed by admins. With workspace configuration, you can create and configure compute environments, configure workflows to run on these environments, and add collaborators. The NeuroCommunity are currently only trialling the Tower service at NCI Gadi and Pawsey Setonix HPCs. As such, you will need to create Tower Agent credentials because this is the only way to access NCI and Pawsey HPC's with Tower.
+
+Add paragraph
 
 ### Create your personal access token
 
@@ -203,7 +209,7 @@ Currently only NCI Gadi is a shared environment. The NCI Gadi environment has sp
 
 > -   From the Launchpad, select "Add pipeline". 
 >
-> -   Give your pipeline a descriptive name. It needs to be unique to your community (can\'t create one that already exists in broader BioCommons group). 
+> -   Give your pipeline a descriptive name. It needs to be unique to your community (can't create one that already exists in broader BioCommons group). 
 >
 > -   Select your previously configured compute environment.
 >
