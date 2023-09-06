@@ -123,7 +123,7 @@ This approach is currently considered the best approach for maximising sensitivt
 >
 > -   Select "Add".
 
-## Launchpad
+## Configured Launchpad
 
 Your launchpad will now reload with a preconfigured workflows.
 

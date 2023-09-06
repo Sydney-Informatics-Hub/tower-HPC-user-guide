@@ -1,5 +1,5 @@
 ---
-title: "Workspace Setup for the Admin Role"
+title: "Setup for the Admin Role"
 output:
   html_document:
     toc: true

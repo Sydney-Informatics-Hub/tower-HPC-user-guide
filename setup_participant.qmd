@@ -1,5 +1,5 @@
 ---
-title: "Workspace Setup for the Launch Role"
+title: "Setup for the Launch Role"
 output:
   html_document:
     toc: true
