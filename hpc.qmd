@@ -23,19 +23,19 @@ NCI's HPC systems are designed to handle complex computational tasks, such as si
 
 All new users must create their account through the [NCI online self service portal](https://my.nci.org.au/mancini/login?next=/mancini/).
 
-To create your account you will need the following information:
-
--   Your Name
-
--   Institutional email address (Gmail, Hotmail, etc are not accepted)
-
--   Mobile phone number (optional, but strongly encouraged as you otherwise won't be able to easily reset your password)
-
--   Either:
-
-    -   NCI project code of an existing project you wish to join
-
-    -   A new project proposal to be assessed by a Scheme Manager to determine if they will grant your project time
+> To create your account you will need the following information:
+>
+> -   Your Name
+>
+> -   Institutional email address (Gmail, Hotmail, etc are not accepted)
+>
+> -   Mobile phone number (optional, but strongly encouraged as you otherwise won't be able to easily reset your password)
+>
+> -   Either:
+>
+>     -   NCI project code of an existing project you wish to join
+>
+>     -   A new project proposal to be assessed by a Scheme Manager to determine if they will grant your project time
 
 Note that resources at NCI are allocated to *projects* and not to individual users.
 
@@ -77,17 +77,17 @@ To copy files to Gadi you should use the Gadi data movers **gadi-dm.nci.org.au*
 
 We recommend the use of one of the following packages for X11 access to Gadi:
 
--   MobaXterm from [http://mobaxterm.mobatek.net](http://mobaxterm.mobatek.net/)
-
--   Cygwin from [https://cygwin.com](https://cygwin.com/)
-
--   Xming from <http://www.straightrunning.com/XmingNotes/>
+> -   MobaXterm from [http://mobaxterm.mobatek.net](http://mobaxterm.mobatek.net/)
+>
+> -   Cygwin from [https://cygwin.com](https://cygwin.com/)
+>
+> -   Xming from <http://www.straightrunning.com/XmingNotes/>
 
 ### Windows
 
 ![](images/Screen%20Shot%202023-09-06%20at%2012.50.53%20pm.png)
 
-![](images/putty.gif)
+> ![](images/putty.gif)
 
 #### Copying Files
 
@@ -95,12 +95,12 @@ To copy files to Gadi you should use the Gadi data movers **gadi-dm.nci.org.au
 
 We recommend the following applications to copy files to and from Gadi:
 
--   MobaXterm from [http://mobaxterm.mobatek.net](http://mobaxterm.mobatek.net/)
-
--   PuTTY's PSCP or PSFTP applications from <http://www.chiark.greenend.org.uk/~sgtatham/putty/>
-
--   FileZilla from [https://filezilla-project.org](https://filezilla-project.org/)
-
--   WinSCP from [https://winscp.net/](https://winscp.net/eng/index.php)
+> -   MobaXterm from [http://mobaxterm.mobatek.net](http://mobaxterm.mobatek.net/)
+>
+> -   PuTTY's PSCP or PSFTP applications from <http://www.chiark.greenend.org.uk/~sgtatham/putty/>
+>
+> -   FileZilla from [https://filezilla-project.org](https://filezilla-project.org/)
+>
+> -   WinSCP from [https://winscp.net/](https://winscp.net/eng/index.php)
 
 To transfer files/folders using [MobaXterm](https://mobaxterm.mobatek.net/) on Windows system, drag and drop files/folders to/from local computer and Gadi after log in to Gadi via [MobaXterm](https://mobaxterm.mobatek.net/).
