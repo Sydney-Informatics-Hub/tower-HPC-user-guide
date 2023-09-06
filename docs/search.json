@@ -313,5 +313,26 @@
     "title": "HPC Access",
     "section": "Getting Started at NCI",
     "text": "Getting Started at NCI\n\nSetting up your NCI Account\nAll new users must create their account through the NCI online self service portal.\nTo create your account you will need the following information:\n\nYour Name\nInstitutional email address (Gmail, Hotmail, etc are not accepted)\nMobile phone number (optional, but strongly encouraged as you otherwise won’t be able to easily reset your password)\nEither:\n\nNCI project code of an existing project you wish to join\nA new project proposal to be assessed by a Scheme Manager to determine if they will grant your project time\n\n\nNote that resources at NCI are allocated to projects and not to individual users.\n\n\n\nClick on the Sign up here link to start your registration form.\n\n\nComplete all steps in the registration form.  Your username will become active when a project Lead CI approves your request to join their project, or when a Scheme Manager approves your new project proposal. You will receive a confirmation email from the Mancini system when your username is activated."
+  },
+  {
+    "objectID": "hpc.html#resources",
+    "href": "hpc.html#resources",
+    "title": "HPC Access",
+    "section": "Resources",
+    "text": "Resources\n\nNCI help"
+  },
+  {
+    "objectID": "hpc.html#setting-up-your-nci-account",
+    "href": "hpc.html#setting-up-your-nci-account",
+    "title": "HPC Access",
+    "section": "Setting up your NCI Account",
+    "text": "Setting up your NCI Account\nAll new users must create their account through the NCI online self service portal.\nTo create your account you will need the following information:\n\nYour Name\nInstitutional email address (Gmail, Hotmail, etc are not accepted)\nMobile phone number (optional, but strongly encouraged as you otherwise won’t be able to easily reset your password)\nEither:\n\nNCI project code of an existing project you wish to join\nA new project proposal to be assessed by a Scheme Manager to determine if they will grant your project time\n\n\nNote that resources at NCI are allocated to projects and not to individual users.\n\n\n\nClick on the Sign up here link to start your registration form.\n\n\nComplete all steps in the registration form.\n\n\n\n\nYour username will become active when a project Lead CI approves your request to join their project, or when a Scheme Manager approves your new project proposal. You will receive a confirmation email from the Mancini system when your username is activated."
+  },
+  {
+    "objectID": "hpc.html#how-to-log-into-gadi",
+    "href": "hpc.html#how-to-log-into-gadi",
+    "title": "HPC Access",
+    "section": "How to log into Gadi",
+    "text": "How to log into Gadi\n\nLinux/Mac/Unix\nAccess to Gadi is via SSH to gadi.nci.org.au. This provides a Unix shell on one of the Gadi login nodes.\n\n\n\nReplace abc123 with your own username. Enter your password when prompted. If you can’t remember your password, you can reset it via Mancini.\n\n\n\nCopying Files\nTo copy files to Gadi you should use the Gadi data movers gadi-dm.nci.org.au:\n\n\n\n\nX11 (X-Windows)\n\n\n\nWhen using OS X 10.8 or later you will need to install XQuartz from https://www.xquartz.org before you can use X11 on a Mac.\n\n\n\nCopying Files\nWe recommend the use of one of the following packages for X11 access to Gadi:\n\nMobaXterm from http://mobaxterm.mobatek.net\nCygwin from https://cygwin.com\nXming from http://www.straightrunning.com/XmingNotes/\n\n\n\n\nWindows\n\n\n\nCopying Files\nTo copy files to Gadi you should use the Gadi data movers gadi-dm.nci.org.au:\nWe recommend the following applications to copy files to and from Gadi:\n\nMobaXterm from http://mobaxterm.mobatek.net\nPuTTY’s PSCP or PSFTP applications from http://www.chiark.greenend.org.uk/~sgtatham/putty/\nFileZilla from https://filezilla-project.org\nWinSCP from https://winscp.net/\n\nTo transfer files/folders using MobaXterm on Windows system, drag and drop files/folders to/from local computer and Gadi after log in to Gadi via MobaXterm."
   }
 ]
