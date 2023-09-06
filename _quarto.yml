@@ -10,12 +10,12 @@ website:
       - href: index.qmd
         text: Home
       - href: hpc.qmd
-        text: "HPC Access"
-      - text: "Setup"
+        text: "Getting HPC Access"
+      - text: "Workspace Curation"
         menu:
-        - text: "Owner"
+        - text: "As an Owner"
           href: setup_admin.html
-        - text: "Participant"
+        - text: "As a Participant"
           href: setup_participant.html
       - href: pipeline.qmd
         text: "Adding Pipelines"
