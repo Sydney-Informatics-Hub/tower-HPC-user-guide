@@ -328,8 +328,26 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="adding-collaborators" class="level2">
 <h2 class="anchored" data-anchor-id="adding-collaborators">Adding collaborators</h2>
-<p>TBA<br>
-</p>
+<p>Collaborators are users who are invited to an organizations workspace, but are not members of that organization. As a result, their access is limited to only within that workspace. New collaborators to an organization’s workspace can be added using the Participants.</p>
+<blockquote class="blockquote">
+<p>To create a new team within an organization:</p>
+<ol type="1">
+<li><p>Go to the <strong>Participants</strong> tab of the organization menu.</p></li>
+<li><p>Click on <strong>Add participant</strong>.</p></li>
+<li><p>Enter the <strong>Name</strong> of new participant.&nbsp;</p></li>
+<li><p>Optionally, update the <strong>role</strong> associated with the participant of the organization members or collaborators.</p></li>
+</ol>
+</blockquote>
+<p>There are five roles available for every workspace participant:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><p><strong>Owner</strong>: The participant have full permissions on any resources within the workspace, including the workspace settings.</p></li>
+<li><p><strong>Admin</strong>: The participant have full permission on the resources associated with the workspace. Therefore they can create/modify/delete Pipelines, Compute environments, Actions and Credentials. They can add/remove users to the workspace, but cannot access the workspace settings.</p></li>
+<li><p><strong>Maintain</strong>: The participant can launch pipelines and modify pipeline executions (e.g.&nbsp;can change the pipeline launch compute environments, parameters, pre/post-run scripts and nextflow configuration) and create new pipelines in the Launchpad. The users cannot modify Compute Environments and Credentials.</p></li>
+<li><p><strong>Launch</strong>: The participant can launch pipelines and modify the pipeline input/output parameters in the Launchpad. They cannot modify the launch configuration and other resources.</p></li>
+<li><p><strong>View</strong>: The participant can view the team pipelines and runs in read-only mode.</p></li>
+</ol>
+</blockquote>
 
 
 </section>
