@@ -29,7 +29,7 @@ Upon signing into Tower, you will be greeted with an interface for you as an ind
 >
 > -   Then select the BioCommons workspace of interest.
 
-Add paragraph
+Each user has a unique personal workspace to manage resources such as pipelines, compute environments, and credentials. You can also create multiple workspaces within an organization context and associate each of these workspaces with dedicated teams of users, while providing a fine-grained access control model for each of the teams.
 
 This is the dashboard where you will manage your workspaces and workflows. It will open to the launchpad interface. Above the interface you'll see the following:
 
