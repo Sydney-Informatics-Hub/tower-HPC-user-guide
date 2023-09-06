@@ -10,17 +10,17 @@ website:
       - href: index.qmd
         text: Home
       - href: hpc.qmd
-        text: "Getting HPC Access"
-      - text: "Workspace Curation"
+        text: "1. Getting HPC Access"
+      - text: "2. Workspace Curation"
         menu:
         - text: "As an Admin"
           href: setup_admin.html
         - text: "As a Participant"
           href: setup_participant.html
       - href: pipeline.qmd
-        text: "Adding Pipelines"
+        text: "3. Adding Pipelines"
       - href: workflow.qmd
-        text: "Running a Workflow"
+        text: "4. Running a Workflow"
 
   body-footer: "All materials copyright Sydney Informatics Hub, University of Sydney"
 
