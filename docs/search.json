@@ -303,8 +303,15 @@
   {
     "objectID": "hpc.html",
     "href": "hpc.html",
-    "title": "Getting Access to HPC",
+    "title": "HPC Access",
     "section": "",
-    "text": "NCI Gadi HPC\n\n\n\nAll materials copyright Sydney Informatics Hub, University of Sydney"
+    "text": "NCI is a research-focused organization that provides advanced computing, data storage, and data management solutions to support scientific research and innovation in Australia and beyond. NCI’s HPC systems are designed to handle complex computational tasks, such as simulations, data analysis, and modeling, for a wide range of scientific disciplines, including climate modeling, genomics, astronomy, and materials science.\nAll materials copyright Sydney Informatics Hub, University of Sydney"
+  },
+  {
+    "objectID": "hpc.html#getting-started-at-nci",
+    "href": "hpc.html#getting-started-at-nci",
+    "title": "HPC Access",
+    "section": "Getting Started at NCI",
+    "text": "Getting Started at NCI\n\nSetting up your NCI Account\nAll new users must create their account through the NCI online self service portal.\nTo create your account you will need the following information:\n\nYour Name\nInstitutional email address (Gmail, Hotmail, etc are not accepted)\nMobile phone number (optional, but strongly encouraged as you otherwise won’t be able to easily reset your password)\nEither:\n\nNCI project code of an existing project you wish to join\nA new project proposal to be assessed by a Scheme Manager to determine if they will grant your project time\n\n\nNote that resources at NCI are allocated to projects and not to individual users.\n\n\n\nClick on the Sign up here link to start your registration form.\n\n\nComplete all steps in the registration form.  Your username will become active when a project Lead CI approves your request to join their project, or when a Scheme Manager approves your new project proposal. You will receive a confirmation email from the Mancini system when your username is activated."
   }
 ]

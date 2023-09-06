@@ -1,5 +1,5 @@
 ---
-title: "Getting Access to HPC"
+title: "HPC Access"
 output:
   html_document:
     toc: true
@@ -10,4 +10,43 @@ editor:
     wrap: sentence
 ---
 
-NCI Gadi HPC
+## National Computational Infrastructure
+
+NCI is a research-focused organization that provides advanced computing, data storage, and data management solutions to support scientific research and innovation in Australia and beyond.
+NCI's HPC systems are designed to handle complex computational tasks, such as simulations, data analysis, and modeling, for a wide range of scientific disciplines, including climate modeling, genomics, astronomy, and materials science.
+
+## Getting Started at NCI
+
+### Setting up your NCI Account
+
+All new users must create their account through the [NCI online self service portal](https://my.nci.org.au/mancini/login?next=/mancini/).
+
+To create your account you will need the following information:
+
+-   Your Name
+
+-   Institutional email address (Gmail, Hotmail, etc are not accepted)
+
+-   Mobile phone number (optional, but strongly encouraged as you otherwise won't be able to easily reset your password)
+
+-   Either:
+
+    -   NCI project code of an existing project you wish to join
+
+    -   A new project proposal to be assessed by a Scheme Manager to determine if they will grant your project time
+
+Note that resources at NCI are allocated to *projects* and not to individual users.
+
+![Click on the Sign up here link to start your registration form.](images/Screen%20Shot%202023-09-06%20at%2012.32.06%20pm.png)
+
+Complete all steps in the registration form. 
+Your username will become active when a project Lead CI approves your request to join their project, or when a Scheme Manager approves your new project proposal.
+You will receive a confirmation email from the Mancini system when your username is activated.
+
+![](images/Screen%20Shot%202023-09-06%20at%2012.02.08%20pm.png)
+
+![](images/Screen%20Shot%202023-09-06%20at%2012.02.45%20pm.png)
+
+![](images/Screen%20Shot%202023-09-06%20at%2012.03.44%20pm.png)
+
+![](images/Screen%20Shot%202023-09-06%20at%2012.04.24%20pm.png)
