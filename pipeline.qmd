@@ -7,11 +7,35 @@ output:
     toc-expand: 2
 ---
 
-## Adding a nf-core pipeline
+## General pipelines
 
-[nf-core](https://nf-co.re/pipelines) is a community effort to collect a curated set of analysis pipelines built using Nextflow. There are 86 pipelines that are currently available.
+TBA
 
-### Germline-StructuralV-nf pipeline
+### Example: Hello World
+
+A simple script showing the basic Hello World! example for the Nextflow framework.
+
+![https://github.com/nextflow-io/hello](images/hello.png)
+
+![](images/helloworlddiagram.png)
+
+<div>
+
+> -   TBA
+>
+> -   TBA
+>
+> -   TBA
+>
+> -   TBA
+
+</div>
+
+## NF-CORE pipelines
+
+[nf-core](https://nf-co.re/pipelines) is a community effort to collect a curated set of analysis pipelines built using Nextflow. There are 86 pipelines that are currently available.\
+
+### Example: Germline-StructuralV-nf pipeline
 
 ![GermlineStructuralV-nf is a pipeline for identifying structural variant events in human Illumina short read whole genome sequence data. GermlineStructuralV-nf identifies structural variant and copy number events from BAM files using Manta, Smoove, and TIDDIT. Variants are then merged using SURVIVOR, and annotated by AnnotSV. The pipeline is written in Nextflow and uses Singularity/Docker to run containerised tools.](images/211971740-772796bc-6fb7-43fb-885b-d9cb116bfdd0.png)
 
