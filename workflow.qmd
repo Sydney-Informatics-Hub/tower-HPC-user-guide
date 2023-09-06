@@ -7,11 +7,7 @@ output:
     toc-expand: 2
 ---
 
-## Running a workflow
-
-TBA
-
-### NCI Gadi HPC
+## NCI Gadi
 
 Before you can execute workflows on Tower on Gadi, you will first need to run the tower agent. Navigate to the previously set up tower-nf directory on the command line and run the agent: 
 
@@ -23,7 +19,7 @@ Back at the tower interface, navigate to your launchpad or run on the command li
 
 ![](images/Screen%20Shot%202023-08-25%20at%204.44.11%20pm.png)
 
-### Pawsey Setonix HPC
+## Pawsey Setonix
 
 Before you can execute workflows on Tower on Setonix, you will first need to run the tower agent.  Navigate to the previously set up tower-nf directory on the command line and run the agent: 
 

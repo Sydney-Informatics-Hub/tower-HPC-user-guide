@@ -1,5 +1,5 @@
 ---
-title: "Workspace Curation for Admins"
+title: "Setup for Admins"
 output:
   html_document:
     toc: true
