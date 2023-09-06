@@ -13,7 +13,7 @@ website:
         text: "Getting HPC Access"
       - text: "Workspace Curation"
         menu:
-        - text: "As an Owner"
+        - text: "As an Admin"
           href: setup_admin.html
         - text: "As a Participant"
           href: setup_participant.html

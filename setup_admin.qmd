@@ -1,13 +1,11 @@
 ---
-title: "Workspace Curation for Owners"
+title: "Workspace Curation for Admins"
 output:
   html_document:
     toc: true
     toc_float: false
     toc-expand: 2
 ---
-
-### ![General steps in a Nextflow tower pipeline.](images/Screen%20Shot%202023-08-25%20at%201.58.52%20pm-02.png){width="747"}
 
 ## Logging into the service
 
