@@ -13,9 +13,9 @@ website:
         text: "1. Getting HPC Access"
       - text: "2. Workspace Curation"
         menu:
-        - text: "As an Admin"
+        - text: "Admin Role"
           href: setup_admin.html
-        - text: "As a Participant"
+        - text: "Launch Role"
           href: setup_participant.html
       - href: pipeline.qmd
         text: "3. Adding Pipelines"
