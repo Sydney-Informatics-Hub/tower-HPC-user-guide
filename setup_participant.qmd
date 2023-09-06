@@ -59,15 +59,9 @@ Add paragraph
 
 </div>
 
-## Setting up your workspace
+## Create your personal access token
 
-Workspace configuration can only be performed by admins. With workspace configuration, you can create and configure compute environments, configure workflows to run on these environments, and add collaborators. The NeuroCommunity are currently only trialling the Tower service at NCI Gadi and Pawsey Setonix HPCs. As such, you will need to create Tower Agent credentials because this is the only way to access NCI and Pawsey HPC's with Tower.
-
-Add paragraph
-
-### Create your personal access token
-
-You will need to create a personal access token and store it on your compute environment (i.e. on the HPC environment, not locally) in order to communicate with the Tower API. To create a personal access token you will need to navigate to the user settings logo in the top navbar and select 'Your tokens', then:
+Workspace configuration can only be performed by admins but you will still need to create a personal access token and store it on your compute environment (i.e. on the HPC environment, not locally) in order to communicate with the Tower API. To create a personal access token you will need to navigate to the user settings logo in the top navbar and select 'Your tokens', then:
 
 > -   Select 'Add Token'. 
 >
