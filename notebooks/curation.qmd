@@ -58,5 +58,7 @@ Depending on how you will be using the Tower service, you may be provided with a
 * Admins are responsible for workspace curation, managing compute environments, and adding pipelines
 * Other members are able to run workflows and won't have the ability to add or remove compute environments, or pipelines. 
 
+USyd users are currently only trialing the Tower service at NCI Gadi and Pawsey Setonix HPCs. As such, all users will need to set up Tower Agent credentials before they can use the Tower service, as this is the only way to access NCI and Pawsey HPC's with Nextflow Tower.
+
 See the following sections for more details. 
 
