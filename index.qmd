@@ -1,5 +1,5 @@
 ---
-title: "Nextflow Tower Service User Guide"
+title: "**Nextflow Tower User Guide for University of Sydney**"
 output:
   html_document:
     toc: true
@@ -10,46 +10,59 @@ editor:
     wrap: sentence
 ---
 
-![](images/Australian-Biocommons-Logo-Horizontal-RGB.png)
-
 Nextflow Tower is a full-stack solution for the management of Nextflow pipeline executions.
 It's designed as an intuitive, user-friendly interface that allows you to control and monitor your data analysis pipelines.
 It simplifies running complex workflows, like those provided by nf-core, on different computation infrastructures such as HPC clusters, cloud services, or Kubernetes.
 
-The Tower service is offered in two ways; a free basic account that can be used by individuals and a licensed service that is suitable for large organisations with multiple collaborators that require more complex user management.
-The [Australian BioCommons Nextflow Tower service](https://www.biocommons.org.au/nextflow-tower) is licensed and provides a centralised command-post for running Nextflow pipelines as a subsidised service for Australian researchers.
+::: {.callout-important}
 
-## Resources
+### Using this guide
 
--   [Biocommons tower service](https://tower.services.biocommons.org.au)
--   [Tower-nf configuration scripts](https://github.com/Sydney-Informatics-Hub/tower-nf)
+This documentation contains instructions for setting up and managing a Nextflow Tower workspace provided by the Australian BioCommons to USyd users. This documentation currently focused on the use of Nextflow Tower on NCI Gadi HPC. For details on configuring Tower for other services, see the [Australian BioCommons Tower user guide](https://australianbiocommons.github.io/tower/user-guide/) (currently under development).
+:::
 
-## Getting started
+## **Resources**
 
-Nextflow Tower provides a centralised interface for managing users, compute environments, and workflows within defined spaces called workspaces.
-These workspaces are provided by the Australian BioCommons to use cases for the pilot program of the Australian BioCommons Nextflow Tower service.
-Therefore,  the Australian BioCommons service team has insight into and administrative control over workspaces.
-However, workspace management and curation is the responsibility of the workspace administrator(s) from the research group.
-Only organisation owners are permitted to create a workspace within the organisation.
-More information on workspace management can be found here: [workspace management](https://help.tower.nf/23.1/orgs-and-teams/workspace-management/).
+- [Australian Biocommons tower service](https://tower.services.biocommons.org.au)
+- [Australian Biocommons tower user guide](https://australianbiocommons.github.io/tower/user-guide/)
+- [Tower-nf HPC configuration scripts](https://github.com/Sydney-Informatics-Hub/tower-nf)
 
-![A workspace provides the context in which a user operates, including what resources are available and who can access them. It is composed of pipelines, compute environments, credentials, runs, actions, and datasets. Access permissions are controlled through participants, collaborators, and teams.](images/Screen%20Shot%202023-08-24%20at%202.54.46%20pm.png)
+## **Getting started**
 
-> -   **Organization:** Top-level entity where businesses, institutions, and groups can collaborate.
->     It can contain multiple workspaces.
->
-> -   **Team:** Group of members in the same organization.
->     Teams can operate in one or more organization workspaces with a specific workspace role (one role per workspace).
->
-> -   **Participant:** A user operating with an assigned role within a workspace.
->
-> -   **Participant Role:** The participant role defines the permissions granted to a user to perform actions or tasks within a workspace.
+The Tower service is offered in two ways: 
+
+* A free basic account that can be used by individuals
+* A licensed service that is suitable for large organisations with multiple collaborators that require more complex user management.
+
+The [Australian BioCommons Nextflow Tower service](https://www.biocommons.org.au/nextflow-tower) is licensed and **provides a centralised command-post for running Nextflow pipelines as a subsidised service for Australian researchers**. More information on workspace management can be found here: [workspace management](https://help.tower.nf/23.1/orgs-and-teams/workspace-management/).
+
+::: {.callout-important}
+
+### Essential consideration for using the service 
+
+  * This service provides an interface for managing users, compute environments, and workflows within defined spaces called **workspaces**
+  * Workspaces are provided by the Australian BioCommons to use cases for the pilot program of the Australian BioCommons Nextflow Tower service
+  * The Australian BioCommons service team has insight into and administrative control over workspaces
+  * Workspace management and curation is the responsibility of the workspace administrator(s) from the research group.
+  * Only organisation owners are permitted to create a workspace within the organisation. 
+::: 
+
+### **Organisational workspace set up**{.unlisted}
+
+A workspace provides the context in which a user operates, including what resources are available and who can access them. It is composed of pipelines, compute environments, credentials, runs, actions, and datasets. Access permissions are controlled through participants, collaborators, and teams ![](images/tower-bc-org.png)
+
+|Level      |Definition                                                                                                                                                  |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Organisation       |Top-level entity where businesses, institutions, and groups can collaborate. It can contain multiple workspaces.                                            |
+|Team               |Group of members in the same organization. Teams can operate in one or more organization workspaces with a specific workspace role (one role per workspace).|
+|Participant        |A user operating with an assigned role within a workspace. Participants can be assigned different levels of access within a workspace.     |
+
+
+## **Glossary of terms**
 
 As you use Tower, keep in mind there are a number of [key terms and core concepts](https://help.tower.nf/23.1/getting-started/definitions/) that you will come across as you set up your workspace, configure your compute environments, and execute your workflows. 
 
-## Glossary of terms
-
-|                          | Definition                                                                                                                                                                                                                                                                                                |
+| |Definition                                                                                                                                                                                                                                                                                                |
 |-------------|-----------------------------------------------------------|
 | **Actions**              | Actions are used to automate the execution of pre-configured workflows (pipelines), based on event triggers such as code commits and webhooks.                                                                                                                                                            |
 | **Cache**                | A feature that allows Nextflow to store and reuse previously computed results to avoid redundant computations.                                                                                                                                                                                            |
