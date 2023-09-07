@@ -81,3 +81,15 @@ As you use Tower, keep in mind there are a number of [key terms and core concept
 | **Task**                 | A single unit of work within a workflow. It typically represents a specific analysis step, such as aligning sequences, running statistical analyses, or generating plots.                                                                                                                                 |
 | **Workflow**             | A sequence of tasks or processes arranged in a specific order to achieve a specific goal, often in the context of scientific or data analysis tasks.                                                                                                                                                      |
 | **Workspace**            | A workspace provides the context in which a user operates, including what resources are available and who can access them. It is composed of pipelines, compute environments, credentials, runs, actions, and datasets. Access permissions are controlled through participants, collaborators, and teams. |
+
+## **Acknowledgements**
+
+This user guide was developed by the Sydney Informatics Hub, University of Sydney. USyd users should contact Georgie Samaha for support using this guide and the Tower service. Contributions by: 
+
+* Eden Zhang (Sydney Informatics Hub, University of Sydney)
+* Georgie Samaha (Sydney Informatics Hub, University of Sydney)
+* Sarah Beecroft (Pawsey Supercomputing Research Centre)
+
+Acknowledgements (and co-authorship, where appropriate) are an important way for us to demonstrate the value we bring to your research. Your research outcomes are vital for ongoing funding of the Sydney Informatics Hub and national compute facilities. We suggest including the following acknowledgement in any publications that follow from this work:
+
+*The authors acknowledge the technical assistance provided by the Sydney Informatics Hub, a Core Research Facility of the University of Sydney, the National Computational Infrastructure's Gadi HPC, and the Australian BioCommons which is enabled by NCRIS via Bioplatforms Australia.*

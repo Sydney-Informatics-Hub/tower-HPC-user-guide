@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SIH User Guides - Setup for the Launch Role</title>
+<title>SIH User Guides - Running Workflows on HPC</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -174,7 +174,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="menu-text">Add a pipeline</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../notebooks/run_pipeline.html">
+    <a class="nav-link active" href="../notebooks/run_pipeline.html" aria-current="page">
  <span class="menu-text">Run a pipeline</span></a>
   </li>  
 </ul>
@@ -192,7 +192,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#create-your-personal-access-token" id="toc-create-your-personal-access-token" class="nav-link active" data-scroll-target="#create-your-personal-access-token"><strong>Create your personal access token</strong></a></li>
+  <li><a href="#nci-gadi" id="toc-nci-gadi" class="nav-link active" data-scroll-target="#nci-gadi"><strong>NCI Gadi</strong></a></li>
+  <li><a href="#pawsey-setonix" id="toc-pawsey-setonix" class="nav-link" data-scroll-target="#pawsey-setonix"><strong>Pawsey Setonix</strong></a></li>
+  <li><a href="#monitor-a-run" id="toc-monitor-a-run" class="nav-link" data-scroll-target="#monitor-a-run"><strong>Monitor a run</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -201,7 +203,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><strong>Setup for the Launch Role</strong></h1>
+<h1 class="title"><strong>Running Workflows on HPC</strong></h1>
 </div>
 
 
@@ -216,31 +218,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="create-your-personal-access-token" class="level2">
-<h2 class="anchored" data-anchor-id="create-your-personal-access-token"><strong>Create your personal access token</strong></h2>
-<p>Workspace configuration can only be performed by admins but you will still need to create a personal access token and store it on your compute environment (i.e.&nbsp;on the HPC environment, not locally) in order to communicate with the Tower API. To create a personal access token you will need to navigate to the user settings logo in the top navbar and select ‘Your tokens’, then:</p>
-<ol type="1">
-<li><p>Select ‘Add Token’.&nbsp;</p></li>
-<li><p>Name your token something descriptive and select ‘Add’: <img src="../images/interface_token_name.png" class="img-fluid" style="width:80.0%"></p></li>
-<li><p>Copy the token to your clipboard: <img src="../images/interface_token.png" class="img-fluid" style="width:80.0%"></p></li>
-<li><p>Open your terminal application, log in to your HPC (either NCI Gadi or Pawsey Setonix) on the command-line:</p></li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> abc123@gadi.nci.org.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="5" type="1">
-<li>If you are using Gadi, navigate to <code>~</code> ($HOME):</li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="6" type="1">
-<li>If you are on Setonix, navigate to <code>$MYSOFTWARE</code>:</li>
-</ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="va">$MYSOFTWARE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="7" type="1">
-<li>From within the directory mentioned above, make a hidden tower (<code>.tower</code>) directory to store Tower token and credentials:</li>
-</ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> .tower</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="8" type="1">
-<li>Copy your personal access token into a file named token within this directory: <img src="../images/cli_token.png" class="img-fluid" style="width:80.0%"></li>
-</ol>
+<section id="nci-gadi" class="level2">
+<h2 class="anchored" data-anchor-id="nci-gadi"><strong>NCI Gadi</strong></h2>
+<p>Before you can execute workflows on Tower on Gadi, you will first need to run the tower agent. Navigate to the previously set up tower-nf directory on the command line and run the agent, for example:&nbsp;</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /g/data/nci_project/tower/tower-nf&nbsp;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> run_tower_agent_pbs.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Back at the tower interface: 1. Navigate to the launchpad 2. Select the launch button for the desired pipeline 3. Provide parameters and input files as required 4. Select launch when ready</p>
+<p>Alternatively, run the pipeline on the command line and monitor on Tower:</p>
+<p><img src="../images/cli_execute_pipeline.png" class="img-fluid"></p>
+</section>
+<section id="pawsey-setonix" class="level2">
+<h2 class="anchored" data-anchor-id="pawsey-setonix"><strong>Pawsey Setonix</strong></h2>
+<p>Before you can execute workflows on Tower on Setonix, you will first need to run the tower agent.&nbsp; Navigate to the previously set up tower-nf directory on the command line and run the agent:&nbsp;</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="dt">\$</span>MYSOFTWARE</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> run_tower_agent_slurm.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Back at the tower interface, navigate to your launchpad and launch the workflow, same as above.</p>
+</section>
+<section id="monitor-a-run" class="level2">
+<h2 class="anchored" data-anchor-id="monitor-a-run"><strong>Monitor a run</strong></h2>
+<p>Once you’ve launched a pipeline run, you can monitor its execution in the Runs tab on the top menu bar. See the <a href="https://help.tower.nf/23.1/monitoring/overview/">Nextflow Tower documentation</a> for more details on how to use this feature.</p>
 
 
 </section>

@@ -19,9 +19,9 @@ website:
           href: notebooks/setup_admin.html
         - text: "Launch role"
           href: notebooks/setup_participant.html
-      - href: notebooks/pipeline.qmd
+      - href: notebooks/add_pipeline.qmd
         text: "Add a pipeline"
-      - href: notebooks/workflow.qmd
+      - href: notebooks/run_pipeline.qmd
         text: "Run a pipeline"
     cookie-consent: 
       type: express
