@@ -49,7 +49,7 @@ The [Australian BioCommons Nextflow Tower service](https://www.biocommons.org.au
 
 ### **Organisational workspace set up**{.unlisted}
 
-A workspace provides the context in which a user operates, including what resources are available and who can access them. It is composed of pipelines, compute environments, credentials, runs, actions, and datasets. Access permissions are controlled through participants, collaborators, and teams ![](images/tower-bc-org.png)
+A workspace provides the context in which a user operates, including what resources are available and who can access them. It is composed of pipelines, compute environments, credentials, runs, actions, and datasets. Access permissions are controlled through participants, collaborators, and teams ![](../images/tower-bc-org.png)
 
 |Level      |Definition                                                                                                                                                  |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
