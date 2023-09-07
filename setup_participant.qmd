@@ -31,11 +31,11 @@ Upon signing into Tower, you will be greeted with an interface for you as an ind
 
 Each user has a unique personal workspace to manage resources such as pipelines, compute environments, and credentials. You can also create multiple workspaces within an organization context and associate each of these workspaces with dedicated teams of users, while providing a fine-grained access control model for each of the teams.
 
-This is the dashboard where you will manage your workspaces and workflows. It will open to the launchpad interface. Above the interface you'll see the following:
+The Tower Dashboard provides an overview of runs in your organizations and personal workspace at a glance. Access it from the user top-right menu, under Dashboard. This is where you will manage your workspaces and workflows. It will open to the launchpad interface.
 
 ![](images/Screen%20Shot%202023-08-24%20at%202.17.37%20pm.png)
 
-Add paragraph
+Above the interface you'll see the following:
 
 <div>
 

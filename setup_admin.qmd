@@ -31,11 +31,11 @@ Upon signing into Tower, you will be greeted with an interface for you as an ind
 
 Each user has a unique personal workspace to manage resources such as pipelines, compute environments, and credentials. You can also create multiple workspaces within an organization context and associate each of these workspaces with dedicated teams of users, while providing a fine-grained access control model for each of the teams.
 
-This is the dashboard where you will manage your workspaces and workflows. It will open to the launchpad interface. Above the interface you'll see the following:
+The Tower Dashboard provides an overview of runs in your organizations and personal workspace at a glance. Access it from the user top-right menu, under Dashboard. This is where you will manage your workspaces and workflows. It will open to the launchpad interface.
 
 ![](images/Screen%20Shot%202023-08-24%20at%202.17.37%20pm.png)
 
-Add paragraph
+Above the interface you'll see the following:
 
 <div>
 
@@ -62,8 +62,6 @@ Add paragraph
 ## Setting up your workspace
 
 Workspace configuration can only be performed by admins. With workspace configuration, you can create and configure compute environments, configure workflows to run on these environments, and add collaborators. The NeuroCommunity are currently only trialling the Tower service at NCI Gadi and Pawsey Setonix HPCs. As such, you will need to create Tower Agent credentials because this is the only way to access NCI and Pawsey HPC's with Tower.
-
-Add paragraph
 
 ### Create your personal access token
 
@@ -121,15 +119,13 @@ You can either choose to work with a shared or personal credential. Setting this
 >
 >     ![](images/Screen%20Shot%202023-08-25%20at%203.50.27%20pm.png)
 >
-> <!-- -->
->
 > -   Navigate to your working directory (not \$HOME).
 >
 >     -   On gadi, run the run_tower_agent_pbs.sh script at /g/data/er01/tower-nf.
 >
->     -   On setonix...
+>         ![](images/Screen%20Shot%202023-08-25%20at%203.54.33%20pm.png)
 >
->     ![](images/Screen%20Shot%202023-08-25%20at%203.54.33%20pm.png)
+>     -   On setonix, TBA.
 >
 > -   Back in the tower interface, hit 'Add' to save your Tower agent credential.
 >
