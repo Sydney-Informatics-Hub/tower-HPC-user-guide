@@ -3,33 +3,43 @@ project:
   output-dir: docs
 
 website:
-  title: "Sydney Informatics Hub Course name"
+  title: "SIH User Guides"
   navbar:
     background: primary
     left:
       - href: index.qmd
         text: Home
-      - href: setup.html
-        text: "Setup"
-      - text: "Session 1"
+      - href: notebooks/hpc.qmd
+        text: "HPC access"
+      - text: "Workspace setup"
         menu:
-        - text: "Python from ipynb example"
-          href: notebooks/01a-fundamentals.html
-        - text: "R from qmd example"
-          href: notebooks/01b_exampleRcontent.html
-        - text: "Markdown from md example"
-          href: notebooks/01c_exampleMDcontent.html
+        - text: "Using the interface"
+          href: notebooks/curation.html
+        - text: "Admin role"
+          href: notebooks/setup_admin.html
+        - text: "Launch role"
+          href: notebooks/setup_participant.html
+      - href: notebooks/pipeline.qmd
+        text: "Add a pipeline"
+      - href: notebooks/workflow.qmd
+        text: "Run a pipeline"
+    cookie-consent: 
+      type: express
+      style: simple
+      palette: light
+      policy-url: https://www.sydney.edu.au/privacy-statement.html
+    google-analytics: "G-TNWWV3HK57"
 
-  body-footer: "All materials copyright Sydney Informatics Hub, University of Sydney"
+  body-footer: "<div style='font-size: 14px;'>All materials copyright Sydney Informatics Hub, University of Sydney</div>"
 
 format:
   html:
-   toc: true
-   theme:
+    theme: 
       light: flatly
-      dark: darkly
-   css: styles.scss
-   code-link: true
-   code-fold: false
+    css: styles.scss
+    toc: true
+    code-overflow: scroll
+    highlight-style: github
+    page-layout: full
 
 

@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sydney Informatics Hub Course name - Course title</title>
+<title>SIH User Guides - Nextflow Tower User Guide for University of Sydney</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,12 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Sydney Informatics Hub Course name</span>
+    <span class="navbar-title">SIH User Guides</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -86,39 +84,40 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./setup.html">
- <span class="menu-text">Setup</span></a>
+    <a class="nav-link" href="./notebooks/hpc.html">
+ <span class="menu-text">1. Getting HPC Access</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-session-1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Session 1</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-workspace-curation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">2. Workspace Curation</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-session-1">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-workspace-curation">    
         <li>
-    <a class="dropdown-item" href="./notebooks/01a-fundamentals.html">
- <span class="dropdown-text">Python from ipynb example</span></a>
+    <a class="dropdown-item" href="./notebooks/setup_admin.html">
+ <span class="dropdown-text">Admin Role</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./notebooks/01b_exampleRcontent.html">
- <span class="dropdown-text">R from qmd example</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./notebooks/01c_exampleMDcontent.html">
- <span class="dropdown-text">Markdown from md example</span></a>
+    <a class="dropdown-item" href="./notebooks/setup_participant.html">
+ <span class="dropdown-text">Launch Role</span></a>
   </li>  
     </ul>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./notebooks/pipeline.html">
+ <span class="menu-text">3. Adding Pipelines</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./notebooks/workflow.html">
+ <span class="menu-text">4. Running a Workflow</span></a>
+  </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -126,21 +125,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#trainers" id="toc-trainers" class="nav-link active" data-scroll-target="#trainers">Trainers</a></li>
-  <li><a href="#course-pre-requisites-and-setup-requirements" id="toc-course-pre-requisites-and-setup-requirements" class="nav-link" data-scroll-target="#course-pre-requisites-and-setup-requirements">Course pre-requisites and setup requirements</a></li>
-  <li><a href="#venue" id="toc-venue" class="nav-link" data-scroll-target="#venue">Venue</a></li>
-  <li><a href="#code-of-conduct" id="toc-code-of-conduct" class="nav-link" data-scroll-target="#code-of-conduct">Code of Conduct</a></li>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
-  <li><a href="#setup-instructions" id="toc-setup-instructions" class="nav-link" data-scroll-target="#setup-instructions">Setup Instructions</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources"><strong>Resources</strong></a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started"><strong>Getting started</strong></a></li>
+  <li><a href="#glossary-of-terms" id="toc-glossary-of-terms" class="nav-link" data-scroll-target="#glossary-of-terms"><strong>Glossary of terms</strong></a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Course title</h1>
+<h1 class="title"><strong>Nextflow Tower User Guide for University of Sydney</strong></h1>
 </div>
 
 
@@ -155,91 +151,178 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This is a training course aimed at (your target audience) to learn (your course).</p>
-<section id="trainers" class="level2">
-<h2 class="anchored" data-anchor-id="trainers">Trainers</h2>
-<p>Have a list of the people delivering the course if it is needed. However, this is subject to change so might be a good idea to not specifiy.</p>
-<p>Here’s an example list. This is a good place to define what your preferred name is if you have one.</p>
+<p>Nextflow Tower is a full-stack solution for the management of Nextflow pipeline executions. It’s designed as an intuitive, user-friendly interface that allows you to control and monitor your data analysis pipelines. It simplifies running complex workflows, like those provided by nf-core, on different computation infrastructures such as HPC clusters, cloud services, or Kubernetes.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Using this guide
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This documentation contains instructions for setting up and managing a Nextflow Tower workspace provided by the Australian BioCommons to USyd users. This documentation currently focused on the use of Nextflow Tower on NCI Gadi HPC. For details on configuring Tower for other services, see the <a href="https://australianbiocommons.github.io/tower/user-guide/">Australian BioCommons Tower user guide</a> (currently under development).</p>
+</div>
+</div>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources"><strong>Resources</strong></h2>
 <ul>
-<li>Nathaniel (Nate) Butterworth</li>
-<li>Darya Vanichkina</li>
-<li>Kristian Maras</li>
+<li><a href="https://tower.services.biocommons.org.au">Australian Biocommons tower service</a></li>
+<li><a href="https://australianbiocommons.github.io/tower/user-guide/">Australian Biocommons tower user guide</a></li>
+<li><a href="https://github.com/Sydney-Informatics-Hub/tower-nf">Tower-nf HPC configuration scripts</a></li>
 </ul>
 </section>
-<section id="course-pre-requisites-and-setup-requirements" class="level2">
-<h2 class="anchored" data-anchor-id="course-pre-requisites-and-setup-requirements">Course pre-requisites and setup requirements</h2>
-<p>Provide some sort of general description of what you should know and who this course is for. For example:</p>
-<blockquote class="blockquote">
-<p>No previous programming experience is required, but <strong>Session 1 is a pre-requisite for the other sessions</strong>. Training will be delivered online, so you will need access to a modern computer with a stable internet connection and around 5GB of storage space for data downloaded prior to the course. Participants are encouraged to setup a Python environment on their local computer (as per the <a href="./setup.html">Setup Instructions</a> provided), but participation using other platforms/environments can be supported where necessary.</p>
-</blockquote>
-</section>
-<section id="venue" class="level2">
-<h2 class="anchored" data-anchor-id="venue">Venue</h2>
-<p>Specifiy where the training will be, whether it is in person, online, or hybrid.</p>
-<p>Include a reminder about the location and time zone in which this course will be running. In almost all cases, our courses are delivered from Sydney and times are reported in AEDT (GMT+11).</p>
-<section id="zoom-etiquette-and-how-we-interact" class="level4">
-<h4 class="anchored" data-anchor-id="zoom-etiquette-and-how-we-interact">Zoom etiquette and how we interact</h4>
-<p>Include some sort of descripter about what is expected from attendees in terms of participation, and what sort of interaction they should expect. This could also be moved to an about page.</p>
-<p>Here’s an example for a zoom only online course:</p>
-<blockquote class="blockquote">
-<p>Sessions will be recorded for attendees only, and it is set up to only record the host shared screen and host audio. We will try and get these uploaded to this site as soon as possible. Please interrupt whenever you want! Ideally, have your camera on and interact as much as possible. There will be someone monitoring the chat-window with any questions you would like to post there. Four hours is a long Zoom session so we have plenty of scheduled breaks combined with a mix of content to be delivered as demos, plus sections as independent exercises, but most of the course will be pretty-hands on with everyone writing their own code. We will use Zoom break-out rooms as needed with the Trainers and participants.</p>
-</blockquote>
-</section>
-</section>
-<section id="code-of-conduct" class="level2">
-<h2 class="anchored" data-anchor-id="code-of-conduct">Code of Conduct</h2>
-<p>As a University of Sydney course, we also want to make sure peopele are aware of our code of conduct. Feel free to move this to an about page as needed.</p>
-<p>Example standard Code of Conduct statement:</p>
-<p>We expect all attendees of our training to follow our code of conduct, including bullying, harassment and discrimination prevention policies.</p>
-<p>In order to foster a positive and professional learning environment we encourage the following kinds of behaviours at all our events and on our platforms:</p>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started"><strong>Getting started</strong></h2>
+<p>The Tower service is offered in two ways:</p>
 <ul>
-<li>Use welcoming and inclusive language</li>
-<li>Be respectful of different viewpoints and experiences</li>
-<li>Gracefully accept constructive criticism</li>
-<li>Focus on what is best for the community</li>
-<li>Show courtesy and respect towards other community members</li>
+<li>A free basic account that can be used by individuals</li>
+<li>A licensed service that is suitable for large organisations with multiple collaborators that require more complex user management.</li>
 </ul>
-<p>Our full CoC, with incident reporting guidelines, is available [here]https://sydney-informatics-hub.github.io/codeofconduct/).</p>
-</section>
-<section id="schedule" class="level2">
-<h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
-<p>If your training includes multiple components, it is always nice to have a table with the schedule. With quarto we can make tables using markdown formating, like below.</p>
+<p>The <a href="https://www.biocommons.org.au/nextflow-tower">Australian BioCommons Nextflow Tower service</a> is licensed and <strong>provides a centralised command-post for running Nextflow pipelines as a subsidised service for Australian researchers</strong>. More information on workspace management can be found here: <a href="https://help.tower.nf/23.1/orgs-and-teams/workspace-management/">workspace management</a>.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Essential consideration for using the service
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>This service provides an interface for managing users, compute environments, and workflows within defined spaces called <strong>workspaces</strong></li>
+<li>Workspaces are provided by the Australian BioCommons to use cases for the pilot program of the Australian BioCommons Nextflow Tower service</li>
+<li>The Australian BioCommons service team has insight into and administrative control over workspaces</li>
+<li>Workspace management and curation is the responsibility of the workspace administrator(s) from the research group.</li>
+<li>Only organisation owners are permitted to create a workspace within the organisation.</li>
+</ul>
+</div>
+</div>
+<section id="organisational-workspace-set-up" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="organisational-workspace-set-up"><strong>Organisational workspace set up</strong></h3>
+<p>A workspace provides the context in which a user operates, including what resources are available and who can access them. It is composed of pipelines, compute environments, credentials, runs, actions, and datasets. Access permissions are controlled through participants, collaborators, and teams <img src="../images/tower-bc-org.png" class="img-fluid"></p>
 <table class="table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 88%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Definition</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td><strong>Day 1</strong></td>
-<td style="text-align: left;"></td>
+<td>Organisation</td>
+<td>Top-level entity where businesses, institutions, and groups can collaborate. It can contain multiple workspaces.</td>
 </tr>
 <tr class="even">
-<td>Morning</td>
-<td style="text-align: left;"><a href="./notebooks/01a-fundamentals.html">Fundamentals</a></td>
+<td>Team</td>
+<td>Group of members in the same organization. Teams can operate in one or more organization workspaces with a specific workspace role (one role per workspace).</td>
 </tr>
 <tr class="odd">
-<td></td>
-<td style="text-align: left;"><a href="./notebooks/01b_exampleRcontent.html">Example R Content</a></td>
-</tr>
-<tr class="even">
-<td><strong>Day 2</strong></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td>Morning</td>
-<td style="text-align: left;"><a href="./notebooks/01c_exampleMDcontent.html">Example MD Content</a></td>
+<td>Participant</td>
+<td>A user operating with an assigned role within a workspace. Participants can be assigned different levels of access within a workspace.</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="setup-instructions" class="level2">
-<h2 class="anchored" data-anchor-id="setup-instructions">Setup Instructions</h2>
-<p>Link to the setup instructions if there are any, for example:</p>
-<blockquote class="blockquote">
-<p>Please complete the <a href="./setup.html">Setup Instructions</a> <strong>before the course</strong>. If you have any trouble, please get in contact with us ASAP.</p>
-</blockquote>
+</section>
+<section id="glossary-of-terms" class="level2">
+<h2 class="anchored" data-anchor-id="glossary-of-terms"><strong>Glossary of terms</strong></h2>
+<p>As you use Tower, keep in mind there are a number of <a href="https://help.tower.nf/23.1/getting-started/definitions/">key terms and core concepts</a> that you will come across as you set up your workspace, configure your compute environments, and execute your workflows.&nbsp;</p>
+<table class="table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 81%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Actions</strong></td>
+<td>Actions are used to automate the execution of pre-configured workflows (pipelines), based on event triggers such as code commits and webhooks.</td>
+</tr>
+<tr class="even">
+<td><strong>Cache</strong></td>
+<td>A feature that allows Nextflow to store and reuse previously computed results to avoid redundant computations.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cluster</strong></td>
+<td>A network of computers or servers used for distributed computing and task execution.</td>
+</tr>
+<tr class="even">
+<td><strong>Compute Environments</strong></td>
+<td>A compute environment is the platform where workflows are executed. It is composed of access credentials, configuration settings, and storage options for the environment.</td>
+</tr>
+<tr class="odd">
+<td><strong>Configuration File</strong></td>
+<td>A file containing settings and parameters that control how a Nextflow workflow is executed.</td>
+</tr>
+<tr class="even">
+<td><strong>Credentials</strong></td>
+<td>Credentials are access keys stored by Tower in an encrypted format, using AES-256 encryption. They allow the safe storage of authentication keys for compute environments, private code repositories, and external services.</td>
+</tr>
+<tr class="odd">
+<td><strong>Datasets</strong></td>
+<td>Datasets are collections of versioned, structured data, usually in TSV (tab-separated values) and CSV (comma-separated values) formats. They are used to manage sample sheets and metadata, to be validated and used as inputs for workflow executions.</td>
+</tr>
+<tr class="even">
+<td><strong>GitHub/GitLab</strong></td>
+<td>Version control platforms used to manage and collaborate on Nextflow workflow scripts and associated files.</td>
+</tr>
+<tr class="odd">
+<td><strong>Launchpad</strong></td>
+<td>The Launchpad contains the collection of available pipelines that can be run in a workspace. From here, you can view and select pre-configured pipelines for launch.</td>
+</tr>
+<tr class="even">
+<td><strong>Members</strong></td>
+<td>A member is a user who is internal to the organization. Members have an organization role and can operate in one or more organization workspaces. In each workspace, members can have a participant role that defines the permissions granted to them within that workspace.</td>
+</tr>
+<tr class="odd">
+<td><strong>Pipeline</strong></td>
+<td>A pipeline is a pre-configured workflow that can be used by all users in a workspace. It is composed of a workflow repository, launch parameters, and a compute environment.</td>
+</tr>
+<tr class="even">
+<td><strong>Pipeline Secrets</strong></td>
+<td>Pipeline secrets are keys used by workflow tasks to interact with external systems, such as a password to connect to an external database or an API token. They are stored in Tower using AES-256 encryption.</td>
+</tr>
+<tr class="odd">
+<td><strong>Run</strong></td>
+<td>A run is a workflow execution. The Runs view is used to monitor and inspect the details of workflow executions in a workspace.</td>
+</tr>
+<tr class="even">
+<td><strong>Shared Environment</strong></td>
+<td>Could refer to a cluster, cloud computing environment, or High-Performance Computing (HPC) system where different users or workflows share the available resources for task execution.</td>
+</tr>
+<tr class="odd">
+<td><strong>Task</strong></td>
+<td>A single unit of work within a workflow. It typically represents a specific analysis step, such as aligning sequences, running statistical analyses, or generating plots.</td>
+</tr>
+<tr class="even">
+<td><strong>Workflow</strong></td>
+<td>A sequence of tasks or processes arranged in a specific order to achieve a specific goal, often in the context of scientific or data analysis tasks.</td>
+</tr>
+<tr class="odd">
+<td><strong>Workspace</strong></td>
+<td>A workspace provides the context in which a user operates, including what resources are available and who can access them. It is composed of pipelines, compute environments, credentials, runs, actions, and datasets. Access permissions are controlled through participants, collaborators, and teams.</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
 
-<p>All materials copyright Sydney Informatics Hub, University of Sydney</p></main> <!-- /main -->
+<div style="font-size: 14px;">
+All materials copyright Sydney Informatics Hub, University of Sydney
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -260,121 +343,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  let localAlternateSentinel = 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

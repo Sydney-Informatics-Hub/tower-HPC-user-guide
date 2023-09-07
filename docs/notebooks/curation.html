@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>SIH User Guides - Workspace management and use</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.scss">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SIH User Guides</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/hpc.html">
+ <span class="menu-text">HPC Access</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-workspace-curation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Workspace Curation</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-workspace-curation">    
+        <li>
+    <a class="dropdown-item" href="../notebooks/curation.html">
+ <span class="dropdown-text">Using the interface</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../notebooks/setup_admin.html">
+ <span class="dropdown-text">Admin Role</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../notebooks/setup_participant.html">
+ <span class="dropdown-text">Launch Role</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/pipeline.html">
+ <span class="menu-text">Add a pipeline</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/workflow.html">
+ <span class="menu-text">Run a pipeline</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#using-the-service" id="toc-using-the-service" class="nav-link active" data-scroll-target="#using-the-service"><strong>Using the service</strong></a></li>
+  <li><a href="#logging-into-the-service" id="toc-logging-into-the-service" class="nav-link" data-scroll-target="#logging-into-the-service"><strong>Logging into the service</strong></a></li>
+  <li><a href="#using-the-interface" id="toc-using-the-interface" class="nav-link" data-scroll-target="#using-the-interface"><strong>Using the interface</strong></a></li>
+  <li><a href="#roles-and-responsibilities" id="toc-roles-and-responsibilities" class="nav-link" data-scroll-target="#roles-and-responsibilities"><strong>Roles and responsibilities</strong></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>Workspace management and use</strong></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="using-the-service" class="level2">
+<h2 class="anchored" data-anchor-id="using-the-service"><strong>Using the service</strong></h2>
+<p>Any Australian researcher can access the Australian BioCommons Tower Service during the pilot phase and use their own personal workspace. Once you’ve set up your compute access and been added to a Nextflow Tower workspace, you’ll be able to do the following, depending on your assigned role:</p>
+<p><img src="../images/tower-process.png" class="img-fluid" style="width:60.0%"></p>
+</section>
+<section id="logging-into-the-service" class="level2">
+<h2 class="anchored" data-anchor-id="logging-into-the-service"><strong>Logging into the service</strong></h2>
+<p>Rather than the more common username and password style login you might be used to, NextFlow Tower uses an authentication link. To login:</p>
+<p>Go to <a href="https://tower.services.biocommons.org.au" class="uri">https://tower.services.biocommons.org.au</a>.</p>
+<p>Provide your University email address. ou will then receive an email with the access link in your email inbox. Click on this link to be logged into Nextflow Tower. Note that it can take a few minutes for the link to hit your inbox.</p>
+<p><img src="../images/login_tower.png" class="img-fluid"></p>
+</section>
+<section id="using-the-interface" class="level2">
+<h2 class="anchored" data-anchor-id="using-the-interface"><strong>Using the interface</strong></h2>
+<p>Upon signing into Tower, you will be greeted with an interface for you as an individual user. To access the full functionality offered by the Australian BioCommons Tower service, you will need to move into (one of) your assigned BioCommons workspaces. To do this:</p>
+<ol type="1">
+<li>Select the dropdown menu by your user name.</li>
+<li>Then select the BioCommons workspace of interest.</li>
+</ol>
+<p>Each user has a unique personal workspace to manage resources such as pipelines, compute environments, and credentials. You can also create multiple workspaces within an organisation context and associate each of these workspaces with dedicated teams of users, while providing a fine-grained access control model for each of the teams.</p>
+<p>The Tower Dashboard provides an overview of runs in your organisations and personal workspace at a glance. Access it from the user top-right menu, under Dashboard. This is where you will manage your workspaces and workflows. It will open to the launchpad interface.</p>
+<p><img src="../images/interface_launchpad.png" class="img-fluid"></p>
+<p>Above the interface you’ll see the following:</p>
+<ol type="1">
+<li><a href="https://help.tower.nf/23.1/launch/launchpad/?h=launchpad">Launchpad</a>: all your configured pipelines will be available here for running. Run them from here by selecting the ‘Launch’ button for the pipeline of interest.&nbsp;</li>
+<li><a href="https://help.tower.nf/23.1/monitoring/overview/?h=runs">Runs</a>: from here you can monitor and inspect the details of all previous workflow executions that you and other users in your workspace have run.</li>
+<li><a href="https://help.tower.nf/23.1/pipeline-actions/overview/?h=actions">Actions</a>: you can use Github and Tower webhooks to trigger an automated pipeline test run based on things like pipeline version release.&nbsp;</li>
+<li><a href="https://help.tower.nf/23.1/datasets/overview/">Datasets</a>: you can store pipeline input sample sheets here that specify metadata and file paths for each of your datapoints or samples to be processed by a workflow.&nbsp;</li>
+<li><a href="https://help.tower.nf/23.1/enterprise/configuration/compute_environments/">Compute environment</a>: Tower can be used to deploy workflows on various environments, here you will be able to manage and find your preconfigured environments.&nbsp;</li>
+<li>Credentials: here you can store all your authentication keys, credentials required to access private code repositories on <a href="https://help.tower.nf/23.1/enterprise/configuration/authentication/?#github-identity-provider">GitHub</a>, the <a href="https://help.tower.nf/23.1/credentials/agent_credentials/">Tower agent</a> on HPCs, and <a href="https://help.tower.nf/23.1/enterprise/configuration/authentication/">external services</a>. These are all encrypted, so they cannot be accessed by anyone else once you’ve stored them.&nbsp;</li>
+<li>Secrets: Ignore for now.&nbsp;</li>
+<li><a href="https://help.tower.nf/23.1/orgs-and-teams/workspace-management/?h=#participant-roles">Participants</a>: here you can see and manage (if you are an admin) the other users in your workspace and define user roles to control access.&nbsp;</li>
+<li>Settings: manage some basic workspace settings (if you are an admin).</li>
+</ol>
+</section>
+<section id="roles-and-responsibilities" class="level2">
+<h2 class="anchored" data-anchor-id="roles-and-responsibilities"><strong>Roles and responsibilities</strong></h2>
+<p>Depending on how you will be using the Tower service, you may be provided with access limitations by the workspace administrator.</p>
+<ul>
+<li>Admins are responsible for workspace curation, managing compute environments, and adding pipelines</li>
+<li>Other members are able to run workflows and won’t have the ability to add or remove compute environments, or pipelines.</li>
+</ul>
+<p>USyd users are currently only trialing the Tower service at NCI Gadi and Pawsey Setonix HPCs. As such, all users will need to set up Tower Agent credentials before they can use the Tower service, as this is the only way to access NCI and Pawsey HPC’s with Nextflow Tower.</p>
+<p>See the following sections for more details.</p>
+
+
+</section>
+
+<div style="font-size: 14px;">
+All materials copyright Sydney Informatics Hub, University of Sydney
+</div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

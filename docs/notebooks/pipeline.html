@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>SIH User Guides - Adding General and NF-CORE Pipelines</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.scss">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SIH User Guides</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/hpc.html">
+ <span class="menu-text">HPC access</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-workspace-setup" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Workspace setup</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-workspace-setup">    
+        <li>
+    <a class="dropdown-item" href="../notebooks/curation.html">
+ <span class="dropdown-text">Using the interface</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../notebooks/setup_admin.html">
+ <span class="dropdown-text">Admin role</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../notebooks/setup_participant.html">
+ <span class="dropdown-text">Launch role</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="../notebooks/pipeline.html" aria-current="page">
+ <span class="menu-text">Add a pipeline</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/workflow.html">
+ <span class="menu-text">Run a pipeline</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general">General</a>
+  <ul class="collapse">
+  <li><a href="#hello-world" id="toc-hello-world" class="nav-link" data-scroll-target="#hello-world">Hello World</a></li>
+  </ul></li>
+  <li><a href="#nf-core" id="toc-nf-core" class="nav-link" data-scroll-target="#nf-core">NF-CORE</a>
+  <ul class="collapse">
+  <li><a href="#germline-structuralv" id="toc-germline-structuralv" class="nav-link" data-scroll-target="#germline-structuralv">Germline-StructuralV</a></li>
+  <li><a href="#ampliseq" id="toc-ampliseq" class="nav-link" data-scroll-target="#ampliseq">Ampliseq</a></li>
+  <li><a href="#rnaseq" id="toc-rnaseq" class="nav-link" data-scroll-target="#rnaseq">RNAseq</a></li>
+  </ul></li>
+  <li><a href="#configured-launchpad" id="toc-configured-launchpad" class="nav-link" data-scroll-target="#configured-launchpad">Configured Launchpad</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Adding General and NF-CORE Pipelines</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="general" class="level2">
+<h2 class="anchored" data-anchor-id="general">General</h2>
+<section id="hello-world" class="level3">
+<h3 class="anchored" data-anchor-id="hello-world">Hello World</h3>
+<p>A simple script showing the basic Hello World! example for the Nextflow framework.</p>
+<p><img src="images/hello.png" class="img-fluid"></p>
+<div>
+<blockquote class="blockquote">
+<ul>
+<li><p>From the Launchpad, select “Add pipeline”.&nbsp;</p></li>
+<li><p>Give your pipeline a descriptive name. It needs to be unique to your community (can’t create one that already exists in broader BioCommons group).&nbsp;</p></li>
+<li><p>Select your previously configured compute environment.</p></li>
+<li><p>Provide pipeline codebase URL <a href="https://github.com/nextflow-io/hello" class="uri">https://github.com/nextflow-io/hello</a>.</p></li>
+<li><p>Select <strong>main</strong> for the Revision number.</p></li>
+<li><p>Specify $TW_AGENT_WORK for the work directory.</p></li>
+<li><p>Select either gadi or setonix for the config profiles (these are provided in the code base of the workflow).</p></li>
+<li><p>Select “Add”.</p></li>
+</ul>
+</blockquote>
+</div>
+</section>
+</section>
+<section id="nf-core" class="level2">
+<h2 class="anchored" data-anchor-id="nf-core">NF-CORE</h2>
+<p><a href="https://nf-co.re/pipelines">nf-core</a> is a community effort to collect a curated set of analysis pipelines built using Nextflow. It has three target audiences: facilities, single users, and developers. For facilities, it provides highly automated and optimised pipelines that guarantee reproducibility of results for their users. Single users profit from portable, documented, and easy-to-use workflows. However, you can also become a developer and write your own pipelines in Nextflow using ready-made templates and helper tools.</p>
+<p><img src="images/nf-core-logo.png" class="img-fluid"></p>
+<p>Currently, there are 86 pipelines available, below are a few examples:</p>
+<section id="germline-structuralv" class="level3">
+<h3 class="anchored" data-anchor-id="germline-structuralv">Germline-StructuralV</h3>
+<p>GermlineStructuralV-nf is a pipeline for identifying structural variant events in human Illumina short read whole genome sequence data. GermlineStructuralV-nf identifies structural variant and copy number events from BAM files using&nbsp;<a href="https://github.com/Illumina/manta/blob/master/docs/userGuide/README.md#de-novo-calling">Manta</a>,&nbsp;<a href="https://github.com/brentp/smoove">Smoove</a>, and&nbsp;<a href="https://github.com/SciLifeLab/TIDDIT">TIDDIT</a>. Variants are then merged using&nbsp;<a href="https://github.com/fritzsedlazeck/SURVIVOR">SURVIVOR</a>, and annotated by&nbsp;<a href="https://pubmed.ncbi.nlm.nih.gov/29669011/">AnnotSV</a>. The pipeline is written in Nextflow and uses Singularity/Docker to run containerised tools.</p>
+<p>Structural and copy number detection is challenging. Most structural variant detection tools infer these events from read mapping patterns, which can often resemble sequencing and read alignment artefacts. To address this, GermlineStructuralV-nf employs 3 general purpose structural variant calling tools, which each support a combination of detection methods. Manta, Smoove and TIDDIT use typical detection approaches that consider:</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Discordant read pair alignments</p></li>
+<li><p>Split reads that span a breakpoints</p></li>
+<li><p>Read depth profiling</p></li>
+<li><p>Local de novo assembly</p></li>
+</ul>
+</blockquote>
+<p>This approach is currently considered the best approach for maximising sensitivty of short read data (<a href="https://www.nature.com/articles/s41467-019-11146-4">Cameron et al.&nbsp;2019</a>,&nbsp;<a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1828-7">Malmoud et al.&nbsp;2019</a>). By using a combination of tools that employ different methods, we improve our ability to detect different types and sizes of variant events.</p>
+<p><img src="images/211971740-772796bc-6fb7-43fb-885b-d9cb116bfdd0.png" class="img-fluid"></p>
+<blockquote class="blockquote">
+<ul>
+<li><p>From the Launchpad, select “Add pipeline”.&nbsp;</p></li>
+<li><p>Give your pipeline a descriptive name. It needs to be unique to your community (can’t create one that already exists in broader BioCommons group).&nbsp;</p></li>
+<li><p>Select your previously configured compute environment.</p></li>
+<li><p>Provide pipeline codebase URL <a href="https://github.com/Sydney-Informatics-Hub/Germline-StructuralV-nf" class="uri">https://github.com/Sydney-Informatics-Hub/Germline-StructuralV-nf</a>.&nbsp;</p></li>
+<li><p>Select <strong>main</strong> for the Revision number.</p></li>
+<li><p>Specify $TW_AGENT_WORK for the work directory.</p></li>
+<li><p>Select either gadi or setonix for the config profiles (these are provided in the code base of the workflow).</p></li>
+<li><p>Select “Add”.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 4.35.01 pm.png" class="img-fluid"></p></li>
+</ul>
+</blockquote>
+</section>
+<section id="ampliseq" class="level3">
+<h3 class="anchored" data-anchor-id="ampliseq">Ampliseq</h3>
+<p><strong>nfcore/ampliseq</strong>&nbsp;is a bioinformatics analysis pipeline used for amplicon sequencing, supporting denoising of any amplicon and, currently, taxonomic assignment of 16S, ITS, CO1 and 18S amplicons. Phylogenetic placement is also possible. Supported is paired-end Illumina or single-end Illumina, PacBio and IonTorrent data. Default is the analysis of 16S rRNA gene amplicons sequenced paired-end with Illumina.</p>
+<p><img src="images/ampliseq_workflow.png" class="img-fluid"></p>
+<blockquote class="blockquote">
+<ul>
+<li><p>From the Launchpad, select “Add pipeline”.&nbsp;</p></li>
+<li><p>Give your pipeline a descriptive name. It needs to be unique to your community (can’t create one that already exists in broader BioCommons group).&nbsp;</p></li>
+<li><p>Select your previously configured compute environment.</p></li>
+<li><p>Provide pipeline codebase URL <a href="https://github.com/nf-core/ampliseq/tree/2.6.1" class="uri">https://github.com/nf-core/ampliseq/tree/2.6.1</a>.</p></li>
+<li><p>Select <strong>2.6.1</strong> for the Revision number.</p></li>
+<li><p>Specify $TW_AGENT_WORK for the work directory.</p></li>
+<li><p>Select either gadi or setonix for the config profiles (these are provided in the code base of the workflow).</p></li>
+<li><p>Select “Add”.</p></li>
+</ul>
+</blockquote>
+</section>
+<section id="rnaseq" class="level3">
+<h3 class="anchored" data-anchor-id="rnaseq">RNAseq</h3>
+<p><strong>nf-core/rnaseq</strong>&nbsp;is a bioinformatics pipeline that can be used to analyse RNA sequencing data obtained from organisms with a reference genome and annotation. It takes a samplesheet and FASTQ files as input, performs quality control (QC), trimming and (pseudo-)alignment, and produces a gene expression matrix and extensive QC report.</p>
+<p><img src="images/nf-core-rnaseq_metro_map_grey.png" class="img-fluid"></p>
+<blockquote class="blockquote">
+<ul>
+<li><p>From the Launchpad, select “Add pipeline”.&nbsp;</p></li>
+<li><p>Give your pipeline a descriptive name. It needs to be unique to your community (can’t create one that already exists in broader BioCommons group).&nbsp;</p></li>
+<li><p>Select your previously configured compute environment.</p></li>
+<li><p>Provide pipeline codebase URL <a href="https://github.com/nf-core/rnaseq" class="uri">https://github.com/nf-core/rnaseq</a>.</p></li>
+<li><p>Select <strong>Master</strong> for the Revision number.</p></li>
+<li><p>Specify $TW_AGENT_WORK for the work directory.</p></li>
+<li><p>Select either gadi or setonix for the config profiles (these are provided in the code base of the workflow).</p></li>
+<li><p>Select “Add”.</p></li>
+</ul>
+</blockquote>
+</section>
+</section>
+<section id="configured-launchpad" class="level2">
+<h2 class="anchored" data-anchor-id="configured-launchpad">Configured Launchpad</h2>
+<p>Your launchpad will now reload with a preconfigured workflows.</p>
+<p><img src="images/Screen Shot 2023-09-06 at 4.26.12 pm.png" class="img-fluid"></p>
+
+
+</section>
+
+<div style="font-size: 14px;">
+All materials copyright Sydney Informatics Hub, University of Sydney
+</div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

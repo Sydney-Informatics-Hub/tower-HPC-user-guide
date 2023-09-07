@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Sydney Informatics Hub - Setup for the Admin Role</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.scss">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Sydney Informatics Hub</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./hpc.html">
+ <span class="menu-text">1. Getting HPC Access</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-workspace-curation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">2. Workspace Curation</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-workspace-curation">    
+        <li>
+    <a class="dropdown-item" href="./setup_admin.html">
+ <span class="dropdown-text">Admin Role</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./setup_participant.html">
+ <span class="dropdown-text">Launch Role</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./pipeline.html">
+ <span class="menu-text">3. Adding Pipelines</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./workflow.html">
+ <span class="menu-text">4. Running a Workflow</span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#logging-into-the-service" id="toc-logging-into-the-service" class="nav-link active" data-scroll-target="#logging-into-the-service">Logging into the service</a></li>
+  <li><a href="#the-interface" id="toc-the-interface" class="nav-link" data-scroll-target="#the-interface">The interface</a></li>
+  <li><a href="#setting-up-your-workspace" id="toc-setting-up-your-workspace" class="nav-link" data-scroll-target="#setting-up-your-workspace">Setting up your workspace</a>
+  <ul class="collapse">
+  <li><a href="#create-your-personal-access-token" id="toc-create-your-personal-access-token" class="nav-link" data-scroll-target="#create-your-personal-access-token">Create your personal access token</a></li>
+  <li><a href="#create-a-tower-credential-for-your-hpc" id="toc-create-a-tower-credential-for-your-hpc" class="nav-link" data-scroll-target="#create-a-tower-credential-for-your-hpc">Create a Tower credential for your HPC</a></li>
+  <li><a href="#configure-a-compute-environment" id="toc-configure-a-compute-environment" class="nav-link" data-scroll-target="#configure-a-compute-environment">Configure a compute environment&nbsp;</a></li>
+  </ul></li>
+  <li><a href="#adding-collaborators" id="toc-adding-collaborators" class="nav-link" data-scroll-target="#adding-collaborators">Adding collaborators</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Setup for the Admin Role</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="logging-into-the-service" class="level2">
+<h2 class="anchored" data-anchor-id="logging-into-the-service">Logging into the service</h2>
+<p>Rather than the more common username and password style login you might be used to, NextFlow Tower uses an authentication link. To login:</p>
+<div>
+<blockquote class="blockquote">
+<ul>
+<li><p>Go to <a href="https://tower.services.biocommons.org.au" class="uri">https://tower.services.biocommons.org.au</a>.</p></li>
+<li><p>Provide your University email address. ou will then receive an email with the access link in your email inbox. Click on this link to be logged into Nextflow Tower. Note that it can take a few minutes for the link to hit your inbox.</p>
+<p><img src="images/Screen Shot 2023-08-24 at 3.07.50 pm.png" class="img-fluid"></p></li>
+</ul>
+</blockquote>
+</div>
+</section>
+<section id="the-interface" class="level2">
+<h2 class="anchored" data-anchor-id="the-interface">The interface</h2>
+<p>Upon signing into Tower, you will be greeted with an interface for you as an individual user. To access the full functionality offered by the Australian BioCommons Tower service, you will need to move into (one of) your assigned BioCommons workspaces. To do this:</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Select the dropdown menu by your user name.</p></li>
+<li><p>Then select the BioCommons workspace of interest.</p></li>
+</ul>
+</blockquote>
+<p>Each user has a unique personal workspace to manage resources such as pipelines, compute environments, and credentials. You can also create multiple workspaces within an organization context and associate each of these workspaces with dedicated teams of users, while providing a fine-grained access control model for each of the teams.</p>
+<p>The Tower Dashboard provides an overview of runs in your organizations and personal workspace at a glance. Access it from the user top-right menu, under Dashboard. This is where you will manage your workspaces and workflows. It will open to the launchpad interface.</p>
+<p><img src="images/Screen Shot 2023-08-24 at 2.17.37 pm.png" class="img-fluid"></p>
+<p>Above the interface you’ll see the following:</p>
+<div>
+<blockquote class="blockquote">
+<ol type="1">
+<li><p><a href="https://help.tower.nf/23.1/launch/launchpad/?h=launchpad">Launchpad</a>: all your configured pipelines will be available here for running. Run them from here by selecting the ‘Launch’ button for the pipeline of interest.&nbsp;</p></li>
+<li><p><a href="https://help.tower.nf/23.1/monitoring/overview/?h=runs">Runs</a>: from here you can monitor and inspect the details of all previous workflow executions that you and other users in your workspace have run.</p></li>
+<li><p><a href="https://help.tower.nf/23.1/pipeline-actions/overview/?h=actions">Actions</a>: you can use Github and Tower webhooks to trigger an automated pipeline test run based on things like pipeline version release.&nbsp;</p></li>
+<li><p><a href="https://help.tower.nf/23.1/datasets/overview/">Datasets</a>: you can store pipeline input sample sheets here that specify metadata and file paths for each of your datapoints or samples to be processed by a workflow.&nbsp;</p></li>
+<li><p><a href="https://help.tower.nf/23.1/enterprise/configuration/compute_environments/">Compute environment</a>: Tower can be used to deploy workflows on various environments, here you will be able to manage and find your preconfigured environments.&nbsp;</p></li>
+<li><p>Credentials: here you can store all your authentication keys, credentials required to access private code repositories on <a href="https://help.tower.nf/23.1/enterprise/configuration/authentication/?#github-identity-provider">GitHub</a>, the <a href="https://help.tower.nf/23.1/credentials/agent_credentials/">Tower agent</a> on HPCs, and <a href="https://help.tower.nf/23.1/enterprise/configuration/authentication/">external services</a>. These are all encrypted, so they cannot be accessed by anyone else once you’ve stored them.&nbsp;</p></li>
+<li><p>Secrets: Ignore for now.&nbsp;</p></li>
+<li><p><a href="https://help.tower.nf/23.1/orgs-and-teams/workspace-management/?h=#participant-roles">Participants</a>: here you can see and manage (if you are an admin) the other users in your workspace and define user roles to control access.&nbsp;</p></li>
+<li><p>Settings: manage some basic workspace settings (if you are an admin).</p></li>
+</ol>
+</blockquote>
+</div>
+</section>
+<section id="setting-up-your-workspace" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-your-workspace">Setting up your workspace</h2>
+<p>Workspace configuration can only be performed by admins. With workspace configuration, you can create and configure compute environments, configure workflows to run on these environments, and add collaborators. The NeuroCommunity are currently only trialling the Tower service at NCI Gadi and Pawsey Setonix HPCs. As such, you will need to create Tower Agent credentials because this is the only way to access NCI and Pawsey HPC’s with Tower.</p>
+<section id="create-your-personal-access-token" class="level3">
+<h3 class="anchored" data-anchor-id="create-your-personal-access-token">Create your personal access token</h3>
+<p>You will need to create a personal access token and store it on your compute environment (i.e.&nbsp;on the HPC environment, not locally) in order to communicate with the Tower API. To create a personal access token you will need to navigate to the user settings logo in the top navbar and select ‘Your tokens’, then:</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Select ‘Add Token’.&nbsp;</p></li>
+<li><p>Name your token something descriptive and select ‘Add’.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 2.58.54 pm.png" class="img-fluid"></p></li>
+<li><p>Copy the token to your clipboard.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 2.59.14 pm.png" class="img-fluid"></p></li>
+<li><p>Log in to your HPC (either NCI Gadi or Pawsey Setonix) on the command-line.</p>
+<ul>
+<li><p>If you are using Gadi, navigate to $HOME.</p></li>
+<li><p>If you are on Setonix, navigate to $MYSOFTWARE.</p></li>
+</ul></li>
+<li><p>From within the directory mentioned above, make a hidden directory called tower to store Tower token and credentials in.</p></li>
+<li><p>Copy your personal access token into a file named token within this directory.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 3.04.27 pm.png" class="img-fluid"></p></li>
+</ul>
+</blockquote>
+</section>
+<section id="create-a-tower-credential-for-your-hpc" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-tower-credential-for-your-hpc">Create a Tower credential for your HPC</h3>
+<p>You can create different types of credentials for different purposes through the Tower interface. For example, you can add credentials to access code repositories, commercial cloud, SSH-keys, and the Tower Agent. To connect your Tower agent to your HPC, you will need to create a Tower agent personal credential.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 3.46.46 pm.png" class="img-fluid"></p>
+<p>To set up your Tower agent credential, you will need to navigate to the user settings logo in the top navbar and select ‘Your credentials’.&nbsp;&nbsp;</p>
+<p>You can either choose to work with a shared or personal credential. Setting this up requires a similar process to creating a personal access token, using both the command line and Tower interface. Starting on the Tower interface, navigate to ‘Credentials’ in the top navbar menu:<br>
+</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Select ‘Add Credential’.</p></li>
+<li><p>Name the credential something descriptive.</p></li>
+<li><p>Select Tower Agent from the Provider dropdown menu.</p></li>
+<li><p>Enable ‘Shared agent’ so that all workspace users can access the same instance (optional).</p></li>
+<li><p>Copy the Agent connection ID to your clipboard.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 3.46.53 pm.png" class="img-fluid"></p></li>
+<li><p>Before saving the credential you will need to run the agent on your HPC command line.&nbsp;</p></li>
+<li><p>Log in to your HPC project space on the command-line and navigate to the shared space where you’ll be running the tower agent from.&nbsp;</p></li>
+<li><p>Copy your personal access token into a file named connection_id within the hidden .tower directory.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 3.50.27 pm.png" class="img-fluid"></p></li>
+<li><p>Navigate to your working directory (not $HOME).</p>
+<ul>
+<li><p>On gadi, run the run_tower_agent_pbs.sh script at /g/data/er01/tower-nf.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 3.54.33 pm.png" class="img-fluid"></p></li>
+<li><p>On setonix, TBA.</p></li>
+</ul></li>
+<li><p>Back in the tower interface, hit ‘Add’ to save your Tower agent credential.</p></li>
+<li><p>You can cancel the Tower agent running on the command line after the credential is saved.</p></li>
+</ul>
+</blockquote>
+</section>
+<section id="configure-a-compute-environment" class="level3">
+<h3 class="anchored" data-anchor-id="configure-a-compute-environment">Configure a compute environment&nbsp;</h3>
+<p>Compute environments have been configured for our group on NCI Gadi and Pawsey Setonix HPCs. The process for setting up this workspace is as follows:</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Run the tower agent on the HPC command line again with the <a href="https://github.com/Sydney-Informatics-Hub/tower-nf">relevant run_tower_agent_&lt;pbs|slurm&gt;.sh script</a></p></li>
+<li><p>In the Tower interface, navigate to ‘Compute Environments’ in the top navbar menu.</p></li>
+<li><p>Name the environment something descriptive to distinguish it from other environments you may set up.</p></li>
+<li><p>Select the platform. For Setonix this is Slurm workload manager, for Gadi this is Altair PBS Pro.&nbsp;</p></li>
+<li><p>Provide your (shared or personal) credentials previously saved to the connection_id file.</p></li>
+</ul>
+</blockquote>
+<p><img src="images/Screen Shot 2023-08-25 at 4.02.10 pm.png" class="img-fluid"></p>
+<section id="nci-gadi-hpc" class="level4">
+<h4 class="anchored" data-anchor-id="nci-gadi-hpc">NCI Gadi HPC</h4>
+<p>Currently only NCI Gadi is a shared environment. The NCI Gadi environment has specifically been configured for our SIH project ‘er01’. Only users with access to er01 added to our workspace will be able to run workflows using this configured compute environment. It’s important that you leave the head and compute queue names empty, given jobs submitted to queues on Gadi are transferred to the exec version of each queue once running. The exec queue names are not visible to the Tower API so your jobs will fail to run.&nbsp;</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Under <strong>Staging options:</strong></p>
+<ul>
+<li><p>module load nextflow/23.04.1.</p></li>
+<li><p>module load singularity/3.8.6-nompi.</p></li>
+</ul></li>
+<li><p>Under <strong>Advanced options:</strong></p>
+<ul>
+<li><p><strong>Nextflow queue size</strong>: Set to 1000 (as directed <a href="https://opus.nci.org.au/display/Help/Queue+Limits">here</a>).</p></li>
+<li><p><strong>Head job options:</strong> PBS options and applied head jobs to the compute jobs. Add queue as “copyq” to provide external network access.</p>
+<ul>
+<li>--Iwalltime=10:00:00, ncpus=1, mem=8G, storage=scratch/&lt;project&gt;+gdata/&lt;project&gt;, wd -P &lt;project&gt; -q copyq</li>
+</ul></li>
+</ul></li>
+</ul>
+</blockquote>
+<p><img src="images/Screen Shot 2023-08-25 at 4.03.34 pm.png" class="img-fluid"></p>
+</section>
+<section id="pawsey-setonix-hpc" class="level4">
+<h4 class="anchored" data-anchor-id="pawsey-setonix-hpc">Pawsey Setonix HPC</h4>
+<blockquote class="blockquote">
+<ul>
+<li><p><strong>Work directory:</strong> $TW_AGENT_WORK.</p></li>
+<li><p><strong>Launch directory:</strong> should be in the /scratch partition, because this is where you should run workflows. For example, /scratch/project_id/user_id/sv_calling.</p></li>
+<li><p><strong>Head queue name</strong>: work.</p></li>
+<li><p><strong>Compute queue name</strong>: work, unless you have a specific reason to select the long, highmem, or copy queue due to your workflow requirements.</p></li>
+<li><p>Under <strong>Staging options:</strong></p>
+<ul>
+<li><p><strong>Pre-run script</strong>: Here we load the needed system modules for running a Nextflow tower job. This currently includes the following modules, but the specific versions may change over time. You can check on the Setonix command line which module versions are available</p>
+<ul>
+<li><p>module load nextflow/23.04.1&nbsp;</p></li>
+<li><p>module load singularity/3.8.6-nompi</p></li>
+</ul></li>
+</ul></li>
+<li><p>Under <strong>Advanced options:</strong></p>
+<ul>
+<li><p><strong>Nextflow queue size</strong>: Set to 1024.</p></li>
+<li><p><strong>Head job submit options:</strong> This setting provides resources specifications for running the Nextflow head job. The main parameter you might want to change is `time`. You may need less than 24 hours walltime, in which case you can reduce the requested time.</p>
+<ul>
+<li>--time=24:00:00 --ntasks=1 --tasks-per-node=1 --mem=12G --cpus-per-task=1</li>
+</ul></li>
+</ul></li>
+</ul>
+</blockquote>
+</section>
+</section>
+</section>
+<section id="adding-collaborators" class="level2">
+<h2 class="anchored" data-anchor-id="adding-collaborators">Adding collaborators</h2>
+<p>Collaborators are users who are invited to an organizations workspace, but are not members of that organization. As a result, their access is limited to only within that workspace. New collaborators to an organization’s workspace can be added using the Participants.</p>
+<blockquote class="blockquote">
+<p>To create a new team within an organization:</p>
+<ol type="1">
+<li><p>Go to the <strong>Participants</strong> tab of the organization menu.</p></li>
+<li><p>Click on <strong>Add participant</strong>.</p></li>
+<li><p>Enter the <strong>Name</strong> of new participant.&nbsp;</p></li>
+<li><p>Optionally, update the <strong>role</strong> associated with the participant of the organization members or collaborators.</p></li>
+</ol>
+</blockquote>
+<p>There are five roles available for every workspace participant:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li><p><strong>Owner</strong>: The participant have full permissions on any resources within the workspace, including the workspace settings.</p></li>
+<li><p><strong>Admin</strong>: The participant have full permission on the resources associated with the workspace. Therefore they can create/modify/delete Pipelines, Compute environments, Actions and Credentials. They can add/remove users to the workspace, but cannot access the workspace settings.</p></li>
+<li><p><strong>Maintain</strong>: The participant can launch pipelines and modify pipeline executions (e.g.&nbsp;can change the pipeline launch compute environments, parameters, pre/post-run scripts and nextflow configuration) and create new pipelines in the Launchpad. The users cannot modify Compute Environments and Credentials.</p></li>
+<li><p><strong>Launch</strong>: The participant can launch pipelines and modify the pipeline input/output parameters in the Launchpad. They cannot modify the launch configuration and other resources.</p></li>
+<li><p><strong>View</strong>: The participant can view the team pipelines and runs in read-only mode.</p></li>
+</ol>
+</blockquote>
+
+
+</section>
+
+<p>All materials copyright Sydney Informatics Hub, University of Sydney</p></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
