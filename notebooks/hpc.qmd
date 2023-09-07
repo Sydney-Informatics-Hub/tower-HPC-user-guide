@@ -1,5 +1,5 @@
 ---
-title: "HPC Access"
+title: "**Accessing NCI Gadi HPC**"
 output:
   html_document:
     toc: true
@@ -10,97 +10,208 @@ editor:
     wrap: sentence
 ---
 
-## National Computational Infrastructure
+## **National Computational Infrastructure**
 
-NCI is a research-focused organization that provides advanced computing, data storage, and data management solutions to support scientific research and innovation in Australia and beyond.
-NCI's HPC systems are designed to handle complex computational tasks, such as simulations, data analysis, and modeling, for a wide range of scientific disciplines, including climate modeling, genomics, astronomy, and materials science.
+NCI is a research-focused organisation that provides advanced computing, data storage, and data management solutions to support scientific research and innovation in Australia and beyond.
+NCI's HPC systems are designed to handle complex computational tasks, such as simulations, data analysis, and modeling, for a wide range of scientific disciplines, including climate modeling, genomics, astronomy, and materials science. The University of Sydney provides its researchers with subsidised access to NCI's infrastructure. 
 
-## Resources
+## **Resources**
 
 -   [NCI help](https://opus.nci.org.au/display/Help/Getting+Started+at+NCI)
 
-## Setting up your NCI Account
+## **Set up your NCI Account**
 
-All new users must create their account through the [NCI online self service portal](https://my.nci.org.au/mancini/login?next=/mancini/).
+All new users must create their account through the [NCI online self service portal](https://my.nci.org.au/mancini/login?next=/mancini/). To create your account you will need the following information:
 
-> To create your account you will need the following information:
->
-> -   Your Name
->
-> -   Institutional email address (Gmail, Hotmail, etc are not accepted)
->
-> -   Mobile phone number (optional, but strongly encouraged as you otherwise won't be able to easily reset your password)
->
-> -   Either:
->
->     -   NCI project code of an existing project you wish to join
->
->     -   A new project proposal to be assessed by a Scheme Manager to determine if they will grant your project time
+- Your Name
+- Institutional email address (Gmail, Hotmail, etc. are not accepted)
+- Mobile phone number
+- Either:
+  - NCI project code of an existing project you wish to join
+  - A new project proposal to be assessed by a Scheme Manager to determine if they will grant your project time
 
-Note that resources at NCI are allocated to *projects* and not to individual users.
+Note that resources at NCI are allocated to **projects** and not to individual users.
 
-![Click on the Sign up here link to start your registration form.](images/Screen%20Shot%202023-09-06%20at%2012.32.06%20pm.png)
+Complete all steps below to set up an NCI account:
 
-Complete all steps in the registration form.
+1. Click on 'Sign up' link on the [NCI online self service portal](https://my.nci.org.au/mancini/login?next=/mancini/): 
+![](../images/Screen%20Shot%202023-09-06%20at%2012.32.06%20pm.png)
 
-![](images/Screen%20Shot%202023-09-06%20at%2012.02.08%20pm.png)
+2. Accept the terms and conditions: 
+![](../images/Screen%20Shot%202023-09-06%20at%2012.02.08%20pm.png)
 
-![](images/Screen%20Shot%202023-09-06%20at%2012.02.45%20pm.png)
+3. Provide your personal details: 
+![](../images/Screen%20Shot%202023-09-06%20at%2012.02.45%20pm.png)
 
-![](images/Screen%20Shot%202023-09-06%20at%2012.03.44%20pm.png)
+4. Provide details on the project you'll be working on: 
+![](../images/Screen%20Shot%202023-09-06%20at%2012.03.44%20pm.png)
 
-![](images/Screen%20Shot%202023-09-06%20at%2012.04.24%20pm.png)
+5. Select University of Sydney as you institution: 
+![](../images/Screen%20Shot%202023-09-06%20at%2012.04.24%20pm.png)
 
-Your username will become active when a project Lead CI approves your request to join their project, or when a Scheme Manager approves your new project proposal.
-You will receive a confirmation email from the Mancini system when your username is activated.
+Your username will become active when a project Lead CI approves your request to join their project, or when a Scheme Manager approves your new project proposal. You will receive a confirmation email from the Mancini system when your username is activated.
 
-## How to log into Gadi
+## **Using a terminal application**
 
-### Linux/Mac/Unix
+Once you have been granted access to NCI you are able to access the platform. To do this, you will need to download a terminal application on your local computer or via NCI's [Australian Research Environment platform (ARE)](https://are-auth.nci.org.au/auth/ldap/login?back=&state=wemd7xq6h4fwgxmpdodee2g2w). 
 
-Access to Gadi is via SSH to **gadi.nci.org.au**.
-This provides a Unix shell on one of the Gadi login nodes.
+If you don't have a terminal already or know what one is, it is used to provide a window with a command line interface through which you can send commands to be executed by the HPC remotely or your local machine. See [here](https://sydney-informatics-hub.github.io/training.artemis.introhpc/setup.html#1-get-a-shell-terminal-emulator) for instructions on downloading a terminal application for your computer.
 
-![Replace abc123 with your own username. Enter your password when prompted. If you can't remember your password, you can reset it via [Mancini](https://my.nci.org.au/mancini/reset/password/).](images/Screen%20Shot%202023-09-06%20at%2012.46.10%20pm.png)
+### **Log into Gadi**
 
-#### Copying Files
+You will need to access the Gadi HPC via the command line when using the Nextflow Tower service for a few purposes: 
 
-To copy files to Gadi you should use the Gadi data movers **gadi-dm.nci.org.au**:
+1. To transfer data to and from the University of Sydney's research data store 
+2. To turn on the Tower Agent before running a workflow
 
-![](images/Screen%20Shot%202023-09-06%20at%2012.53.52%20pm.png)
+Access to Gadi is via SSH to **gadi.nci.org.au**. This provides a Unix shell on one of the Gadi login nodes.
 
-### X11 (X-Windows)
+Open a terminal application and type the following command:
 
-![When using OS X 10.8 or later you will need to install XQuartz from https://www.xquartz.org before you can use X11 on a Mac.](images/Screen%20Shot%202023-09-06%20at%2012.49.39%20pm.png)
+```bash
+ssh abc123@gadi.nci.org.au 
+```
 
-#### Copying Files
+Replace abc123 with your own username. Enter your password when prompted. If you can't remember your password, you can reset it via [Mancini](https://my.nci.org.au/mancini/reset/password/). Navigate to your project space: 
 
-We recommend the use of one of the following packages for X11 access to Gadi:
+```bash
+cd /scratch/ab01
+```
 
-> -   MobaXterm from [http://mobaxterm.mobatek.net](http://mobaxterm.mobatek.net/)
->
-> -   Cygwin from [https://cygwin.com](https://cygwin.com/)
->
-> -   Xming from <http://www.straightrunning.com/XmingNotes/>
+Replace ab01 with your project name. 
 
-### Windows
+### **Copy your data to Gadi**
 
-![](images/Screen%20Shot%202023-09-06%20at%2012.50.53%20pm.png)
+To copy files to Gadi you should use the Gadi data mover queue and **gadi-dm.nci.org.au**. To transfer data from USyd's RDS via a PBS job, you'll need to set up ssh keys for passwordless transfer of datasets using the University of Sydney's Artemis HPC. 
 
-> ![](images/putty.gif)
+#### **Set up ssh keys**
 
-#### Copying Files
+**1. Generate SSH Key Pair on the Artemis HPC**
 
-To copy files to Gadi you should use the Gadi data movers **gadi-dm.nci.org.au**:
+Log in to the Artemis HPC and stay in your home directory:
 
-We recommend the following applications to copy files to and from Gadi:
+```bash
+ssh unikey@hpc.sydney.edu.au
+```
 
-> -   MobaXterm from [http://mobaxterm.mobatek.net](http://mobaxterm.mobatek.net/)
->
-> -   PuTTY's PSCP or PSFTP applications from <http://www.chiark.greenend.org.uk/~sgtatham/putty/>
->
-> -   FileZilla from [https://filezilla-project.org](https://filezilla-project.org/)
->
-> -   WinSCP from [https://winscp.net/](https://winscp.net/eng/index.php)
+Run the following command to generate an SSH key pair without a passphrase:
 
-To transfer files/folders using [MobaXterm](https://mobaxterm.mobatek.net/) on Windows system, drag and drop files/folders to/from local computer and Gadi after log in to Gadi via [MobaXterm](https://mobaxterm.mobatek.net/).
+```bash
+ssh-keygen -t rsa -b 2048 -N ""
+```
+
+Press enter when prompted, saving the key in ~/.ssh/id_rsa. 
+
+**2. Set Appropriate Permissions**
+
+Ensure that your SSH key files have the appropriate permissions to maintain a secure environment:
+
+Set permissions on your SSH key files using `chmod` command:
+
+```bash
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/id_rsa
+chmod 644 ~/.ssh/id_rsa.pub
+```
+
+Create the authorized_keys file to transfer to Gadi HPC:
+
+```bash
+cat ~/.ssh/id_rsa.pub >> ~/authorized_keys
+```
+
+Then set permissions on this file with `chmod`:
+
+```bash
+chmod 700 ~/authorized_keys
+```
+
+**3. Transfer Public Key to Gadi**
+
+Now move your `authorized_keys` file to Gadi HPC. Start by logging into Gadi from the Artemis HPC CLI and provide your password when prompted: 
+
+```bash
+sftp abc123@gadi-dm.nci.org.au
+```
+
+Replace abc123 above with your NCI username. 
+
+If you don't already have an .ssh directory in your home directory, you'll need to create one: 
+
+```bash 
+mkdir ~/.ssh 
+```
+
+Move into the .ssh directory and transfer your `authorized_keys` file: 
+
+```bash 
+cd ~/.ssh
+```
+
+```bash
+put authorized_keys
+```
+
+This will transfer authorized_keys on Gadi to your current directory. With sftp, it will look for the file relative to where you launched sftp. You can check where you are on Artemis using `lls`. 
+
+**4. Set Up the Public Key on the Gadi HPC**
+
+Log in to the Gadi HPC via the data mover address: 
+
+```bash
+ssh abc123@gadi-dm.nci.org.au
+```
+
+Append the transferred public key to the `~/.ssh/authorized_keys` file using the following command:
+
+   ```sh
+   cat /path/to/directory/id_rsa.pub >> ~/.ssh/authorized_keys
+   ```
+
+7. Set appropriate permissions for the `~/.ssh/authorized_keys` file:
+
+   ```sh
+   chmod 600 ~/.ssh/authorized_keys
+   ```
+
+**5. Test the setup**
+
+Logout using `ctrl`+`z` and test the sftp connection. You should not need to use a password:
+
+```bash
+sftp abc123@gadi-dm.nci.org.au
+```
+
+This completes the setup. Now you can log in to the Gadi HPC from the Artemis HPC without entering a password each time. Be sure to handle your private key securely, especially since it is not passphrase protected.
+
+#### **Copying files from RDS to Gadi**
+
+Using a PBS job to transfer data transfer between Artemis HPC and NCI's Gadi HPC using `scp` or `rsync` is a good practice. Below is a simple example of a PBS script that you might run from Artemis to transfer data to Gadi HPC:
+
+```bash
+#!/bin/bash
+
+# Transfer files from Gadi to RDS by submitting this job on Artemis
+# Must have ssh-keys set up for passwordless transfer
+
+#PBS -P SIH
+#PBS -N transfer
+#PBS -l walltime=24:00:00
+#PBS -l ncpus=1
+#PBS -l mem=40GB
+#PBS -W umask=022
+#PBS -q dtq
+
+nci_username= #specify your nci username
+source_host=${nci_username}@gadi-dm.nci.org.au
+source_path= #specify path to data to be transferred
+destination_path=/rds/PRJ-SIH/FromGadi #specify path of where you'd like to upload data
+
+while [ 1 ]
+do
+  echo Transferring ${source_host}:${source_path}/${dir} to ${destination_path}
+  rsync -rPvz -L --append-verify ${source_host}:${source_path}/${dir} ${destination_path}
+
+done
+
+```
