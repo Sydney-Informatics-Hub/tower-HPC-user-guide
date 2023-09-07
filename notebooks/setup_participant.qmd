@@ -1,0 +1,86 @@
+---
+title: "Setup for the Launch Role"
+output:
+  html_document:
+    toc: true
+    toc_float: false
+    toc-expand: 2
+---
+
+## Logging into the service
+
+Rather than the more common username and password style login you might be used to, NextFlow Tower uses an authentication link. To login:
+
+<div>
+
+> -   Go to <https://tower.services.biocommons.org.au>.
+>
+> -   Provide your University email address. ou will then receive an email with the access link in your email inbox. Click on this link to be logged into Nextflow Tower. Note that it can take a few minutes for the link to hit your inbox.
+>
+>     ![](images/Screen%20Shot%202023-08-24%20at%203.07.50%20pm.png)
+
+</div>
+
+## The interface
+
+Upon signing into Tower, you will be greeted with an interface for you as an individual user. To access the full functionality offered by the Australian BioCommons Tower service, you will need to move into (one of) your assigned BioCommons workspaces. To do this:
+
+> -   Select the dropdown menu by your user name.
+>
+> -   Then select the BioCommons workspace of interest.
+
+Each user has a unique personal workspace to manage resources such as pipelines, compute environments, and credentials. You can also create multiple workspaces within an organization context and associate each of these workspaces with dedicated teams of users, while providing a fine-grained access control model for each of the teams.
+
+The Tower Dashboard provides an overview of runs in your organizations and personal workspace at a glance. Access it from the user top-right menu, under Dashboard. This is where you will manage your workspaces and workflows. It will open to the launchpad interface.
+
+![](images/Screen%20Shot%202023-08-24%20at%202.17.37%20pm.png)
+
+Above the interface you'll see the following:
+
+<div>
+
+> 1.  [Launchpad](https://help.tower.nf/23.1/launch/launchpad/?h=launchpad): all your configured pipelines will be available here for running. Run them from here by selecting the 'Launch' button for the pipeline of interest. 
+>
+> 2.  [Runs](https://help.tower.nf/23.1/monitoring/overview/?h=runs): from here you can monitor and inspect the details of all previous workflow executions that you and other users in your workspace have run.
+>
+> 3.  [Actions](https://help.tower.nf/23.1/pipeline-actions/overview/?h=actions): you can use Github and Tower webhooks to trigger an automated pipeline test run based on things like pipeline version release. 
+>
+> 4.  [Datasets](https://help.tower.nf/23.1/datasets/overview/): you can store pipeline input sample sheets here that specify metadata and file paths for each of your datapoints or samples to be processed by a workflow. 
+>
+> 5.  [Compute environment](https://help.tower.nf/23.1/enterprise/configuration/compute_environments/): Tower can be used to deploy workflows on various environments, here you will be able to manage and find your preconfigured environments. 
+>
+> 6.  Credentials: here you can store all your authentication keys, credentials required to access private code repositories on [GitHub](https://help.tower.nf/23.1/enterprise/configuration/authentication/?#github-identity-provider), the [Tower agent](https://help.tower.nf/23.1/credentials/agent_credentials/) on HPCs, and [external services](https://help.tower.nf/23.1/enterprise/configuration/authentication/). These are all encrypted, so they cannot be accessed by anyone else once you've stored them. 
+>
+> 7.  Secrets: Ignore for now. 
+>
+> 8.  [Participants](https://help.tower.nf/23.1/orgs-and-teams/workspace-management/?h=#participant-roles): here you can see and manage (if you are an admin) the other users in your workspace and define user roles to control access. 
+>
+> 9.  Settings: manage some basic workspace settings (if you are an admin).
+
+</div>
+
+## Create your personal access token
+
+Workspace configuration can only be performed by admins but you will still need to create a personal access token and store it on your compute environment (i.e. on the HPC environment, not locally) in order to communicate with the Tower API. To create a personal access token you will need to navigate to the user settings logo in the top navbar and select 'Your tokens', then:
+
+> -   Select 'Add Token'. 
+>
+> -   Name your token something descriptive and select 'Add'.
+>
+>     ![](images/Screen%20Shot%202023-08-25%20at%202.58.54%20pm.png)
+>
+> -   Copy the token to your clipboard.
+>
+>     ![](images/Screen%20Shot%202023-08-25%20at%202.59.14%20pm.png)
+>
+> -   Log in to your HPC (either NCI Gadi or Pawsey Setonix) on the command-line.
+>
+>     -   If you are using Gadi, navigate to \$HOME.
+>
+>     -   If you are on Setonix, navigate to \$MYSOFTWARE.
+>
+> -   From within the directory mentioned above, make a hidden directory called tower to store Tower token and credentials in.
+>
+> -   Copy your personal access token into a file named token within this directory.
+>
+>     ![](images/Screen%20Shot%202023-08-25%20at%203.04.27%20pm.png)

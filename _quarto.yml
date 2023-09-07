@@ -3,23 +3,23 @@ project:
   output-dir: docs
 
 website:
-  title: "Sydney Informatics Hub"
+  title: "SIH User Guides"
   navbar:
     background: primary
     left:
       - href: index.qmd
         text: Home
-      - href: hpc.qmd
+      - href: notebooks/hpc.qmd
         text: "1. Getting HPC Access"
       - text: "2. Workspace Curation"
         menu:
         - text: "Admin Role"
-          href: setup_admin.html
+          href: notebooks/setup_admin.html
         - text: "Launch Role"
-          href: setup_participant.html
-      - href: pipeline.qmd
+          href: notebooks/setup_participant.html
+      - href: notebooks/pipeline.qmd
         text: "3. Adding Pipelines"
-      - href: workflow.qmd
+      - href: notebooks/workflow.qmd
         text: "4. Running a Workflow"
     cookie-consent: 
       type: express
@@ -28,16 +28,16 @@ website:
       policy-url: https://www.sydney.edu.au/privacy-statement.html
     google-analytics: "G-TNWWV3HK57"
 
-  body-footer: "All materials copyright Sydney Informatics Hub, University of Sydney"
+  body-footer: "<div style='font-size: 14px;'>All materials copyright Sydney Informatics Hub, University of Sydney</div>"
 
 format:
   html:
-   toc: true
-   theme:
+    theme: 
       light: flatly
-      dark: darkly
-   css: styles.scss
-   code-link: true
-   code-fold: false
+    css: styles.scss
+    toc: true
+    code-overflow: scroll
+    highlight-style: github
+    page-layout: full
 
 

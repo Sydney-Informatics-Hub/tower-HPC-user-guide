@@ -1,0 +1,106 @@
+---
+title: "HPC Access"
+output:
+  html_document:
+    toc: true
+    toc_float: false
+    toc-expand: 2
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+## National Computational Infrastructure
+
+NCI is a research-focused organization that provides advanced computing, data storage, and data management solutions to support scientific research and innovation in Australia and beyond.
+NCI's HPC systems are designed to handle complex computational tasks, such as simulations, data analysis, and modeling, for a wide range of scientific disciplines, including climate modeling, genomics, astronomy, and materials science.
+
+## Resources
+
+-   [NCI help](https://opus.nci.org.au/display/Help/Getting+Started+at+NCI)
+
+## Setting up your NCI Account
+
+All new users must create their account through the [NCI online self service portal](https://my.nci.org.au/mancini/login?next=/mancini/).
+
+> To create your account you will need the following information:
+>
+> -   Your Name
+>
+> -   Institutional email address (Gmail, Hotmail, etc are not accepted)
+>
+> -   Mobile phone number (optional, but strongly encouraged as you otherwise won't be able to easily reset your password)
+>
+> -   Either:
+>
+>     -   NCI project code of an existing project you wish to join
+>
+>     -   A new project proposal to be assessed by a Scheme Manager to determine if they will grant your project time
+
+Note that resources at NCI are allocated to *projects* and not to individual users.
+
+![Click on the Sign up here link to start your registration form.](images/Screen%20Shot%202023-09-06%20at%2012.32.06%20pm.png)
+
+Complete all steps in the registration form.
+
+![](images/Screen%20Shot%202023-09-06%20at%2012.02.08%20pm.png)
+
+![](images/Screen%20Shot%202023-09-06%20at%2012.02.45%20pm.png)
+
+![](images/Screen%20Shot%202023-09-06%20at%2012.03.44%20pm.png)
+
+![](images/Screen%20Shot%202023-09-06%20at%2012.04.24%20pm.png)
+
+Your username will become active when a project Lead CI approves your request to join their project, or when a Scheme Manager approves your new project proposal.
+You will receive a confirmation email from the Mancini system when your username is activated.
+
+## How to log into Gadi
+
+### Linux/Mac/Unix
+
+Access to Gadi is via SSH to **gadi.nci.org.au**.
+This provides a Unix shell on one of the Gadi login nodes.
+
+![Replace abc123 with your own username. Enter your password when prompted. If you can't remember your password, you can reset it via [Mancini](https://my.nci.org.au/mancini/reset/password/).](images/Screen%20Shot%202023-09-06%20at%2012.46.10%20pm.png)
+
+#### Copying Files
+
+To copy files to Gadi you should use the Gadi data movers **gadi-dm.nci.org.au**:
+
+![](images/Screen%20Shot%202023-09-06%20at%2012.53.52%20pm.png)
+
+### X11 (X-Windows)
+
+![When using OS X 10.8 or later you will need to install XQuartz from https://www.xquartz.org before you can use X11 on a Mac.](images/Screen%20Shot%202023-09-06%20at%2012.49.39%20pm.png)
+
+#### Copying Files
+
+We recommend the use of one of the following packages for X11 access to Gadi:
+
+> -   MobaXterm from [http://mobaxterm.mobatek.net](http://mobaxterm.mobatek.net/)
+>
+> -   Cygwin from [https://cygwin.com](https://cygwin.com/)
+>
+> -   Xming from <http://www.straightrunning.com/XmingNotes/>
+
+### Windows
+
+![](images/Screen%20Shot%202023-09-06%20at%2012.50.53%20pm.png)
+
+> ![](images/putty.gif)
+
+#### Copying Files
+
+To copy files to Gadi you should use the Gadi data movers **gadi-dm.nci.org.au**:
+
+We recommend the following applications to copy files to and from Gadi:
+
+> -   MobaXterm from [http://mobaxterm.mobatek.net](http://mobaxterm.mobatek.net/)
+>
+> -   PuTTY's PSCP or PSFTP applications from <http://www.chiark.greenend.org.uk/~sgtatham/putty/>
+>
+> -   FileZilla from [https://filezilla-project.org](https://filezilla-project.org/)
+>
+> -   WinSCP from [https://winscp.net/](https://winscp.net/eng/index.php)
+
+To transfer files/folders using [MobaXterm](https://mobaxterm.mobatek.net/) on Windows system, drag and drop files/folders to/from local computer and Gadi after log in to Gadi via [MobaXterm](https://mobaxterm.mobatek.net/).
