@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>SIH User Guides - Accessing NCI Gadi HPC</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.scss">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SIH User Guides</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../notebooks/hpc.html" aria-current="page">
+ <span class="menu-text">HPC Access</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-workspace-curation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Workspace Curation</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-workspace-curation">    
+        <li>
+    <a class="dropdown-item" href="../notebooks/curation.html">
+ <span class="dropdown-text">Using the workspace</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../notebooks/setup_admin.html">
+ <span class="dropdown-text">Admin Role</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../notebooks/setup_participant.html">
+ <span class="dropdown-text">Launch Role</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/pipeline.html">
+ <span class="menu-text">Add a pipeline</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/workflow.html">
+ <span class="menu-text">Run a pipeline</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#national-computational-infrastructure" id="toc-national-computational-infrastructure" class="nav-link active" data-scroll-target="#national-computational-infrastructure"><strong>National Computational Infrastructure</strong></a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources"><strong>Resources</strong></a></li>
+  <li><a href="#set-up-your-nci-account" id="toc-set-up-your-nci-account" class="nav-link" data-scroll-target="#set-up-your-nci-account"><strong>Set up your NCI Account</strong></a></li>
+  <li><a href="#using-a-terminal-application" id="toc-using-a-terminal-application" class="nav-link" data-scroll-target="#using-a-terminal-application"><strong>Using a terminal application</strong></a>
+  <ul class="collapse">
+  <li><a href="#log-into-gadi" id="toc-log-into-gadi" class="nav-link" data-scroll-target="#log-into-gadi"><strong>Log into Gadi</strong></a></li>
+  <li><a href="#transfer-your-data-to-and-from-gadi" id="toc-transfer-your-data-to-and-from-gadi" class="nav-link" data-scroll-target="#transfer-your-data-to-and-from-gadi"><strong>Transfer your data to and from Gadi</strong></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><strong>Accessing NCI Gadi HPC</strong></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="national-computational-infrastructure" class="level2">
+<h2 class="anchored" data-anchor-id="national-computational-infrastructure"><strong>National Computational Infrastructure</strong></h2>
+<p>NCI is a research-focused organisation that provides advanced computing, data storage, and data management solutions to support scientific research and innovation in Australia and beyond. NCI’s HPC systems are designed to handle complex computational tasks, such as simulations, data analysis, and modeling, for a wide range of scientific disciplines, including climate modeling, genomics, astronomy, and materials science. The University of Sydney provides its researchers with subsidised access to NCI’s infrastructure.</p>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources"><strong>Resources</strong></h2>
+<ul>
+<li><a href="https://opus.nci.org.au/display/Help/Getting+Started+at+NCI">NCI help</a></li>
+</ul>
+</section>
+<section id="set-up-your-nci-account" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-your-nci-account"><strong>Set up your NCI Account</strong></h2>
+<p>All new users must create their account through the <a href="https://my.nci.org.au/mancini/login?next=/mancini/">NCI online self service portal</a>. To create your account you will need the following information:</p>
+<ul>
+<li>Your Name</li>
+<li>Institutional email address (Gmail, Hotmail, etc. are not accepted)</li>
+<li>Mobile phone number</li>
+<li>Either:
+<ul>
+<li>NCI project code of an existing project you wish to join</li>
+<li>A new project proposal to be assessed by a Scheme Manager to determine if they will grant your project time</li>
+</ul></li>
+</ul>
+<p>Note that resources at NCI are allocated to&nbsp;<strong>projects</strong>&nbsp;and not to individual users.</p>
+<p>Complete all steps below to set up an NCI account:</p>
+<ol type="1">
+<li><p>Click on ‘Sign up’ link on the <a href="https://my.nci.org.au/mancini/login?next=/mancini/">NCI online self service portal</a>: <img src="../images/Screen Shot 2023-09-06 at 12.32.06 pm.png" class="img-fluid"></p></li>
+<li><p>Accept the terms and conditions: <img src="../images/Screen Shot 2023-09-06 at 12.02.08 pm.png" class="img-fluid"></p></li>
+<li><p>Provide your personal details: <img src="../images/Screen Shot 2023-09-06 at 12.02.45 pm.png" class="img-fluid"></p></li>
+<li><p>Provide details on the project you’ll be working on: <img src="../images/Screen Shot 2023-09-06 at 12.03.44 pm.png" class="img-fluid"></p></li>
+<li><p>Select University of Sydney as you institution: <img src="../images/Screen Shot 2023-09-06 at 12.04.24 pm.png" class="img-fluid"></p></li>
+</ol>
+<p>Your username will become active when a project Lead CI approves your request to join their project, or when a Scheme Manager approves your new project proposal. You will receive a confirmation email from the Mancini system when your username is activated.</p>
+</section>
+<section id="using-a-terminal-application" class="level2">
+<h2 class="anchored" data-anchor-id="using-a-terminal-application"><strong>Using a terminal application</strong></h2>
+<p>Once you have been granted access to NCI you are able to access the platform. To do this, you will need to download a terminal application on your local computer or via NCI’s <a href="https://are-auth.nci.org.au/auth/ldap/login?back=&amp;state=wemd7xq6h4fwgxmpdodee2g2w">Australian Research Environment platform (ARE)</a>.</p>
+<p>If you don’t have a terminal already or know what one is, it is used to provide a window with a command line interface through which you can send commands to be executed by the HPC remotely or your local machine. See <a href="https://sydney-informatics-hub.github.io/training.artemis.introhpc/setup.html#1-get-a-shell-terminal-emulator">here</a> for instructions on downloading a terminal application for your computer.</p>
+<section id="log-into-gadi" class="level3">
+<h3 class="anchored" data-anchor-id="log-into-gadi"><strong>Log into Gadi</strong></h3>
+<p>You will need to access the Gadi HPC via the command line when using the Nextflow Tower service for a few purposes:</p>
+<ol type="1">
+<li>To transfer data to and from the University of Sydney’s research data store</li>
+<li>To turn on the Tower Agent before running a workflow</li>
+</ol>
+<p>Access to Gadi is via SSH to&nbsp;<strong>gadi.nci.org.au</strong>. This provides a Unix shell on one of the Gadi login nodes.</p>
+<p>Open a terminal application and type the following command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> abc123@gadi.nci.org.au </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replace abc123 with your own username. Enter your password when prompted. If you can’t remember your password, you can reset it via <a href="https://my.nci.org.au/mancini/reset/password/">Mancini</a>. Navigate to your project space:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /scratch/ab01</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replace ab01 with your project name.</p>
+</section>
+<section id="transfer-your-data-to-and-from-gadi" class="level3">
+<h3 class="anchored" data-anchor-id="transfer-your-data-to-and-from-gadi"><strong>Transfer your data to and from Gadi</strong></h3>
+<p>To copy files to Gadi you should use the Gadi data mover queue and&nbsp;<strong>gadi-dm.nci.org.au</strong>. To transfer data from USyd’s RDS via a PBS job, you’ll need to set up ssh keys for passwordless transfer of datasets using the University of Sydney’s Artemis HPC.</p>
+<section id="set-up-ssh-keys" class="level4">
+<h4 class="anchored" data-anchor-id="set-up-ssh-keys"><strong>Set up ssh keys</strong></h4>
+<p><strong>1. Generate SSH Key Pair on the Artemis HPC</strong></p>
+<p>Log in to the Artemis HPC and stay in your home directory:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> unikey@hpc.sydney.edu.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Run the following command to generate an SSH key pair without a passphrase:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> rsa <span class="at">-b</span> 2048 <span class="at">-N</span> <span class="st">""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Press enter when prompted, saving the key in ~/.ssh/id_rsa.</p>
+<p><strong>2. Set Appropriate Permissions</strong></p>
+<p>Ensure that your SSH key files have the appropriate permissions to maintain a secure environment:</p>
+<p>Set permissions on your SSH key files using <code>chmod</code> command:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 700 ~/.ssh</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 600 ~/.ssh/id_rsa</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 644 ~/.ssh/id_rsa.pub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Create the authorized_keys file to transfer to Gadi HPC:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_rsa.pub <span class="op">&gt;&gt;</span> ~/authorized_keys</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then set permissions on this file with <code>chmod</code>:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 700 ~/authorized_keys</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>3. Transfer Public Key to Gadi</strong></p>
+<p>Now move your <code>authorized_keys</code> file to Gadi HPC. Start by logging into Gadi from the Artemis HPC CLI and provide your password when prompted:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sftp</span> abc123@gadi-dm.nci.org.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replace abc123 above with your NCI username.</p>
+<p>If you don’t already have an .ssh directory in your home directory, you’ll need to create one:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> ~/.ssh </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Move into the .ssh directory and transfer your <code>authorized_keys</code> file:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/.ssh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">put</span> authorized_keys</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will transfer authorized_keys on Gadi to your current directory. With sftp, it will look for the file relative to where you launched sftp. You can check where you are on Artemis using <code>lls</code>.</p>
+<p><strong>4. Set Up the Public Key on the Gadi HPC</strong></p>
+<p>Log in to the Gadi HPC via the data mover address:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> abc123@gadi-dm.nci.org.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Append the transferred public key to the <code>~/.ssh/authorized_keys</code> file using the following command:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /path/to/directory/id_rsa.pub <span class="op">&gt;&gt;</span> ~/.ssh/authorized_keys</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="7" type="1">
+<li><p>Set appropriate permissions for the <code>~/.ssh/authorized_keys</code> file:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 600 ~/.ssh/authorized_keys</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+<p><strong>5. Test the setup</strong></p>
+<p>Logout using <code>ctrl</code>+<code>z</code> and test the sftp connection. You should not need to use a password:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sftp</span> abc123@gadi-dm.nci.org.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This completes the setup. Now you can log in to the Gadi HPC from the Artemis HPC without entering a password each time. Be sure to handle your private key securely, especially since it is not passphrase protected.</p>
+</section>
+<section id="copying-files-from-rds-to-gadi" class="level4">
+<h4 class="anchored" data-anchor-id="copying-files-from-rds-to-gadi"><strong>Copying files from RDS to Gadi</strong></h4>
+<p>Using a PBS job to transfer data transfer between Artemis HPC and NCI’s Gadi HPC using <code>scp</code> or <code>rsync</code> is a good practice. Below is a simple example of a PBS script that you might run from Artemis to transfer data to Gadi HPC:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Transfer files from Gadi to RDS by submitting this job on Artemis</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Must have ssh-keys set up for passwordless transfer</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -P SIH</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -N transfer</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -l walltime=24:00:00</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -l ncpus=1</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -l mem=40GB</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -W umask=022</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -q dtq</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="va">nci_username</span><span class="op">=</span> <span class="co">#specify your nci username</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="va">source_host</span><span class="op">=</span><span class="va">${nci_username}</span>@gadi-dm.nci.org.au</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="va">source_path</span><span class="op">=</span> <span class="co">#specify path to data to be transferred</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="va">destination_path</span><span class="op">=</span>/rds/PRJ-SIH/FromGadi <span class="co">#specify path of where you'd like to upload data</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="bu">[</span> 1 <span class="bu">]</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="cf">do</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> Transferring <span class="va">${source_host}</span>:<span class="va">${source_path}</span>/<span class="va">${dir}</span> to <span class="va">${destination_path}</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rsync</span> <span class="at">-rPvz</span> <span class="at">-L</span> <span class="at">--append-verify</span> <span class="va">${source_host}</span>:<span class="va">${source_path}</span>/<span class="va">${dir}</span> <span class="va">${destination_path}</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+</section>
+</section>
+
+<div style="font-size: 14px;">
+All materials copyright Sydney Informatics Hub, University of Sydney
+</div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

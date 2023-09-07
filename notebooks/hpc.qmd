@@ -80,7 +80,7 @@ cd /scratch/ab01
 
 Replace ab01 with your project name. 
 
-### **Copy your data to Gadi**
+### **Transfer your data to and from Gadi**
 
 To copy files to Gadi you should use the Gadi data mover queue and **gadi-dm.nci.org.au**. To transfer data from USyd's RDS via a PBS job, you'll need to set up ssh keys for passwordless transfer of datasets using the University of Sydney's Artemis HPC. 
 

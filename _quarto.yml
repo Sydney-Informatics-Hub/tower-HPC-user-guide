@@ -10,17 +10,19 @@ website:
       - href: index.qmd
         text: Home
       - href: notebooks/hpc.qmd
-        text: "1. Getting HPC Access"
-      - text: "2. Workspace Curation"
+        text: "HPC Access"
+      - text: "Workspace Curation"
         menu:
+        - text: "Using the interface"
+          href: notebooks/curation.html
         - text: "Admin Role"
           href: notebooks/setup_admin.html
         - text: "Launch Role"
           href: notebooks/setup_participant.html
       - href: notebooks/pipeline.qmd
-        text: "3. Adding Pipelines"
+        text: "Add a pipeline"
       - href: notebooks/workflow.qmd
-        text: "4. Running a Workflow"
+        text: "Run a pipeline"
     cookie-consent: 
       type: express
       style: simple

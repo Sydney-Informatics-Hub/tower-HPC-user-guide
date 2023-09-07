@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sydney Informatics Hub - User Setup Instructions</title>
+<title>SIH User Guides - Setup for the Launch Role</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,8 +70,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Sydney Informatics Hub</span>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SIH User Guides</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -82,32 +80,44 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="../index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./setup.html" aria-current="page">
- <span class="menu-text">Setup</span></a>
+    <a class="nav-link" href="../notebooks/hpc.html">
+ <span class="menu-text">1. Getting HPC Access</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-workspace-curation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">2. Workspace Curation</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-workspace-curation">    
+        <li>
+    <a class="dropdown-item" href="../notebooks/setup_admin.html">
+ <span class="dropdown-text">Admin Role</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../notebooks/setup_participant.html">
+ <span class="dropdown-text">Launch Role</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks/pipeline.html">
+ <span class="menu-text">3. Adding Pipelines</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./pipeline.html">
- <span class="menu-text">Adding Pipelines</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./workflow.html">
- <span class="menu-text">Running a Workflow</span></a>
+    <a class="nav-link" href="../notebooks/workflow.html">
+ <span class="menu-text">4. Running a Workflow</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -115,18 +125,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#general-steps-in-a-nextflow-tower-pipeline." id="toc-general-steps-in-a-nextflow-tower-pipeline." class="nav-link active" data-scroll-target="#general-steps-in-a-nextflow-tower-pipeline."><img src="images/Screen Shot 2023-08-25 at 1.58.52 pm-02.png" class="img-fluid" width="747" alt="General steps in a Nextflow tower pipeline."></a></li>
-  <li><a href="#logging-into-the-service" id="toc-logging-into-the-service" class="nav-link" data-scroll-target="#logging-into-the-service">Logging into the service</a></li>
+  <li><a href="#logging-into-the-service" id="toc-logging-into-the-service" class="nav-link active" data-scroll-target="#logging-into-the-service">Logging into the service</a></li>
   <li><a href="#the-interface" id="toc-the-interface" class="nav-link" data-scroll-target="#the-interface">The interface</a></li>
+  <li><a href="#create-your-personal-access-token" id="toc-create-your-personal-access-token" class="nav-link" data-scroll-target="#create-your-personal-access-token">Create your personal access token</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">User Setup Instructions</h1>
+<h1 class="title">Setup for the Launch Role</h1>
 </div>
 
 
@@ -141,9 +151,6 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="general-steps-in-a-nextflow-tower-pipeline." class="level3">
-<h3 class="anchored" data-anchor-id="general-steps-in-a-nextflow-tower-pipeline."><img src="images/Screen Shot 2023-08-25 at 1.58.52 pm-02.png" class="img-fluid" width="747" alt="General steps in a Nextflow tower pipeline."></h3>
-</section>
 <section id="logging-into-the-service" class="level2">
 <h2 class="anchored" data-anchor-id="logging-into-the-service">Logging into the service</h2>
 <p>Rather than the more common username and password style login you might be used to, NextFlow Tower uses an authentication link. To login:</p>
@@ -166,10 +173,10 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Then select the BioCommons workspace of interest.</p></li>
 </ul>
 </blockquote>
-<p>Add paragraph</p>
-<p>This is the dashboard where you will manage your workspaces and workflows. It will open to the launchpad interface. Above the interface you’ll see the following:</p>
+<p>Each user has a unique personal workspace to manage resources such as pipelines, compute environments, and credentials. You can also create multiple workspaces within an organization context and associate each of these workspaces with dedicated teams of users, while providing a fine-grained access control model for each of the teams.</p>
+<p>The Tower Dashboard provides an overview of runs in your organizations and personal workspace at a glance. Access it from the user top-right menu, under Dashboard. This is where you will manage your workspaces and workflows. It will open to the launchpad interface.</p>
 <p><img src="images/Screen Shot 2023-08-24 at 2.17.37 pm.png" class="img-fluid"></p>
-<p>Add paragraph</p>
+<p>Above the interface you’ll see the following:</p>
 <div>
 <blockquote class="blockquote">
 <ol type="1">
@@ -185,11 +192,34 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </blockquote>
 </div>
+</section>
+<section id="create-your-personal-access-token" class="level2">
+<h2 class="anchored" data-anchor-id="create-your-personal-access-token">Create your personal access token</h2>
+<p>Workspace configuration can only be performed by admins but you will still need to create a personal access token and store it on your compute environment (i.e.&nbsp;on the HPC environment, not locally) in order to communicate with the Tower API. To create a personal access token you will need to navigate to the user settings logo in the top navbar and select ‘Your tokens’, then:</p>
+<blockquote class="blockquote">
+<ul>
+<li><p>Select ‘Add Token’.&nbsp;</p></li>
+<li><p>Name your token something descriptive and select ‘Add’.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 2.58.54 pm.png" class="img-fluid"></p></li>
+<li><p>Copy the token to your clipboard.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 2.59.14 pm.png" class="img-fluid"></p></li>
+<li><p>Log in to your HPC (either NCI Gadi or Pawsey Setonix) on the command-line.</p>
+<ul>
+<li><p>If you are using Gadi, navigate to $HOME.</p></li>
+<li><p>If you are on Setonix, navigate to $MYSOFTWARE.</p></li>
+</ul></li>
+<li><p>From within the directory mentioned above, make a hidden directory called tower to store Tower token and credentials in.</p></li>
+<li><p>Copy your personal access token into a file named token within this directory.</p>
+<p><img src="images/Screen Shot 2023-08-25 at 3.04.27 pm.png" class="img-fluid"></p></li>
+</ul>
+</blockquote>
 
 
 </section>
 
-<p>All materials copyright Sydney Informatics Hub, University of Sydney</p></main> <!-- /main -->
+<div style="font-size: 14px;">
+All materials copyright Sydney Informatics Hub, University of Sydney
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -210,121 +240,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  let localAlternateSentinel = 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
