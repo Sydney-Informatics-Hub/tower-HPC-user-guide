@@ -1,0 +1,62 @@
+---
+title: "**Adding pipelines**"
+output:
+  html_document:
+    toc: true
+    toc_float: false
+    toc-expand: 2
+---
+
+Only admins can add pipelines to the launchpad for all workspace members to run. Below are some examples for how to set up Nextflow and nf-core pipelines. This documentation is currently under development, more details will be added regarding pipeline-specific configuration and development required for a workflow's parameters to be visible to the Tower interface. 
+
+## **Example 1: Hello World**
+
+A simple script showing the Nextflow Hello World! pipeline.
+![](../images/hello.png){width=80%}
+
+1. From the Launchpad, select "Add pipeline". 
+2. Give your pipeline a descriptive name. It needs to be unique to your community (can't create one that already exists in broader BioCommons group). 
+3. Select your previously configured compute environment.
+4. Provide pipeline codebase URL <https://github.com/nextflow-io/hello>.
+5. Select **main** for the Revision number.
+6. Specify \$TW_AGENT_WORK for the work directory.
+7. Select "Add".
+
+## **Example 2: nf-core/rnaseq**
+
+[nf-core](https://nf-co.re/pipelines) is a community effort to collect a curated set of analysis pipelines built using Nextflow. It has three target audiences: facilities, single users, and developers. For facilities, it provides highly automated and optimised pipelines that guarantee reproducibility of results for their users. Single users profit from portable, documented, and easy-to-use workflows. However, you can also become a developer and write your own pipelines in Nextflow using ready-made templates and helper tools. Currently, there are 86 pipelines available.
+
+**nf-core/rnaseq** is a bioinformatics pipeline that can be used to analyse RNA sequencing data obtained from organisms with a reference genome and annotation. It takes a samplesheet and FASTQ files as input, performs quality control (QC), trimming and (pseudo-)alignment, and produces a gene expression matrix and extensive QC report.
+
+![](../images/nf-core-rnaseq_metro_map_grey.png){width=80%}
+
+1. From the Launchpad, select "Add pipeline". 
+2. Give your pipeline a descriptive name. It needs to be unique to your community (can't create one that already exists in broader BioCommons group). 
+3. Select your previously configured compute environment.
+4. Provide pipeline codebase URL <https://github.com/nf-core/rnaseq>.
+5. Select **Master** for the Revision number.
+6. Specify \$TW_AGENT_WORK for the work directory.
+7. Select either gadi or setonix for the config profiles (these are provided in the code base of the workflow).
+8. Select "Add".
+
+## **Example 3: Germline-StructuralV**
+
+GermlineStructuralV-nf is a pipeline for identifying structural variant events in human Illumina short read whole genome sequence data. GermlineStructuralV-nf identifies structural variant and copy number events from BAM files using [Manta](https://github.com/Illumina/manta/blob/master/docs/userGuide/README.md#de-novo-calling), [Smoove](https://github.com/brentp/smoove), and [TIDDIT](https://github.com/SciLifeLab/TIDDIT). Variants are then merged using [SURVIVOR](https://github.com/fritzsedlazeck/SURVIVOR), and annotated by [AnnotSV](https://pubmed.ncbi.nlm.nih.gov/29669011/). The pipeline is written in Nextflow and uses Singularity/Docker to run containerised tools.
+
+![](../images/211971740-772796bc-6fb7-43fb-885b-d9cb116bfdd0.png){width=60%}
+
+1. From the Launchpad, select "Add pipeline". 
+2. Give your pipeline a descriptive name. It needs to be unique to your community (can't create one that already exists in broader BioCommons group). 
+3. Select your previously configured compute environment.
+4. Provide pipeline codebase URL <https://github.com/Sydney-Informatics-Hub/Germline-StructuralV-nf>. 
+5. Select **main** for the Revision number.
+6. Specify \$TW_AGENT_WORK for the work directory.
+7. Select either gadi or setonix for the config profiles (these are provided in the code base of the workflow).
+8. Select "Add".
+![](../images/interface_add_gsv.png)
+
+## **Configured Launchpad**
+
+Your launchpad will now reload with a preconfigured workflows.
+
+![](../images/interface_launchpad_workflows.png)

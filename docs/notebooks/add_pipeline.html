@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SIH User Guides - Setup for the Launch Role</title>
+<title>SIH User Guides - Adding pipelines</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,69 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -170,7 +107,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../notebooks/add_pipeline.html">
+    <a class="nav-link active" href="../notebooks/add_pipeline.html" aria-current="page">
  <span class="menu-text">Add a pipeline</span></a>
   </li>  
   <li class="nav-item">
@@ -192,7 +129,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#create-your-personal-access-token" id="toc-create-your-personal-access-token" class="nav-link active" data-scroll-target="#create-your-personal-access-token"><strong>Create your personal access token</strong></a></li>
+  <li><a href="#example-1-hello-world" id="toc-example-1-hello-world" class="nav-link active" data-scroll-target="#example-1-hello-world"><strong>Example 1: Hello World</strong></a></li>
+  <li><a href="#example-2-nf-corernaseq" id="toc-example-2-nf-corernaseq" class="nav-link" data-scroll-target="#example-2-nf-corernaseq"><strong>Example 2: nf-core/rnaseq</strong></a></li>
+  <li><a href="#example-3-germline-structuralv" id="toc-example-3-germline-structuralv" class="nav-link" data-scroll-target="#example-3-germline-structuralv"><strong>Example 3: Germline-StructuralV</strong></a></li>
+  <li><a href="#configured-launchpad" id="toc-configured-launchpad" class="nav-link" data-scroll-target="#configured-launchpad"><strong>Configured Launchpad</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -201,7 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><strong>Setup for the Launch Role</strong></h1>
+<h1 class="title"><strong>Adding pipelines</strong></h1>
 </div>
 
 
@@ -216,31 +156,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="create-your-personal-access-token" class="level2">
-<h2 class="anchored" data-anchor-id="create-your-personal-access-token"><strong>Create your personal access token</strong></h2>
-<p>Workspace configuration can only be performed by admins but you will still need to create a personal access token and store it on your compute environment (i.e.&nbsp;on the HPC environment, not locally) in order to communicate with the Tower API. To create a personal access token you will need to navigate to the user settings logo in the top navbar and select ‘Your tokens’, then:</p>
+<p>Only admins can add pipelines to the launchpad for all workspace members to run. Below are some examples for how to set up Nextflow and nf-core pipelines. This documentation is currently under development, more details will be added regarding pipeline-specific configuration and development required for a workflow’s parameters to be visible to the Tower interface.</p>
+<section id="example-1-hello-world" class="level2">
+<h2 class="anchored" data-anchor-id="example-1-hello-world"><strong>Example 1: Hello World</strong></h2>
+<p>A simple script showing the Nextflow Hello World! pipeline. <img src="../images/hello.png" class="img-fluid" style="width:80.0%"></p>
 <ol type="1">
-<li><p>Select ‘Add Token’.&nbsp;</p></li>
-<li><p>Name your token something descriptive and select ‘Add’: <img src="../images/interface_token_name.png" class="img-fluid" style="width:80.0%"></p></li>
-<li><p>Copy the token to your clipboard: <img src="../images/interface_token.png" class="img-fluid" style="width:80.0%"></p></li>
-<li><p>Open your terminal application, log in to your HPC (either NCI Gadi or Pawsey Setonix) on the command-line:</p></li>
+<li>From the Launchpad, select “Add pipeline”.&nbsp;</li>
+<li>Give your pipeline a descriptive name. It needs to be unique to your community (can’t create one that already exists in broader BioCommons group).&nbsp;</li>
+<li>Select your previously configured compute environment.</li>
+<li>Provide pipeline codebase URL <a href="https://github.com/nextflow-io/hello" class="uri">https://github.com/nextflow-io/hello</a>.</li>
+<li>Select <strong>main</strong> for the Revision number.</li>
+<li>Specify $TW_AGENT_WORK for the work directory.</li>
+<li>Select “Add”.</li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> abc123@gadi.nci.org.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="5" type="1">
-<li>If you are using Gadi, navigate to <code>~</code> ($HOME):</li>
+</section>
+<section id="example-2-nf-corernaseq" class="level2">
+<h2 class="anchored" data-anchor-id="example-2-nf-corernaseq"><strong>Example 2: nf-core/rnaseq</strong></h2>
+<p><a href="https://nf-co.re/pipelines">nf-core</a> is a community effort to collect a curated set of analysis pipelines built using Nextflow. It has three target audiences: facilities, single users, and developers. For facilities, it provides highly automated and optimised pipelines that guarantee reproducibility of results for their users. Single users profit from portable, documented, and easy-to-use workflows. However, you can also become a developer and write your own pipelines in Nextflow using ready-made templates and helper tools. Currently, there are 86 pipelines available.</p>
+<p><strong>nf-core/rnaseq</strong>&nbsp;is a bioinformatics pipeline that can be used to analyse RNA sequencing data obtained from organisms with a reference genome and annotation. It takes a samplesheet and FASTQ files as input, performs quality control (QC), trimming and (pseudo-)alignment, and produces a gene expression matrix and extensive QC report.</p>
+<p><img src="../images/nf-core-rnaseq_metro_map_grey.png" class="img-fluid" style="width:80.0%"></p>
+<ol type="1">
+<li>From the Launchpad, select “Add pipeline”.&nbsp;</li>
+<li>Give your pipeline a descriptive name. It needs to be unique to your community (can’t create one that already exists in broader BioCommons group).&nbsp;</li>
+<li>Select your previously configured compute environment.</li>
+<li>Provide pipeline codebase URL <a href="https://github.com/nf-core/rnaseq" class="uri">https://github.com/nf-core/rnaseq</a>.</li>
+<li>Select <strong>Master</strong> for the Revision number.</li>
+<li>Specify $TW_AGENT_WORK for the work directory.</li>
+<li>Select either gadi or setonix for the config profiles (these are provided in the code base of the workflow).</li>
+<li>Select “Add”.</li>
 </ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="6" type="1">
-<li>If you are on Setonix, navigate to <code>$MYSOFTWARE</code>:</li>
+</section>
+<section id="example-3-germline-structuralv" class="level2">
+<h2 class="anchored" data-anchor-id="example-3-germline-structuralv"><strong>Example 3: Germline-StructuralV</strong></h2>
+<p>GermlineStructuralV-nf is a pipeline for identifying structural variant events in human Illumina short read whole genome sequence data. GermlineStructuralV-nf identifies structural variant and copy number events from BAM files using&nbsp;<a href="https://github.com/Illumina/manta/blob/master/docs/userGuide/README.md#de-novo-calling">Manta</a>,&nbsp;<a href="https://github.com/brentp/smoove">Smoove</a>, and&nbsp;<a href="https://github.com/SciLifeLab/TIDDIT">TIDDIT</a>. Variants are then merged using&nbsp;<a href="https://github.com/fritzsedlazeck/SURVIVOR">SURVIVOR</a>, and annotated by&nbsp;<a href="https://pubmed.ncbi.nlm.nih.gov/29669011/">AnnotSV</a>. The pipeline is written in Nextflow and uses Singularity/Docker to run containerised tools.</p>
+<p><img src="../images/211971740-772796bc-6fb7-43fb-885b-d9cb116bfdd0.png" class="img-fluid" style="width:60.0%"></p>
+<ol type="1">
+<li>From the Launchpad, select “Add pipeline”.&nbsp;</li>
+<li>Give your pipeline a descriptive name. It needs to be unique to your community (can’t create one that already exists in broader BioCommons group).&nbsp;</li>
+<li>Select your previously configured compute environment.</li>
+<li>Provide pipeline codebase URL <a href="https://github.com/Sydney-Informatics-Hub/Germline-StructuralV-nf" class="uri">https://github.com/Sydney-Informatics-Hub/Germline-StructuralV-nf</a>.&nbsp;</li>
+<li>Select <strong>main</strong> for the Revision number.</li>
+<li>Specify $TW_AGENT_WORK for the work directory.</li>
+<li>Select either gadi or setonix for the config profiles (these are provided in the code base of the workflow).</li>
+<li>Select “Add”. <img src="../images/interface_add_gsv.png" class="img-fluid"></li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="va">$MYSOFTWARE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="7" type="1">
-<li>From within the directory mentioned above, make a hidden tower (<code>.tower</code>) directory to store Tower token and credentials:</li>
-</ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> .tower</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="8" type="1">
-<li>Copy your personal access token into a file named token within this directory: <img src="../images/cli_token.png" class="img-fluid" style="width:80.0%"></li>
-</ol>
+</section>
+<section id="configured-launchpad" class="level2">
+<h2 class="anchored" data-anchor-id="configured-launchpad"><strong>Configured Launchpad</strong></h2>
+<p>Your launchpad will now reload with a preconfigured workflows.</p>
+<p><img src="../images/interface_launchpad_workflows.png" class="img-fluid"></p>
 
 
 </section>
