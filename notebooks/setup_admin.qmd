@@ -7,11 +7,7 @@ output:
     toc-expand: 2
 ---
 
-## **Setting up your group's workspace**
-
-Workspace configuration can only be performed by admins. With workspace configuration, you can create and configure compute environments, configure workflows to run on these environments, and add collaborators. 
-
-### Create your personal access token
+## **Create your personal access token**
 
 You will need to create a Tower personal access token and store it on your compute environment (i.e. on the HPC environment, not locally) in order to communicate with the Tower API. To create a personal access token you will need to navigate to the user settings logo in the top navbar and select 'Your tokens', then:
 
@@ -44,6 +40,10 @@ mkdir .tower
 
 8. Copy your personal access token into a file named token within this directory:
 ![](../images/cli_token.png){width=80%}
+
+## **Set up your group's workspace**
+
+Workspace configuration can only be performed by admins. With workspace configuration, you can create and configure compute environments, configure workflows to run on these environments, and add collaborators. 
 
 ### **Create a Tower credential for your HPC**
 

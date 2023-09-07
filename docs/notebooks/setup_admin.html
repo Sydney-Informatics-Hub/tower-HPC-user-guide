@@ -192,9 +192,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#setting-up-your-groups-workspace" id="toc-setting-up-your-groups-workspace" class="nav-link active" data-scroll-target="#setting-up-your-groups-workspace"><strong>Setting up your group’s workspace</strong></a>
+  <li><a href="#create-your-personal-access-token" id="toc-create-your-personal-access-token" class="nav-link active" data-scroll-target="#create-your-personal-access-token"><strong>Create your personal access token</strong></a></li>
+  <li><a href="#set-up-your-groups-workspace" id="toc-set-up-your-groups-workspace" class="nav-link" data-scroll-target="#set-up-your-groups-workspace"><strong>Set up your group’s workspace</strong></a>
   <ul class="collapse">
-  <li><a href="#create-your-personal-access-token" id="toc-create-your-personal-access-token" class="nav-link" data-scroll-target="#create-your-personal-access-token">Create your personal access token</a></li>
   <li><a href="#create-a-tower-credential-for-your-hpc" id="toc-create-a-tower-credential-for-your-hpc" class="nav-link" data-scroll-target="#create-a-tower-credential-for-your-hpc"><strong>Create a Tower credential for your HPC</strong></a></li>
   <li><a href="#configure-a-compute-environment" id="toc-configure-a-compute-environment" class="nav-link" data-scroll-target="#configure-a-compute-environment"><strong>Configure a compute environment</strong>&nbsp;</a></li>
   </ul></li>
@@ -222,11 +222,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="setting-up-your-groups-workspace" class="level2">
-<h2 class="anchored" data-anchor-id="setting-up-your-groups-workspace"><strong>Setting up your group’s workspace</strong></h2>
-<p>Workspace configuration can only be performed by admins. With workspace configuration, you can create and configure compute environments, configure workflows to run on these environments, and add collaborators.</p>
-<section id="create-your-personal-access-token" class="level3">
-<h3 class="anchored" data-anchor-id="create-your-personal-access-token">Create your personal access token</h3>
+<section id="create-your-personal-access-token" class="level2">
+<h2 class="anchored" data-anchor-id="create-your-personal-access-token"><strong>Create your personal access token</strong></h2>
 <p>You will need to create a Tower personal access token and store it on your compute environment (i.e.&nbsp;on the HPC environment, not locally) in order to communicate with the Tower API. To create a personal access token you will need to navigate to the user settings logo in the top navbar and select ‘Your tokens’, then:</p>
 <ol type="1">
 <li><p>Select ‘Add Token’.&nbsp;</p></li>
@@ -251,6 +248,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Copy your personal access token into a file named token within this directory: <img src="../images/cli_token.png" class="img-fluid" style="width:80.0%"></li>
 </ol>
 </section>
+<section id="set-up-your-groups-workspace" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-your-groups-workspace"><strong>Set up your group’s workspace</strong></h2>
+<p>Workspace configuration can only be performed by admins. With workspace configuration, you can create and configure compute environments, configure workflows to run on these environments, and add collaborators.</p>
 <section id="create-a-tower-credential-for-your-hpc" class="level3">
 <h3 class="anchored" data-anchor-id="create-a-tower-credential-for-your-hpc"><strong>Create a Tower credential for your HPC</strong></h3>
 <p>You can create different types of credentials for different purposes through the Tower interface. For example, you can add credentials to access code repositories, commercial cloud, SSH-keys, and the Tower Agent. To connect your Tower agent to your HPC, you will need to create a Tower agent personal credential.</p>

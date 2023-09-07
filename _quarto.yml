@@ -10,14 +10,14 @@ website:
       - href: index.qmd
         text: Home
       - href: notebooks/hpc.qmd
-        text: "HPC Access"
-      - text: "Workspace Curation"
+        text: "HPC access"
+      - text: "Workspace setup"
         menu:
         - text: "Using the interface"
           href: notebooks/curation.html
-        - text: "Admin Role"
+        - text: "Admin role"
           href: notebooks/setup_admin.html
-        - text: "Launch Role"
+        - text: "Launch role"
           href: notebooks/setup_participant.html
       - href: notebooks/pipeline.qmd
         text: "Add a pipeline"
