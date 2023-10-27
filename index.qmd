@@ -1,5 +1,5 @@
 ---
-title: "**Nextflow Tower User Guide for University of Sydney**"
+title: "**Nextflow Tower User Guide for University of Sydney users**"
 output:
   html_document:
     toc: true
@@ -10,9 +10,7 @@ editor:
     wrap: sentence
 ---
 
-Nextflow Tower is a full-stack solution for the management of Nextflow pipeline executions.
-It's designed as an intuitive, user-friendly interface that allows you to control and monitor your data analysis pipelines.
-It simplifies running complex workflows, like those provided by nf-core, on different computation infrastructures such as HPC clusters, cloud services, or Kubernetes.
+Nextflow Tower is a full-stack solution for the management of Nextflow pipeline executions. It's designed as an intuitive, user-friendly interface that allows you to control and monitor your data analysis pipelines. It simplifies running complex workflows, like those provided by nf-core, on different computation infrastructures such as HPC clusters, cloud services, or Kubernetes.
 
 ::: {.callout-important}
 
@@ -49,7 +47,7 @@ The [Australian BioCommons Nextflow Tower service](https://www.biocommons.org.au
 
 ### **Organisational workspace set up**{.unlisted}
 
-A workspace provides the context in which a user operates, including what resources are available and who can access them. It is composed of pipelines, compute environments, credentials, runs, actions, and datasets. Access permissions are controlled through participants, collaborators, and teams ![](../images/tower-bc-org.png)
+A workspace provides the context in which a user operates, including what resources are available and who can access them. It is composed of pipelines, compute environments, credentials, runs, actions, and datasets. Access permissions are controlled through participants, collaborators, and teams ![](./images/tower-bc-org.png)
 
 |Level      |Definition                                                                                                                                                  |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
